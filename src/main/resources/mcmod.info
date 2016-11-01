@@ -1,0 +1,8 @@
+[{
+	"modid": "firecraft",
+	"name": "FireCraft",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+	"url": "ilmarin.firelizzard.local/~ikiwiki/wiki/FireCraft",
+	"authorList": ["Firelizzard"]
+}]
