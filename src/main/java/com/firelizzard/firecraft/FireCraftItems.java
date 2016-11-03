@@ -1,13 +1,14 @@
 package com.firelizzard.firecraft;
 
+import com.rwtema.extrautils.ExtraUtils;
+
 import cofh.thermaldynamics.duct.TDDucts;
 import cofh.thermalexpansion.block.TEBlocks;
-import cofh.thermalexpansion.block.cell.BlockCell;
 import cofh.thermalexpansion.block.dynamo.BlockDynamo;
+import cofh.thermalexpansion.item.ItemCapacitor;
 import cofh.thermalexpansion.item.TEItems;
 import cofh.thermalfoundation.item.TFItems;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
@@ -35,10 +36,9 @@ public class FireCraftItems {
 				"ABA",
 				"BCB",
 				"ABA",
-//				'A', FireCraftBlocks.silmarilliumBlock,
 				'A', silmarilliumIngot,
 				'B', TEItems.powerCoilGold,
-				'C', new ItemStack(superConductor.getItem(), 8, superConductor.getItemDamage()));
+				'C', superConductor);
 		
 		GameRegistry.addRecipe(elementiumIngot,
 				" A ",
@@ -62,14 +62,16 @@ public class FireCraftItems {
 		
 		GameRegistry.addRecipe(new ItemStack(destroyer),
 				"ABA",
-				"CDC",
-				"EFE",
-				'A', Blocks.dirt,
-				'B', Items.diamond,
-				'C', Items.coal,
+				"CDE",
+				"FGH",
+				'A', Items.diamond,
+				'B', ExtraUtils.ethericSword,
+				'C', ExtraUtils.erosionShovel,
 				'D', destroyerCore,
-				'E', Items.redstone,
-				'F', new ItemStack(TEBlocks.blockCell, 1, BlockCell.Types.RESONANT.ordinal()));
+				'E', ExtraUtils.destructionPickaxe,
+				'F', ExtraUtils.precisionShears,
+				'G', new ItemStack(TEItems.itemCapacitor, 1, ItemCapacitor.Types.RESONANT.ordinal()),
+				'H', ExtraUtils.healingAxe);
 		
 		TConstructRegistry.getTableCasting().addCastingRecipe(
 				silmarilliumIngot,

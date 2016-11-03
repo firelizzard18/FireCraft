@@ -1,6 +1,5 @@
 package com.firelizzard.firecraft;
 
-import cofh.thermalfoundation.fluid.TFFluids;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
@@ -19,13 +18,14 @@ public class FireCraftFluids {
 	}
 	
 	public static void recipes() {
-		Smeltery.addAlloyMixing(new FluidStack(FireCraftFluids.silmarillium, TConstruct.ingotLiquidValue*4),
+		Smeltery.addAlloyMixing(new FluidStack(FireCraftFluids.silmarillium, TConstruct.ingotLiquidValue),
 				new FluidStack(FluidRegistry.getFluid("enderium.molten"), TConstruct.ingotLiquidValue),
 				new FluidStack(FluidRegistry.getFluid("lumium.molten"), TConstruct.ingotLiquidValue),
 				new FluidStack(FluidRegistry.getFluid("signalum.molten"), TConstruct.ingotLiquidValue),
-				new FluidStack(TFFluids.fluidPetrotheum, TConstruct.ingotLiquidValue/4),
-				new FluidStack(TFFluids.fluidCryotheum, TConstruct.ingotLiquidValue/4),
-				new FluidStack(TFFluids.fluidAerotheum, TConstruct.ingotLiquidValue/4),
-				new FluidStack(TFFluids.fluidPyrotheum, TConstruct.ingotLiquidValue/4));
+				new FluidStack(FluidRegistry.getFluid("mithril.molten"), TConstruct.ingotLiquidValue),
+				new FluidStack(FluidRegistry.getFluid("molten.unstableingots"), TConstruct.ingotLiquidValue),
+				new FluidStack(FluidRegistry.getFluid("bedrockium.molten"), TConstruct.ingotLiquidValue),
+				new FluidStack(FluidRegistry.getFluid("manyullyn.molten"), TConstruct.ingotLiquidValue),
+				new FluidStack(FluidRegistry.getFluid("emerald.liquid"), 640));
 	}
 }
