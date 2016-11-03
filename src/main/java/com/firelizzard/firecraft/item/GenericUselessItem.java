@@ -1,6 +1,9 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.item;
 
 import java.util.List;
+
+import com.firelizzard.firecraft.FireCraftMod;
+import com.firelizzard.firecraft.initialization.FireCraftOres;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

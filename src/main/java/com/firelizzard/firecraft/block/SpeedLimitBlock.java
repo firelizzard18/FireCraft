@@ -1,4 +1,8 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.block;
+
+import com.firelizzard.firecraft.FireCraftMod;
+import com.firelizzard.firecraft.initialization.FireCraftMaterials;
+import com.firelizzard.firecraft.tile.SpeedLimitTile;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -13,7 +17,7 @@ public class SpeedLimitBlock extends BasicBlock implements ITileEntityProvider {
 	public static final double SPEED_LIMIT = 5d;
 	public static final double PER_TICK_EXPONENT = 1d;
 	
-	protected SpeedLimitBlock()
+	public SpeedLimitBlock()
 	{
 		super(FireCraftMaterials.speedLimit, NAME);
 		setHardness(0.3f);

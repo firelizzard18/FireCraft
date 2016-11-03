@@ -1,4 +1,4 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.initialization;
 
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;

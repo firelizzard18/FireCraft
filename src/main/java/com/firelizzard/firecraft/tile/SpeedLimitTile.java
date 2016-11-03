@@ -1,4 +1,4 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.tile;
 
 import net.minecraft.tileentity.TileEntity;
 

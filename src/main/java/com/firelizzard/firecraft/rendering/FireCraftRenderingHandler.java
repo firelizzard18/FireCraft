@@ -1,4 +1,7 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.rendering;
+
+import com.firelizzard.firecraft.FireCraftMod;
+import com.firelizzard.firecraft.block.SilmarilBlock;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import net.minecraft.block.Block;

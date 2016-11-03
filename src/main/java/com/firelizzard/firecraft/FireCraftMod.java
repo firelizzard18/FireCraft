@@ -1,5 +1,12 @@
 package com.firelizzard.firecraft;
 
+import com.firelizzard.firecraft.initialization.FireCraftBlocks;
+import com.firelizzard.firecraft.initialization.FireCraftFluids;
+import com.firelizzard.firecraft.initialization.FireCraftItems;
+import com.firelizzard.firecraft.initialization.FireCraftLogisticsIntegration;
+import com.firelizzard.firecraft.initialization.FireCraftOres;
+import com.firelizzard.firecraft.initialization.FireCraftProxy;
+
 //import net.minecraft.init.Blocks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;

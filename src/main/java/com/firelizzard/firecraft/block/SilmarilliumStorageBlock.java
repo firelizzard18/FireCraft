@@ -1,4 +1,7 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.block;
+
+import com.firelizzard.firecraft.FireCraftMod;
+import com.firelizzard.firecraft.initialization.FireCraftOres;
 
 import net.minecraft.block.material.Material;
 

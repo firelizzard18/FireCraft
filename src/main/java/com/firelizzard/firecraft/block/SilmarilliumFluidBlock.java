@@ -1,4 +1,8 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.block;
+
+import com.firelizzard.firecraft.FireCraftMod;
+import com.firelizzard.firecraft.initialization.FireCraftFluids;
+import com.firelizzard.firecraft.initialization.FireCraftOres;
 
 import cofh.core.fluid.BlockFluidCoFHBase;
 import cofh.core.render.IconRegistry;

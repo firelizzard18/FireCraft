@@ -1,4 +1,4 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.material;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MapColor;

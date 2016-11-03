@@ -1,4 +1,6 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.block;
+
+import com.firelizzard.firecraft.FireCraftMod;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

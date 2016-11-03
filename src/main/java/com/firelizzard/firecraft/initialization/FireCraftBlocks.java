@@ -1,5 +1,10 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.initialization;
 
+import com.firelizzard.firecraft.block.SilmarilBlock;
+import com.firelizzard.firecraft.block.SilmarilliumFluidBlock;
+import com.firelizzard.firecraft.block.SilmarilliumStorageBlock;
+import com.firelizzard.firecraft.block.SpeedLimitBlock;
+import com.firelizzard.firecraft.tile.SpeedLimitTile;
 import com.rwtema.extrautils.ExtraUtils;
 
 import cpw.mods.fml.common.registry.GameRegistry;

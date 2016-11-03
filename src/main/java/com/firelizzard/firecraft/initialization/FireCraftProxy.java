@@ -1,4 +1,4 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.initialization;
 
 public abstract class FireCraftProxy {
 	public void preInit() { }

@@ -1,6 +1,9 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.item;
 
 import java.util.List;
+
+import com.firelizzard.firecraft.FireCraftMod;
+import com.firelizzard.firecraft.entity.AutopickupEntityItem;
 
 import codechicken.enderstorage.common.BlockEnderStorage;
 import cofh.api.block.IBlockConfigGui;

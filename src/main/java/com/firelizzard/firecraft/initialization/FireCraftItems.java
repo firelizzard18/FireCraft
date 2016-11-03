@@ -1,5 +1,7 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.initialization;
 
+import com.firelizzard.firecraft.item.DestroyerTool;
+import com.firelizzard.firecraft.item.GenericUselessItem;
 import com.rwtema.extrautils.ExtraUtils;
 
 import cofh.thermaldynamics.duct.TDDucts;

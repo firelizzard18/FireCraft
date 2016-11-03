@@ -1,4 +1,4 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.entity;
 
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;

@@ -1,4 +1,4 @@
-package com.firelizzard.firecraft;
+package com.firelizzard.firecraft.initialization;
 
 import cofh.lib.util.helpers.StringHelper;
 import net.minecraftforge.oredict.OreDictionary;
