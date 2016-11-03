@@ -47,6 +47,7 @@ public class FireCraftMod {
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit();
+		FireCraftLogisticsIntegration.postInit();
 		
 		FireCraftFluids.recipes();
 		FireCraftBlocks.recipes();
