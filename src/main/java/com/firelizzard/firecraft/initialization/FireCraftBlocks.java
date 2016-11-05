@@ -1,5 +1,7 @@
 package com.firelizzard.firecraft.initialization;
 
+import com.firelizzard.firecraft.api.Initialization;
+import com.firelizzard.firecraft.block.SecurityStationBlock;
 import com.firelizzard.firecraft.block.SilmarilBlock;
 import com.firelizzard.firecraft.block.SilmarilliumFluidBlock;
 import com.firelizzard.firecraft.block.SilmarilliumStorageBlock;
@@ -11,20 +13,25 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
+@Initialization(after = {FireCraftFluids.class})
 public class FireCraftBlocks {
 	public static final SpeedLimitBlock speedlimit = new SpeedLimitBlock();
-	public static final SilmarilliumFluidBlock silmarilliumMolten = new SilmarilliumFluidBlock();
 	public static final SilmarilliumStorageBlock silmarilliumStorage = new SilmarilliumStorageBlock();
 	public static final SilmarilBlock silmaril = new SilmarilBlock();
+	public static final SecurityStationBlock securityStation = new SecurityStationBlock();
+
+	public static final SilmarilliumFluidBlock silmarilliumMolten = new SilmarilliumFluidBlock();
 	
-	public static void register() {
+	static {
 		GameRegistry.registerBlock(speedlimit, SpeedLimitBlock.NAME);
 		GameRegistry.registerTileEntity(SpeedLimitTile.class, SpeedLimitBlock.NAME);
 		GameRegistry.registerBlock(silmarilliumMolten, FireCraftOres.SILMARILLIUM + ".molten");
 		GameRegistry.registerBlock(silmarilliumStorage, FireCraftOres.SILMARILLIUM + ".storage");
 		GameRegistry.registerBlock(silmaril, SilmarilBlock.NAME);
+		GameRegistry.registerBlock(securityStation, SecurityStationBlock.NAME);
 	}
 
+	@Initialization.Post
 	public static void recipes() {
 		GameRegistry.addRecipe(new ItemStack(speedlimit, 8),
 				"AAA",

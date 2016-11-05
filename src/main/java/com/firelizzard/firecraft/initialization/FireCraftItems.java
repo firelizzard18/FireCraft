@@ -1,5 +1,6 @@
 package com.firelizzard.firecraft.initialization;
 
+import com.firelizzard.firecraft.api.Initialization;
 import com.firelizzard.firecraft.item.DestroyerTool;
 import com.firelizzard.firecraft.item.GenericUselessItem;
 import com.rwtema.extrautils.ExtraUtils;
@@ -17,6 +18,7 @@ import net.minecraftforge.fluids.FluidStack;
 import tconstruct.TConstruct;
 import tconstruct.library.TConstructRegistry;
 
+@Initialization
 public class FireCraftItems {
 	public static GenericUselessItem useless = new GenericUselessItem();
 	public static DestroyerTool destroyer = new DestroyerTool();
@@ -25,12 +27,13 @@ public class FireCraftItems {
 	public static ItemStack destroyerCore = new ItemStack(useless, 1, GenericUselessItem.DESTROYERCORE_META);
 	public static ItemStack silmarilliumIngot = new ItemStack(useless, 1, GenericUselessItem.SILMARILLIUMINGOT_META);
 	public static ItemStack elementiumIngot = new ItemStack(useless, 1, GenericUselessItem.ELEMENTIUM_META);
-	
-	public static void register() {
+
+	static {
 		GameRegistry.registerItem(useless, GenericUselessItem.USELESS_NAME);
 		GameRegistry.registerItem(destroyer, DestroyerTool.NAME);
 	}
-	
+
+	@Initialization.Post
 	public static void recipes() {
 		ItemStack superConductor = TDDucts.energySuperCond.itemStack;
 		

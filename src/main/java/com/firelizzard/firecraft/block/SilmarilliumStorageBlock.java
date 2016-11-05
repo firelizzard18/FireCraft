@@ -3,11 +3,15 @@ package com.firelizzard.firecraft.block;
 import com.firelizzard.firecraft.FireCraftMod;
 import com.firelizzard.firecraft.initialization.FireCraftOres;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 
-public class SilmarilliumStorageBlock extends BasicBlock {
+public class SilmarilliumStorageBlock extends Block {
 	public SilmarilliumStorageBlock() {
-		super(Material.iron, FireCraftOres.SILMARILLIUM + "Storage");
+		super(Material.iron);
 		setHardness(5.0F);
 		setResistance(10.0F);
         setLightOpacity(0);
@@ -27,4 +31,11 @@ public class SilmarilliumStorageBlock extends BasicBlock {
 	public boolean isOpaqueCube() {
 		return false;
 	}
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons (IIconRegister iconRegister)
+    {
+        blockIcon = iconRegister.registerIcon(FireCraftMod.MODID + ":" + FireCraftOres.SILMARILLIUM + "Storage");
+    }
 }

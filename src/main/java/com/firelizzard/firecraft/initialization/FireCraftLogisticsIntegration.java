@@ -1,7 +1,9 @@
 package com.firelizzard.firecraft.initialization;
 
+import com.firelizzard.firecraft.api.Initialization;
 import com.firelizzard.firecraft.gui.SecureItemSinkInHand;
 import com.firelizzard.firecraft.gui.SecureItemSinkSlot;
+import com.firelizzard.firecraft.logistics.EnergyItemSinkModule;
 import com.firelizzard.firecraft.logistics.SecureItemSinkModule;
 import com.firelizzard.firecraft.network.SecureItemSinkMode;
 import com.firelizzard.firecraft.network.SecureItemSinkPacket;
@@ -12,11 +14,14 @@ import logisticspipes.network.PacketHandler;
 import logisticspipes.network.abstractguis.GuiProvider;
 import logisticspipes.network.abstractpackets.ModernPacket;
 
+@Initialization
 public class FireCraftLogisticsIntegration {
 //	public static final SecureItemSinkModule module = new SecureItemSinkModule();
-	
+
+	@Initialization.Post
 	public static void postInit() {
 		LogisticsPipes.ModuleItem.registerModule(1000, SecureItemSinkModule.class);
+		LogisticsPipes.ModuleItem.registerModule(1001, EnergyItemSinkModule.class);
 		
 		
 		

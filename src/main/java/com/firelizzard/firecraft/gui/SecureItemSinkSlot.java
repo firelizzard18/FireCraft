@@ -15,11 +15,11 @@ import net.minecraft.entity.player.EntityPlayer;
 public class SecureItemSinkSlot extends ModuleCoordinatesGuiProvider {
 	private UUID ownerUUID;
 	private String ownerName;
-	
+
 	public SecureItemSinkSlot(int id) {
 		super(id);
 	}
-	
+
 	@Override
 	public void writeData(LPDataOutputStream data) throws IOException {
 		super.writeData(data);
@@ -27,19 +27,19 @@ public class SecureItemSinkSlot extends ModuleCoordinatesGuiProvider {
 		data.writeLong(ownerUUID == null ? 0 : ownerUUID.getMostSignificantBits());
 		data.writeByteArray(ownerName == null ? new byte[0] : ownerName.getBytes());
 	}
-	
+
 	@Override
 	public void readData(LPDataInputStream data) throws IOException {
 		super.readData(data);
 		long lsb = data.readLong();
 		long msb = data.readLong();
 		byte[] bytes = data.readByteArray();
-		
+
 		if (lsb == 0 && msb == 0)
 			ownerUUID = null;
 		else
 			ownerUUID = new UUID(msb, lsb);
-		
+
 		if (bytes.length == 0)
 			ownerName = null;
 		else

@@ -3,6 +3,7 @@ package com.firelizzard.firecraft.item;
 import java.util.List;
 
 import com.firelizzard.firecraft.FireCraftMod;
+import com.firelizzard.firecraft.block.SecurityStationBlock;
 import com.firelizzard.firecraft.entity.AutopickupEntityItem;
 
 import codechicken.enderstorage.common.BlockEnderStorage;
@@ -44,8 +45,13 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.monster.EntityCreeper;
+import net.minecraft.entity.monster.EntitySkeleton;
+import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
@@ -61,6 +67,10 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	}
 	
 	static boolean isMachineBlock(Block block) {
+		// firecraft
+		if (block instanceof SecurityStationBlock)
+			return true;
+		
 		// thermal expansion
 		if (block instanceof BlockCache)
 			return true;
@@ -129,7 +139,7 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	}
 
 	public float minDamage = 1f;
-	public float hitDamage = 15f;
+	public float hitDamage = 50f;
 	public float silkTouchMultiplier = 2f;
 	
 	public DestroyerTool() {
@@ -189,10 +199,47 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 
     @Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase entity, EntityLivingBase player) {
-    	float damage = Math.max(minDamage, hitDamage * extractEnergy(stack, energyPerUse, false) / maxEnergy);
+    	float damage = Math.max(minDamage, hitDamage * extractEnergy(stack, energyPerUse, false) / energyPerUse);
     	entity.attackEntityFrom(DamageSource.causePlayerDamage((EntityPlayer)player), damage);
         return false;
     }
+    
+    @Override
+    public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer player, EntityLivingBase living) {
+    	if (!(living instanceof EntityPlayer) || !player.isSneaking())
+//    		living.attackEntityFrom(DamageSource.causePlayerDamage(player), Float.POSITIVE_INFINITY);
+    		living.setDead();
+    	ItemStack drop = getHeadDrop(living);
+    	if (drop != null)
+    		tryGiveToPlayer(player.worldObj, player, (int)living.posX, (int)living.posY, (int)living.posZ, drop);
+    	return true;
+    }
+    
+    private ItemStack getHeadDrop(EntityLivingBase entity) {
+        // meta 0,1: skeleton and wither skelly
+        if(entity instanceof EntitySkeleton) {
+          return new ItemStack(Items.skull, 1, ((EntitySkeleton) entity).getSkeletonType() == 1 ? 1 : 0);
+        }
+        // meta 2: zombie
+        else if(entity instanceof EntityZombie) {
+          return new ItemStack(Items.skull, 1, 2);
+        }
+        // meta 4: creeper
+        else if(entity instanceof EntityCreeper) {
+          return new ItemStack(Items.skull, 1, 4);
+        }
+        // meta 3: player
+        else if(entity instanceof EntityPlayer) {
+          ItemStack head = new ItemStack(Items.skull, 1, 3);
+          NBTTagCompound nametag = new NBTTagCompound();
+          nametag.setString("SkullOwner", ((EntityPlayer) entity).getDisplayName());
+          head.setTagCompound(nametag);
+          return head;
+        }
+
+        // no head
+        return null;
+      }
     
     boolean onItemUse_machine(ItemStack stack, EntityPlayer player, World world, Block block, int x, int y, int z, int hitSide) {
     	if (block instanceof IDismantleable && player.isSneaking())
@@ -291,10 +338,13 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
     	for (ItemStack drop : drops) {
     		if (drop.stackSize == 0)
     			continue;
-    		if (player.inventory.addItemStackToInventory(drop))
-    			continue;
-    		ejectIntoWorld(world, null, x, y, z, drop);
+    		tryGiveToPlayer(world, player, x, y, z, drop);
     	}
+	}
+	
+	void tryGiveToPlayer(World world, EntityPlayer player, int x, int y, int z, ItemStack drop) {
+		if (!player.inventory.addItemStackToInventory(drop))
+			ejectIntoWorld(world, null, x, y, z, drop);
 	}
 	
 	void ejectIntoWorld(World world, EntityPlayer player, int x, int y, int z, List<ItemStack> drops) {

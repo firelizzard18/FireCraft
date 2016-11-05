@@ -4,14 +4,17 @@ import com.firelizzard.firecraft.FireCraftMod;
 import com.firelizzard.firecraft.initialization.FireCraftMaterials;
 import com.firelizzard.firecraft.tile.SpeedLimitTile;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
-public class SpeedLimitBlock extends BasicBlock implements ITileEntityProvider {
+public class SpeedLimitBlock extends Block implements ITileEntityProvider {
 	public static final String NAME = "speedlimit";
 	
 	public static final double SPEED_LIMIT = 5d;
@@ -19,12 +22,19 @@ public class SpeedLimitBlock extends BasicBlock implements ITileEntityProvider {
 	
 	public SpeedLimitBlock()
 	{
-		super(FireCraftMaterials.speedLimit, NAME);
+		super(FireCraftMaterials.speedLimit);
 		setHardness(0.3f);
 		setBlockName(NAME);
 		setCreativeTab(FireCraftMod.tab);
 		setLightOpacity(3);
 	}
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons (IIconRegister iconRegister)
+    {
+        blockIcon = iconRegister.registerIcon(FireCraftMod.MODID + ":" + NAME);
+    }
 	
 	@Override
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)

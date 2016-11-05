@@ -27,6 +27,8 @@ import net.minecraft.util.IIcon;
 
 public class SecureItemSinkModule extends LogisticsGuiModule {
 	public static final String NAME = "secureItemSinkModule";
+	public static final String OWNER_UUID_KEY = "OwnerUUID";
+	public static final String OWNER_NAME_KEY = "Owner";
 	
 	SinkReply _sinkReply;
 
@@ -56,11 +58,11 @@ public class SecureItemSinkModule extends LogisticsGuiModule {
 
 	@Override
 	public void readFromNBT(NBTTagCompound tag) {
-		String uuid = tag.getString("OwnerUUID");
+		String uuid = tag.getString(OWNER_UUID_KEY);
 		if (!Strings.isNullOrEmpty(uuid))
 			ownerUUID = UUID.fromString(uuid);
 		
-		String name = tag.getString("Owner");
+		String name = tag.getString(OWNER_NAME_KEY);
 		if (!Strings.isNullOrEmpty(name))
 			ownerName = name;
 	}
@@ -68,9 +70,9 @@ public class SecureItemSinkModule extends LogisticsGuiModule {
 	@Override
 	public void writeToNBT(NBTTagCompound tag) {
 		if (ownerUUID != null)
-			tag.setString("OwnerUUID", ownerUUID.toString());
+			tag.setString(OWNER_UUID_KEY, ownerUUID.toString());
 		if (ownerName != null)
-			tag.setString("Owner", ownerName);
+			tag.setString(OWNER_NAME_KEY, ownerName);
 	}
 
 	
@@ -106,9 +108,9 @@ public class SecureItemSinkModule extends LogisticsGuiModule {
 			return null;
 
 		if (ownerUUID != null) {
-			if (!ownerUUID.equals(UUID.fromString(stack.stackTagCompound.getString("OwnerUUID"))))
+			if (!ownerUUID.equals(UUID.fromString(stack.stackTagCompound.getString(OWNER_UUID_KEY))))
 				return null;
-		} else if (!ownerName.equals(stack.stackTagCompound.getString("Onwer")))
+		} else if (!ownerName.equals(stack.stackTagCompound.getString(OWNER_NAME_KEY)))
 			return null;
 		
 		if (_service.canUseEnergy(5))
