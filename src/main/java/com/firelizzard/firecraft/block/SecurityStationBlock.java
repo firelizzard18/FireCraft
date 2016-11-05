@@ -6,14 +6,19 @@ import com.mojang.authlib.GameProfile;
 import cofh.api.tileentity.ISecurable;
 import cofh.api.tileentity.ISecurable.AccessMode;
 import cofh.lib.util.helpers.SecurityHelper;
+import cofh.thermalexpansion.item.ItemSatchel;
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import logisticspipes.items.ItemModule;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
@@ -59,10 +64,30 @@ public class SecurityStationBlock extends Block {
 		ItemStack stack = player.getHeldItem();
 		if (stack == null)
 			return false;
+		
+		Item item = stack.getItem();
+		if (item instanceof ItemModule) {
+			player.addChatMessage(getMessageTranslation("bad_stack"));
+			return true;
+		}
 
-		if (stack.getItem() instanceof ISecurable) {
+		if (item instanceof ISecurable || item instanceof ItemSatchel) {
 			player.addChatMessage(getMessageTranslation("isecurable"));
-			return false;
+			return true;
+		}
+		
+		if (item instanceof ItemBlock) {
+			Block block = ((ItemBlock)item).field_150939_a;
+			if (block instanceof ISecurable) {
+				player.addChatMessage(getMessageTranslation("isecurable"));
+				return true;
+			}
+			
+			TileEntity tile = block.createTileEntity(world, item.getDamage(stack));
+			if (tile instanceof ISecurable) {
+				player.addChatMessage(getMessageTranslation("isecurable"));
+				return true;
+			}
 		}
 		
 		boolean isSecure = SecurityHelper.isSecure(stack);
@@ -72,12 +97,12 @@ public class SecurityStationBlock extends Block {
 			
 			if (ownerProfile == null ^ playerProfile == null) {
 				player.addChatMessage(getMessageTranslation("not_owner"));
-				return false;
+				return true;
 			}
 			
 			if (ownerProfile != null && !ownerProfile.equals(playerProfile)) {
 				player.addChatMessage(getMessageTranslation("not_owner"));
-				return false;
+				return true;
 			}
 		}
 		

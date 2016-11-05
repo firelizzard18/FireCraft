@@ -1,6 +1,7 @@
 package com.firelizzard.firecraft;
 
 import com.firelizzard.firecraft.initialization.FireCraftProxy;
+import com.firelizzard.firecraft.item.FakeDestroyerTool;
 
 import cofh.mod.BaseMod;
 import cpw.mods.fml.common.Mod;
@@ -8,8 +9,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 @Mod(modid = FireCraftMod.MODID, version = FireCraftMod.VERSION)
@@ -20,11 +21,13 @@ public class FireCraftMod extends BaseMod {
 	public static final int RENDERERID_1 = 1;
 	
 	private static final FireCraftMod inst = new FireCraftMod();
+
+	private static FakeDestroyerTool fakeDestroyer = new FakeDestroyerTool();
 	
 	public static final CreativeTabs tab = new CreativeTabs("firecraft") {
 		@Override
 		public Item getTabIconItem() {
-			return Items.diamond;
+			return fakeDestroyer;
 		}
 	};
 	
@@ -84,6 +87,8 @@ public class FireCraftMod extends BaseMod {
 	public void init(FMLInitializationEvent event) {
 		proxy.init();
 		init.callInitializers();
+
+		GameRegistry.registerItem(fakeDestroyer, "fakeDestroyer");
 	}
 	
 	@Mod.EventHandler
