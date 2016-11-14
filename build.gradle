@@ -17,7 +17,10 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.1"
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+version = "1.1.1"
 group= "com.firelizzard.firecraft"
 archivesBaseName = "firecraft"
 
@@ -26,8 +29,13 @@ minecraft {
     runDir = "eclipse"
 }
 
+configurations {
+    embed
+    compile.extendsFrom(embed)
+}
+
 dependencies {
-	compile 'org.reflections:reflections:0.9.10'
+	embed 'org.reflections:reflections:0.9.10'
 }
 
 processResources
@@ -48,4 +56,8 @@ processResources
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+}
+
+jar {
+    from configurations.embed.collect { it.isDirectory() ? it : zipTree(it) }
 }

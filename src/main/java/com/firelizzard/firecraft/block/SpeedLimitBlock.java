@@ -25,7 +25,7 @@ public class SpeedLimitBlock extends Block implements ITileEntityProvider {
 		super(FireCraftMaterials.speedLimit);
 		setHardness(0.3f);
 		setBlockName(NAME);
-		setCreativeTab(FireCraftMod.tab);
+		setCreativeTab(FireCraftMod.TAB);
 		setLightOpacity(3);
 	}
 

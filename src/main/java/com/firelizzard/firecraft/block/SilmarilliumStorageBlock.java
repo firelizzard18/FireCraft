@@ -15,9 +15,9 @@ public class SilmarilliumStorageBlock extends Block {
 		setHardness(5.0F);
 		setResistance(10.0F);
         setLightOpacity(0);
-        setLightLevel(15);
+        setLightLevel(1);
 		setStepSound(soundTypeMetal);
-		setCreativeTab(FireCraftMod.tab);
+		setCreativeTab(FireCraftMod.TAB);
 		setBlockName(FireCraftOres.SILMARILLIUM);
 
 		setHarvestLevel("pickaxe", 2);
@@ -30,6 +30,7 @@ public class SilmarilliumStorageBlock extends Block {
 	@Override
 	public boolean isOpaqueCube() {
 		return false;
+//		return true;
 	}
 
     @Override

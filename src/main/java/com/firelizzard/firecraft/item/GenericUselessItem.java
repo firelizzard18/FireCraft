@@ -43,7 +43,7 @@ public class GenericUselessItem extends Item {
 	public GenericUselessItem() {
 		super();
 		setMaxStackSize(64);
-		setCreativeTab(FireCraftMod.tab);
+		setCreativeTab(FireCraftMod.TAB);
 		setHasSubtypes(true);
 		setMaxDamage(0);
 	}

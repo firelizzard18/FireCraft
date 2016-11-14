@@ -15,10 +15,10 @@ public class SilmarilBlock extends BlockDragonEgg {
 	
 	public SilmarilBlock() {
 //        super(Material.dragonEgg);
-        setCreativeTab(FireCraftMod.tab);
+        setCreativeTab(FireCraftMod.TAB);
 //        setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 1.0F, 0.9375F);
-//        setLightOpacity(0);
-//        setLightLevel(15);
+        setLightOpacity(0);
+        setLightLevel(1);
         setBlockName(NAME);
     }
 	

@@ -13,7 +13,7 @@ public class FireCraftRenderingHandler implements ISimpleBlockRenderingHandler {
 	
 	@Override
 	public int getRenderId() {
-		return FireCraftMod.RENDERERID_1;
+		return FireCraftMod.RENDERERID_DEFAULT;
 	}
 	
 	@Override

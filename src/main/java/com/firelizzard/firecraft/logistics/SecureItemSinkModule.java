@@ -89,7 +89,7 @@ public class SecureItemSinkModule extends LogisticsGuiModule {
 	@Override
 	public void registerPosition(ModulePositionType slot, int positionInt) {
 		super.registerPosition(slot, positionInt);
-		_sinkReply = new SinkReply(FixedPriority.ItemSink, Integer.MAX_VALUE, true, false, 3, 0, new ChassiTargetInformation(getPositionInt()));
+		_sinkReply = new SinkReply(FixedPriority.ElectricBuffer, 1000, true, false, 5, 0, new ChassiTargetInformation(getPositionInt()));
 	}
 
 	@Override

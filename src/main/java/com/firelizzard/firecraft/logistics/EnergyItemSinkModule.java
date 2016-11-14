@@ -59,7 +59,7 @@ public class EnergyItemSinkModule extends LogisticsModule {
 	@Override
 	public void registerPosition(ModulePositionType slot, int positionInt) {
 		super.registerPosition(slot, positionInt);
-		_sinkReply = new SinkReply(FixedPriority.ElectricManager, Integer.MAX_VALUE, true, false, 3, 0, new ChassiTargetInformation(getPositionInt()));
+		_sinkReply = new SinkReply(FixedPriority.ElectricManager, Integer.MAX_VALUE, true, false, 5, 0, new ChassiTargetInformation(getPositionInt()));
 	}
 
 	@Override

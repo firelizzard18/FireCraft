@@ -3,15 +3,19 @@ package com.firelizzard.firecraft.block;
 import com.firelizzard.firecraft.FireCraftMod;
 import com.mojang.authlib.GameProfile;
 
+import codechicken.enderstorage.storage.item.ItemEnderPouch;
 import cofh.api.tileentity.ISecurable;
 import cofh.api.tileentity.ISecurable.AccessMode;
 import cofh.lib.util.helpers.SecurityHelper;
+import cofh.lib.util.helpers.ServerHelper;
 import cofh.thermalexpansion.item.ItemSatchel;
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import logisticspipes.items.ItemModule;
+import logisticspipes.items.ItemUpgrade;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockEnderChest;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -33,7 +37,36 @@ public class SecurityStationBlock extends Block {
 	public SecurityStationBlock() {
         super(Material.iron);
 		setBlockName(NAME);
-		setCreativeTab(FireCraftMod.tab);
+		setCreativeTab(FireCraftMod.TAB);
+	}
+	
+	private boolean isUnsafeToSecure(ItemStack stack) {
+		Item item = stack.getItem();
+		return item instanceof ItemModule || item instanceof ItemUpgrade;
+	}
+	
+	private boolean hasSecureRecipe(World world, ItemStack stack) {
+		Item item = stack.getItem();
+
+		if (item instanceof ISecurable || item instanceof ItemSatchel || item instanceof ItemEnderPouch)
+			return true;
+		
+		if (!(item instanceof ItemBlock))
+			return false;
+
+		Block block = ((ItemBlock)item).field_150939_a;
+
+		if (block instanceof ISecurable || block instanceof BlockEnderChest)
+			return true;
+		
+		TileEntity tile = block.createTileEntity(world, item.getDamage(stack));
+		if (tile == null)
+			return false;
+		
+		if (tile instanceof ISecurable)
+			return true;
+		
+		return false;
 	}
 	
 	private static IChatComponent getMessageTranslation(String msgId) {
@@ -48,7 +81,7 @@ public class SecurityStationBlock extends Block {
 	
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float xOffset, float yOffset, float zOffset) {
-		if (world.isRemote)
+		if (ServerHelper.isServerWorld(world))
 			return true;
 		
 //		SecurityStationTile tile = (SecurityStationTile)world.getTileEntity(x, y, z);
@@ -65,29 +98,14 @@ public class SecurityStationBlock extends Block {
 		if (stack == null)
 			return false;
 		
-		Item item = stack.getItem();
-		if (item instanceof ItemModule) {
+		if (isUnsafeToSecure(stack)) {
 			player.addChatMessage(getMessageTranslation("bad_stack"));
 			return true;
 		}
 
-		if (item instanceof ISecurable || item instanceof ItemSatchel) {
+		if (hasSecureRecipe(world, stack)) {
 			player.addChatMessage(getMessageTranslation("isecurable"));
 			return true;
-		}
-		
-		if (item instanceof ItemBlock) {
-			Block block = ((ItemBlock)item).field_150939_a;
-			if (block instanceof ISecurable) {
-				player.addChatMessage(getMessageTranslation("isecurable"));
-				return true;
-			}
-			
-			TileEntity tile = block.createTileEntity(world, item.getDamage(stack));
-			if (tile instanceof ISecurable) {
-				player.addChatMessage(getMessageTranslation("isecurable"));
-				return true;
-			}
 		}
 		
 		boolean isSecure = SecurityHelper.isSecure(stack);

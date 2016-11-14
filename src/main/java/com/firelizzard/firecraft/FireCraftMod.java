@@ -9,6 +9,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -16,20 +18,38 @@ import net.minecraft.item.Item;
 @Mod(modid = FireCraftMod.MODID, version = FireCraftMod.VERSION)
 public class FireCraftMod extends BaseMod {
 	public static final String MODID = "firecraft";
-	public static final String VERSION = "1.1";
+	public static final String VERSION = "1.1.1";
 	
-	public static final int RENDERERID_1 = 1;
+	public static final int RENDERERID_DEFAULT;
+	public static final int ENTITYID_PLASMA_BOLT;
+	public static final CreativeTabs TAB;
+	public static final SimpleNetworkWrapper NETWORK;
 	
-	private static final FireCraftMod inst = new FireCraftMod();
-
-	private static FakeDestroyerTool fakeDestroyer = new FakeDestroyerTool();
+	private static final FireCraftMod inst;
+	private static final FakeDestroyerTool fakeDestroyer;
 	
-	public static final CreativeTabs tab = new CreativeTabs("firecraft") {
-		@Override
-		public Item getTabIconItem() {
-			return fakeDestroyer;
-		}
-	};
+	static {
+		FakeDestroyerTool fakeDestroyerInst = new FakeDestroyerTool();
+		
+		inst = new FireCraftMod();
+		fakeDestroyer = fakeDestroyerInst;
+		
+		
+		int rID = 0;
+		RENDERERID_DEFAULT = rID++;
+		
+		int eID = 0;
+		ENTITYID_PLASMA_BOLT = eID++;
+		
+		
+		NETWORK = NetworkRegistry.INSTANCE.newSimpleChannel(MODID);
+		TAB = new CreativeTabs("firecraft") {
+			@Override
+			public Item getTabIconItem() {
+				return fakeDestroyerInst;
+			}
+		};
+	}
 	
 	@SidedProxy(
 		clientSide = "com.firelizzard.firecraft.initialization.FireCraftProxy$Client",
