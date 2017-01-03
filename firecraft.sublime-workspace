@@ -108,58 +108,59 @@
 	"buffers":
 	[
 		{
-			"contents": "\n  BRANCH:  On branch `master` tracking `origin/master`.\n           You're ahead by 2.\n  ROOT:    C:\\Users\\firelizzard\\Source\\FireCraft\n  HEAD:    2252cf8 Version bump\n\n  UNSTAGED:\n    build.gradle\n  - notlibs/MineTweaker3-1.7.10-3.0.10B.jar.nope\n  - notlibs/ModTweaker2-0.9.5.jar.nope\n    src/main/java/com/firelizzard/firecraft/FireCraftMod.java\n    src/main/java/com/firelizzard/firecraft/block/SecurityStationBlock.java\n    src/main/java/com/firelizzard/firecraft/logistics/EnergyItemSinkModule.java\n    src/main/java/com/firelizzard/firecraft/logistics/SecureItemSinkModule.java\n\n  UNTRACKED:\n    firecraft.sublime-project\n    firecraft.sublime-workspace\n    libs/ComputerCraft1.75.jar\n    libs/MineTweaker3-1.7.10-3.0.10B.jar\n    libs/ModTweaker2-0.9.5.jar\n\n  ###################                   ###############\n  ## SELECTED FILE ##                   ## ALL FILES ##\n  ###################                   ###############\n\n  [o] open file                         [a] stage all unstaged files\n  [s] stage file                        [A] stage all unstaged and untracked files\n  [u] unstage file                      [U] unstage all staged files\n  [d] discard changes to file           [D] discard all unstaged changes\n  [h] open file on remote\n  [M] launch external merge tool for conflict\n\n  [l] diff file inline                  [f] diff all files\n  [e] diff file                         [F] diff all cached files\n\n  #############                         #############\n  ## ACTIONS ##                         ## STASHES ##\n  #############                         #############\n\n  [c] commit                            [t][a] apply stash\n  [C] commit, including unstaged        [t][p] pop stash\n  [m] amend previous commit             [t][s] show stash\n  [P] push current branch               [t][c] create stash\n                                        [t][u] create stash including untracked files\n  [i] ignore file                       [t][d] discard stash\n  [I] ignore pattern\n\n  ###########\n  ## OTHER ##\n  ###########\n\n  [r]         refresh status\n  [?]         toggle this help menu\n  [tab]       transition to next dashboard\n  [SHIFT-tab] transition to previous dashboard\n  [.]         move cursor to next file\n  [,]         move cursor to previous file\n\n-\n\n",
+			"contents": "packages: vim, git",
 			"settings":
 			{
-				"buffer_size": 2276,
+				"buffer_size": 18,
 				"line_ending": "Unix",
-				"name": "STATUS: FireCraft",
+				"name": "packages: vim, git"
+			}
+		},
+		{
+			"contents": "\n  BRANCH:  On branch `master` tracking `origin/master`.\n  ROOT:    C:\\Users\\firelizzard\\Source\\erx-laurelin\n  HEAD:    d84dfba Bug fix\n\n    Your working directory is clean.\n\n  ###################                   ###############\n  ## SELECTED FILE ##                   ## ALL FILES ##\n  ###################                   ###############\n\n  [o] open file                         [a] stage all unstaged files\n  [s] stage file                        [A] stage all unstaged and untracked files\n  [u] unstage file                      [U] unstage all staged files\n  [d] discard changes to file           [D] discard all unstaged changes\n  [h] open file on remote\n  [M] launch external merge tool for conflict\n\n  [l] diff file inline                  [f] diff all files\n  [e] diff file                         [F] diff all cached files\n\n  #############                         #############\n  ## ACTIONS ##                         ## STASHES ##\n  #############                         #############\n\n  [c] commit                            [t][a] apply stash\n  [C] commit, including unstaged        [t][p] pop stash\n  [m] amend previous commit             [t][s] show stash\n  [P] push current branch               [t][c] create stash\n                                        [t][u] create stash including untracked files\n  [i] ignore file                       [t][d] discard stash\n  [I] ignore pattern\n\n  ###########\n  ## OTHER ##\n  ###########\n\n  [r]         refresh status\n  [?]         toggle this help menu\n  [tab]       transition to next dashboard\n  [SHIFT-tab] transition to previous dashboard\n  [.]         move cursor to next file\n  [,]         move cursor to previous file\n\n-\n\n",
+			"settings":
+			{
+				"buffer_size": 1687,
+				"line_ending": "Unix",
+				"name": "STATUS: erx-laurelin",
 				"read_only": true,
 				"scratch": true
 			}
 		},
 		{
-			"contents": "logistics deadlock\n\nI'm developing a simple mod ([FireCraft](https://github.com/firelizzard18/FireCraft)). This mod is not intended for use anywhere besides my personal server. I've created a couple itemsink modules. This may be a terrible idea, but I'm not distributing this mod (other than as source on github) so I won't break anyone else's server by being dumb.\n\nI used\nI may have done something funny to my test world, but when I right click on a chassis (Mk I) with my destroyer tool, the client hangs. The offending line is [here](https://github.com/RS485/LogisticsPipes/blob/b7a0b9bb2a3ebe2837460aea74b815d77fb0396b/common/logisticspipes/utils/item/ItemIdentifier.java#L301)\n\n```Java\n// ItemIdentifier.getOrCreateTag line:301\nItemIdentifier.keyRefRlock.lock();\n```\n\nThe other logistics threads are all blocked on various kinds of synchronous collections. I don't think it's the routing table update or server/client compressor/decompressor threads, as those all look effectively idle. The only thing that looks at all relevant is the ItemIdentifier Cleanup thread, which is blocked [here](https://github.com/RS485/LogisticsPipes/blob/b7a0b9bb2a3ebe2837460aea74b815d77fb0396b/common/logisticspipes/utils/item/ItemIdentifier.java#L207), though it still doesn't make a ton of sense:\n\n```Java\n// ItemIdentifier$ItemIdentifierCleanupThread.run line:207\nr = (IDReference) (ItemIdentifier.keyRefQueue.remove());\n```\n\nI've set up my [destroyer tool](https://github.com/firelizzard18/FireCraft/blob/07d4e9a4821a0f9318ed916c6300755d1880146c/src/main/java/com/firelizzard/firecraft/item/DestroyerTool.java) to open the GUI of any machine-type block on right click. The following is the code that does this for logistics objects:\n\n```Java\nboolean onItemUse_logisticsPipe(ItemStack stack, EntityPlayer player, World world, LogisticsBlockGenericPipe block, int x, int y, int z, int hitSide) {\n\tCoreUnroutedPipe pipe = LogisticsBlockGenericPipe.getPipe(world, x, y, z);\n\t\n\tif (!LogisticsBlockGenericPipe.isValid(pipe))\n\t\treturn false;\n\t\n\tif (!(pipe instanceof CoreRoutedPipe))\n\t\treturn false;\n\t\n\tCoreRoutedPipe rpipe = (CoreRoutedPipe)pipe;\n\tif (!(rpipe.getLogisticsModule() instanceof LogisticsGuiModule))\n\t\treturn false;\n\n\tLogisticsGuiModule gui = (LogisticsGuiModule)rpipe.getLogisticsModule();\n\tgui.getPipeGuiProviderForModule().setTilePos(pipe.getContainer()).open(player);\n\treturn true;\n}\n```\n\nJust for good measure, my [secure itemsink](https://github.com/firelizzard18/FireCraft/blob/07d4e9a4821a0f9318ed916c6300755d1880146c/src/main/java/com/firelizzard/firecraft/logistics/SecureItemSinkModule.java) seems to be causing other issues (null NBT values), though I restarted the client and the destroyer right click issue still happens (and its the first thing I did).\n\nThe following is how I register my itemsink module (from [here](https://github.com/firelizzard18/FireCraft/blob/07d4e9a4821a0f9318ed916c6300755d1880146c/src/main/java/com/firelizzard/firecraft/initialization/FireCraftLogisticsIntegration.java#L23)):\n\n```Java\n// FireCraftLogisticsIntegration.postInit line:23\nLogisticsPipes.ModuleItem.registerModule(1000, SecureItemSinkModule.class);\n```\n",
+			"file": "/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.def",
 			"settings":
 			{
-				"buffer_size": 3158,
+				"buffer_size": 52,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "cofh lib error\n\njava.lang.NullPointerException: Unexpected error\n\tat cofh.lib.util.helpers.BlockHelper.createStackedBlock(BlockHelper.java:565)\n\tat cofh.lib.util.helpers.BlockHelper.breakBlock(BlockHelper.java:540)\n\tat com.firelizzard.firecraft.item.DestroyerTool.func_77648_a(DestroyerTool.java:329)\n\tat net.minecraft.item.ItemStack.func_77943_a(ItemStack.java:129)\n\tat net.minecraft.client.multiplayer.PlayerControllerMP.func_78760_a(PlayerControllerMP.java:360)\n\tat net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1447)\n\tat net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1953)\n\tat net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:973)\n\tat net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:898)\n\tat net.minecraft.client.main.Main.main(SourceFile:148)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:483)\n\tat net.minecraft.launchwrapper.Launch.launch(Launch.java:135)\n\tat net.minecraft.launchwrapper.Launch.main(Launch.java:28)",
+			"file": "/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/domain/node.def",
 			"settings":
 			{
-				"buffer_size": 1208,
+				"buffer_size": 22,
+				"encoding": "UTF-8",
 				"line_ending": "Unix",
-				"name": "cofh lib error"
+				"name": "type: txt"
 			}
 		},
 		{
-			"contents": "logistics error\n\n[20:18:54] [Server thread/ERROR] [FML]: PacketInboundHandler exception\njava.lang.IllegalArgumentException: Comparison method violates its general contract!\n        at java.util.TimSort.mergeLo(TimSort.java:777) ~[?:1.8.0_91]\n        at java.util.TimSort.mergeAt(TimSort.java:514) ~[?:1.8.0_91]\n        at java.util.TimSort.mergeCollapse(TimSort.java:441) ~[?:1.8.0_91]\n        at java.util.TimSort.sort(TimSort.java:245) ~[?:1.8.0_91]\n        at java.util.Arrays.sort(Arrays.java:1512) ~[?:1.8.0_91]\n        at java.util.ArrayList.sort(ArrayList.java:1454) ~[?:1.8.0_91]\n        at java.util.Collections.sort(Collections.java:175) ~[?:1.8.0_91]\n        at logisticspipes.request.RequestTreeNode.getProviders(RequestTreeNode.java:304) ~[RequestTreeNode.class:0.9.3.local]\n        at logisticspipes.request.RequestTreeNode.checkProvider(RequestTreeNode.java:272) ~[RequestTreeNode.class:0.9.3.local]\n        at logisticspipes.request.RequestTreeNode.<init>(RequestTreeNode.java:48) ~[RequestTreeNode.class:0.9.3.local]\n        at logisticspipes.request.RequestTreeNode.<init>(RequestTreeNode.java:31) ~[RequestTreeNode.class:0.9.3.local]\n        at logisticspipes.request.RequestTree.<init>(RequestTree.java:43) ~[RequestTree.class:0.9.3.local]\n        at logisticspipes.request.RequestTree.request(RequestTree.java:177) ~[RequestTree.class:0.9.3.local]\n        at logisticspipes.request.RequestTree.request(RequestTree.java:202) ~[RequestTree.class:0.9.3.local]\n        at logisticspipes.request.RequestHandler.request(RequestHandler.java:48) ~[RequestHandler.class:0.9.3.local]\n        at logisticspipes.network.packets.orderer.RequestSubmitPacket.processPacket(RequestSubmitPacket.java:29) ~[RequestSubmitPacket.class:0.9.3.local]\n        at logisticspipes.network.PacketInboundHandler.channelRead0(PacketInboundHandler.java:21) ~[PacketInboundHandler.class:0.9.3.local]\n        at logisticspipes.network.PacketInboundHandler.channelRead0(PacketInboundHandler.java:16) ~[PacketInboundHandler.class:0.9.3.local]\n        at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:98) ~[SimpleChannelInboundHandler.class:?]\n        at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:337) [DefaultChannelHandlerContext.class:?]\n        at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:323) [DefaultChannelHandlerContext.class:?]\n        at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) [MessageToMessageDecoder.class:?]\n        at io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111) [MessageToMessageCodec.class:?]\n        at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:337) [DefaultChannelHandlerContext.class:?]\n        at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:323) [DefaultChannelHandlerContext.class:?]\n        at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) [DefaultChannelPipeline.class:?]\n        at io.netty.channel.embedded.EmbeddedChannel.writeInbound(EmbeddedChannel.java:169) [EmbeddedChannel.class:?]\n        at cpw.mods.fml.common.network.internal.FMLProxyPacket.func_148833_a(FMLProxyPacket.java:77) [FMLProxyPacket.class:?]\n        at net.minecraft.network.NetworkManager.func_74428_b(NetworkManager.java:212) [ej.class:?]\n        at net.minecraft.network.NetworkSystem.func_151269_c(NetworkSystem.java:165) [nc.class:?]\n        at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:659) [MinecraftServer.class:?]\n        at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:334) [lt.class:?]\n        at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:547) [MinecraftServer.class:?]\n        at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:427) [MinecraftServer.class:?]\n        at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685) [li.class:?]\n[20:18:54] [Server thread/ERROR] [FML]: There was a critical exception handling a packet on channel LogisticsPipes\njava.lang.IllegalArgumentException: Comparison method violates its general contract!\n        at java.util.TimSort.mergeLo(TimSort.java:777) ~[?:1.8.0_91]\n        at java.util.TimSort.mergeAt(TimSort.java:514) ~[?:1.8.0_91]\n        at java.util.TimSort.mergeCollapse(TimSort.java:441) ~[?:1.8.0_91]\n        at java.util.TimSort.sort(TimSort.java:245) ~[?:1.8.0_91]\n        at java.util.Arrays.sort(Arrays.java:1512) ~[?:1.8.0_91]\n        at java.util.ArrayList.sort(ArrayList.java:1454) ~[?:1.8.0_91]\n        at java.util.Collections.sort(Collections.java:175) ~[?:1.8.0_91]\n        at logisticspipes.request.RequestTreeNode.getProviders(RequestTreeNode.java:304) ~[RequestTreeNode.class:0.9.3.local]\n        at logisticspipes.request.RequestTreeNode.checkProvider(RequestTreeNode.java:272) ~[RequestTreeNode.class:0.9.3.local]\n        at logisticspipes.request.RequestTreeNode.<init>(RequestTreeNode.java:48) ~[RequestTreeNode.class:0.9.3.local]\n        at logisticspipes.request.RequestTreeNode.<init>(RequestTreeNode.java:31) ~[RequestTreeNode.class:0.9.3.local]\n        at logisticspipes.request.RequestTree.<init>(RequestTree.java:43) ~[RequestTree.class:0.9.3.local]\n        at logisticspipes.request.RequestTree.request(RequestTree.java:177) ~[RequestTree.class:0.9.3.local]\n        at logisticspipes.request.RequestTree.request(RequestTree.java:202) ~[RequestTree.class:0.9.3.local]\n        at logisticspipes.request.RequestHandler.request(RequestHandler.java:48) ~[RequestHandler.class:0.9.3.local]\n        at logisticspipes.network.packets.orderer.RequestSubmitPacket.processPacket(RequestSubmitPacket.java:29) ~[RequestSubmitPacket.class:0.9.3.local]\n        at logisticspipes.network.PacketInboundHandler.channelRead0(PacketInboundHandler.java:21) ~[PacketInboundHandler.class:0.9.3.local]\n        at logisticspipes.network.PacketInboundHandler.channelRead0(PacketInboundHandler.java:16) ~[PacketInboundHandler.class:0.9.3.local]\n        at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:98) ~[SimpleChannelInboundHandler.class:?]\n        at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:337) ~[DefaultChannelHandlerContext.class:?]\n        at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:323) ~[DefaultChannelHandlerContext.class:?]\n        at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[MessageToMessageDecoder.class:?]\n        at io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111) ~[MessageToMessageCodec.class:?]\n        at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:337) ~[DefaultChannelHandlerContext.class:?]\n        at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:323) ~[DefaultChannelHandlerContext.class:?]\n        at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) ~[DefaultChannelPipeline.class:?]\n        at io.netty.channel.embedded.EmbeddedChannel.writeInbound(EmbeddedChannel.java:169) ~[EmbeddedChannel.class:?]\n        at cpw.mods.fml.common.network.internal.FMLProxyPacket.func_148833_a(FMLProxyPacket.java:77) [FMLProxyPacket.class:?]\n        at net.minecraft.network.NetworkManager.func_74428_b(NetworkManager.java:212) [ej.class:?]\n        at net.minecraft.network.NetworkSystem.func_151269_c(NetworkSystem.java:165) [nc.class:?]\n        at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:659) [MinecraftServer.class:?]\n        at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:334) [lt.class:?]\n        at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:547) [MinecraftServer.class:?]\n        at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:427) [MinecraftServer.class:?]\n        at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685) [li.class:?]",
+			"file": "/C/Users/firelizzard/Source/erx-laurelin/scripts/pre-config.d/setup-templates.script",
 			"settings":
 			{
-				"buffer_size": 8350,
-				"line_ending": "Unix",
-				"name": "logistics error"
+				"buffer_size": 742,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "cofh error\n\njava.lang.IllegalAccessError: tried to access class cofh.api.transport.IEnderAttuned from class cofh.lib.transport.EnderRegistry\n\tat cofh.lib.transport.EnderRegistry.addHandler(EnderRegistry.java:265) ~[EnderRegistry.class:?]\n\tat cofh.lib.transport.EnderRegistry.addItemHandler(EnderRegistry.java:281) ~[EnderRegistry.class:?]\n\tat cofh.lib.transport.EnderRegistry.add(EnderRegistry.java:380) ~[EnderRegistry.class:?]\n\tat cofh.thermalexpansion.block.ender.TileTesseract.addToRegistry(TileTesseract.java:247) ~[TileTesseract.class:?]\n\tat cofh.thermalexpansion.block.ender.TileTesseract.validate(TileTesseract.java:152) ~[TileTesseract.class:?]\n\tat net.minecraft.world.chunk.Chunk.func_150812_a(Chunk.java:969) ~[Chunk.class:?]\n\tat net.minecraft.world.chunk.Chunk.addTileEntity(Chunk.java:945) ~[Chunk.class:?]\n\tat net.minecraft.world.chunk.storage.AnvilChunkLoader.loadEntities(AnvilChunkLoader.java:529) ~[AnvilChunkLoader.class:?]\n\tat net.minecraftforge.common.chunkio.ChunkIOProvider.callStage2(ChunkIOProvider.java:41) ~[ChunkIOProvider.class:?]\n\tat net.minecraftforge.common.chunkio.ChunkIOProvider.callStage2(ChunkIOProvider.java:12) ~[ChunkIOProvider.class:?]\n\tat net.minecraftforge.common.util.AsynchronousExecutor.skipQueue(AsynchronousExecutor.java:344) ~[AsynchronousExecutor.class:?]\n\tat net.minecraftforge.common.util.AsynchronousExecutor.getSkipQueue(AsynchronousExecutor.java:302) ~[AsynchronousExecutor.class:?]\n\tat net.minecraftforge.common.chunkio.ChunkIOExecutor.syncChunkLoad(ChunkIOExecutor.java:12) ~[ChunkIOExecutor.class:?]\n\tat net.minecraft.world.gen.ChunkProviderServer.loadChunk(ChunkProviderServer.java:144) ~[ChunkProviderServer.class:?]\n\tat net.minecraft.world.gen.ChunkProviderServer.loadChunk(ChunkProviderServer.java:119) ~[ChunkProviderServer.class:?]\n\tat net.minecraft.server.MinecraftServer.initialWorldChunkLoad(MinecraftServer.java:305) ~[MinecraftServer.class:?]\n\tat net.minecraft.server.integrated.IntegratedServer.loadAllWorlds(IntegratedServer.java:79) ~[IntegratedServer.class:?]\n\tat net.minecraft.server.integrated.IntegratedServer.startServer(IntegratedServer.java:96) ~[IntegratedServer.class:?]\n\tat net.minecraft.server.MinecraftServer.run(MinecraftServer.java:445) [MinecraftServer.class:?]\n\tat net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752) [MinecraftServer$2.class:?]",
+			"contents": "git filter-branch --env-filter '\nOLD_EMAIL=\"root@Laurelin.firelizzard.local\"\nCORRECT_NAME=\"Ethan Reesor\"\nCORRECT_EMAIL=\"firelizzard+erx-laurelin@gmail.com\"\nif [ \"$GIT_COMMITTER_EMAIL\" = \"$OLD_EMAIL\" ]\nthen\n    export GIT_COMMITTER_NAME=\"$CORRECT_NAME\"\n    export GIT_COMMITTER_EMAIL=\"$CORRECT_EMAIL\"\nfi\nif [ \"$GIT_AUTHOR_EMAIL\" = \"$OLD_EMAIL\" ]\nthen\n    export GIT_AUTHOR_NAME=\"$CORRECT_NAME\"\n    export GIT_AUTHOR_EMAIL=\"$CORRECT_EMAIL\"\nfi\n' --tag-name-filter cat -- --branches --tags",
 			"settings":
 			{
-				"buffer_size": 2349,
+				"buffer_size": 485,
 				"line_ending": "Unix",
-				"name": "cofh error"
-			}
-		},
-		{
-			"contents": "IN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=1126 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=1106\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=194 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=174\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=69 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=49\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=60 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=40\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=104 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=84\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=138 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=118\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=207 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=187\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=60 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=40\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=104 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=84\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=138 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=118\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=207 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=187\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=60 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=40\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=104 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=84\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=138 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=118\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=207 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=187\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=236 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=216\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=69 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=49\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=190 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=170\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=843 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=823\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=973 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=953\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=236 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=216\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=69 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=49\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=973 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=953\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=1126 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=1106\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.251 LEN=69 TOS=0x00 PREC=0x00 TTL=255 ID=0 DF PROTO=UDP SPT=5353 DPT=5353 LEN=49\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=255.255.255.255 LEN=32 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=54194 DPT=10001 LEN=12\nIN=eth0 OUT= MAC= SRC=23.243.25.102 DST=255.255.255.255 LEN=178 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=50763 DPT=54616 LEN=158\n\n4: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000\n    link/ether 80:2a:a8:5f:5f:4d brd ff:ff:ff:ff:ff:ff\n    inet 23.243.25.102/19 brd 255.255.255.255 scope global eth0\n       valid_lft forever preferred_lft forever\n    inet6 fe80::822a:a8ff:fe5f:5f4d/64 scope link\n       valid_lft forever preferred_lft forever",
-			"settings":
-			{
-				"buffer_size": 3897,
-				"line_ending": "Unix",
-				"name": "IN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.25"
+				"name": "git filter-branch --env-filter '"
 			}
 		}
 	],
@@ -170,10 +171,30 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 104.0,
-		"last_filter": "wrap",
+		"height": 196.0,
+		"last_filter": "git pul",
 		"selected_items":
 		[
+			[
+				"git pul",
+				"git: pull"
+			],
+			[
+				"git statu",
+				"git: status"
+			],
+			[
+				"graph",
+				"git: graph"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
 			[
 				"wrap",
 				"Word Wrap: Toggle"
@@ -207,23 +228,15 @@
 				"Set Syntax: Perl"
 			],
 			[
-				"indent",
-				"Indentation: Reindent Lines"
-			],
-			[
 				"javasc",
 				"Set Syntax: JavaScript"
-			],
-			[
-				"java",
-				"Set Syntax: Java"
 			],
 			[
 				"xml",
 				"Set Syntax: XML"
 			]
 		],
-		"width": 432.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -243,10 +256,77 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/firelizzard/Source/FireCraft"
+		"/C/Users/firelizzard/Source/erx-laurelin",
+		"/C/Users/firelizzard/Source/erx-laurelin/scripts",
+		"/C/Users/firelizzard/Source/erx-laurelin/scripts/post-config.d",
+		"/C/Users/firelizzard/Source/erx-laurelin/scripts/pre-config.d",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/domain",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/options/bogus-priv",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/options/domain-needed",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/options/no-hosts",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/options/no-resolv",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/host/node.tag",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/mail-exchange/node.tag",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/service",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/service/node.tag",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/service/node.tag/port"
 	],
 	"file_history":
 	[
+		"/C/Users/firelizzard/Source/erx-laurelin/config.boot",
+		"/C/Users/firelizzard/Source/erx-laurelin/scripts/pre-config.d/setup-templates.script",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/bind/local/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/bind/except-interface/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/bind/interface/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/bind/address/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/bind/dynamic/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/bind/interfaces/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/upstream/source/interface/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/upstream/source/address/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/upstream/address/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/upstream/domain/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/upstream/port/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/upstream/source/port/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/options/bogus-priv/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/port/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/options/domain-needed/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/options/no-hosts/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/options/no-resolv/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/host/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/canonical-name/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/mail-exchange/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/pointer/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/SRV/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/text/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/TXT/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/MX/node.tag/hostname/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/MX/node.tag/preference/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/SRV/node.tag/weight/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/SRV/node.tag/priority/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/SRV/node.tag/target/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/SRV/node.tag/port/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/A/node.tag/ipv6/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/A/node.tag/ipv4/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/A/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/TXT/node.tag/string/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/CNAME/node.tag/ttl/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/PTR/node.tag/target/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/records/CNAME/node.tag/target/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/upstream/source/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/record/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/bind/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/upstream/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/options/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.def",
+		"/C/Users/firelizzard/Source/erx-laurelin/scripts/post-config.d/iptables_raw.script",
+		"/C/Users/firelizzard/Source/erx-laurelin/scripts/post-config.d/install_packages.script",
+		"/C/Users/firelizzard/AppData/Roaming/.minecraft/dynmap/texturepacks/standard/README",
+		"/C/Users/firelizzard/Downloads/ethan.conf",
 		"/C/Users/firelizzard/Source/FireCraft/eclipse/scripts/no-turtles.zs",
 		"/C/Users/firelizzard/Source/FireCraft/build.gradle",
 		"/C/Program Files (x86)/Steam/steamapps/common/Starbound/storage/player/8b8f42d75b934f27531d8d4c4101c1cc.player",
@@ -326,7 +406,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -345,6 +425,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Search",
+			"\\s\\d+",
+			"clamp",
 			"TOS",
 			"Laurelin",
 			"skipping",
@@ -436,28 +519,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2276,
+						"buffer_size": 18,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								181,
-								181
+								18,
+								18
 							]
 						],
 						"settings":
 						{
-							"__vi_external_disable": false,
-							"git_savvy.help_hidden": false,
-							"git_savvy.interface": "status",
+							"auto_name": "packages: vim, git",
 							"git_savvy.repo_path": "C:\\Users\\firelizzard\\Source\\FireCraft",
-							"git_savvy.status_view": true,
-							"git_savvy.tabbable": true,
-							"syntax": "Packages/GitSavvy/syntax/status.sublime-syntax",
-							"tab_size": 2,
-							"word_wrap": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -471,21 +548,28 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3158,
+						"buffer_size": 1687,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18,
-								18
+								198,
+								198
 							]
 						],
 						"settings":
 						{
-							"git_savvy.repo_path": "C:\\Users\\firelizzard\\Source\\FireCraft",
-							"syntax": "Packages/Markdown/MultiMarkdown.sublime-syntax"
+							"__vi_external_disable": false,
+							"git_savvy.help_hidden": false,
+							"git_savvy.interface": "status",
+							"git_savvy.repo_path": "C:\\Users\\firelizzard\\Source\\erx-laurelin",
+							"git_savvy.status_view": true,
+							"git_savvy.tabbable": true,
+							"syntax": "Packages/GitSavvy/syntax/status.sublime-syntax",
+							"tab_size": 2,
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -496,57 +580,56 @@
 				},
 				{
 					"buffer": 2,
-					"semi_transient": false,
+					"file": "/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.def",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1208,
+						"buffer_size": 52,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14,
-								14
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_name": "cofh lib error",
-							"git_savvy.repo_path": "C:\\Users\\firelizzard\\Source\\FireCraft",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"git_savvy.file_path": "C:\\Users\\firelizzard\\Source\\erx-laurelin\\templates\\service\\alt-dns\\node.def",
+							"git_savvy.repo_path": "C:\\Users\\firelizzard\\Source\\erx-laurelin",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "/C/Users/firelizzard/Source/erx-laurelin/templates/service/alt-dns/node.tag/domain/node.def",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8350,
+						"buffer_size": 22,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15,
-								10
+								22,
+								22
 							]
 						],
 						"settings":
 						{
-							"auto_name": "logistics error",
+							"auto_name": "type: txt",
 							"git_savvy.repo_path": "C:\\Users\\firelizzard\\Source\\FireCraft",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 8,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -557,31 +640,33 @@
 				},
 				{
 					"buffer": 4,
+					"file": "/C/Users/firelizzard/Source/erx-laurelin/scripts/pre-config.d/setup-templates.script",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2349,
+						"buffer_size": 742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								2349
+								368,
+								368
 							]
 						],
 						"settings":
 						{
-							"auto_name": "cofh error",
-							"git_savvy.repo_path": "C:\\Users\\firelizzard\\Source\\FireCraft",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"git_savvy.file_path": "C:\\Users\\firelizzard\\Source\\erx-laurelin\\scripts\\pre-config.d\\setup-templates.script",
+							"git_savvy.repo_path": "C:\\Users\\firelizzard\\Source\\erx-laurelin",
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 21.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -589,23 +674,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3897,
+						"buffer_size": 485,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3715,
-								3699
+								0,
+								485
 							]
 						],
 						"settings":
 						{
-							"auto_name": "IN=eth0 OUT= MAC= SRC=23.243.25.102 DST=224.0.0.25",
+							"auto_name": "git filter-branch --env-filter '",
 							"git_savvy.repo_path": "C:\\Users\\firelizzard\\Source\\FireCraft",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -656,11 +740,15 @@
 	{
 		"height": 0.0
 	},
+	"output.show_commit_info":
+	{
+		"height": 118.0
+	},
 	"pinned_build_system": "",
 	"project": "firecraft.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

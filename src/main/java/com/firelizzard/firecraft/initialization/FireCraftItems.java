@@ -5,31 +5,45 @@ import com.firelizzard.firecraft.item.DestroyerTool;
 import com.firelizzard.firecraft.item.GenericUselessItem;
 import com.rwtema.extrautils.ExtraUtils;
 
+import cofh.lib.util.helpers.ItemHelper;
 import cofh.thermaldynamics.duct.TDDucts;
 import cofh.thermalexpansion.block.TEBlocks;
 import cofh.thermalexpansion.block.dynamo.BlockDynamo;
 import cofh.thermalexpansion.item.ItemCapacitor;
 import cofh.thermalexpansion.item.TEItems;
+import cofh.thermalexpansion.util.crafting.FurnaceManager;
+import cofh.thermalexpansion.util.crafting.PulverizerManager;
+import cofh.thermalexpansion.util.crafting.SmelterManager;
 import cofh.thermalfoundation.item.TFItems;
 import cpw.mods.fml.common.registry.GameRegistry;
+import mods.railcraft.common.items.RailcraftToolItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.oredict.OreDictionary;
 import tconstruct.TConstruct;
 import tconstruct.library.TConstructRegistry;
 
 @Initialization
 public class FireCraftItems {
-	public static GenericUselessItem useless = new GenericUselessItem();
-	public static DestroyerTool destroyer = new DestroyerTool();
-
-	public static ItemStack magnetron = new ItemStack(useless, 1, GenericUselessItem.MAGNETRON_META);
-	public static ItemStack destroyerCore = new ItemStack(useless, 1, GenericUselessItem.DESTROYERCORE_META);
-	public static ItemStack silmarilliumIngot = new ItemStack(useless, 1, GenericUselessItem.SILMARILLIUMINGOT_META);
-	public static ItemStack elementiumIngot = new ItemStack(useless, 1, GenericUselessItem.ELEMENTIUM_META);
+	public final static GenericUselessItem useless = new GenericUselessItem();
+	public final static DestroyerTool destroyer = new DestroyerTool();
+	
+	public final static ItemStack[] useless_stacks = new ItemStack[GenericUselessItem.Items.values().length];
+	public final static ItemStack magnetron, destroyerCore, silmarilliumIngot, elementiumIngot, carborundum, pulverizedCoke;
 
 	static {
-		GameRegistry.registerItem(useless, GenericUselessItem.USELESS_NAME);
+		for (int i = 0; i < useless_stacks.length; i++)
+			useless_stacks[i] = new ItemStack(useless, 1, GenericUselessItem.Items.values()[i].getMeta());
+		
+		magnetron = GenericUselessItem.Items.MAGNETRON.getStack();
+		destroyerCore = GenericUselessItem.Items.DESTROYER_CORE.getStack();
+		silmarilliumIngot = GenericUselessItem.Items.SILMARILLIUM_INGOT.getStack();
+		elementiumIngot = GenericUselessItem.Items.ELEMENTIUM.getStack();
+		carborundum = GenericUselessItem.Items.CARBORUNDUM.getStack();
+		pulverizedCoke = GenericUselessItem.Items.PULVERIZED_COKE.getStack();
+		
+		GameRegistry.registerItem(useless, GenericUselessItem.Items.USELESS.getName());
 		GameRegistry.registerItem(destroyer, DestroyerTool.NAME);
 	}
 
@@ -70,7 +84,7 @@ public class FireCraftItems {
 				"CDE",
 				"FGH",
 				'A', Items.diamond,
-				'B', ExtraUtils.ethericSword,
+				'B', ExtraUtils.lawSword,
 				'C', ExtraUtils.erosionShovel,
 				'D', destroyerCore,
 				'E', ExtraUtils.destructionPickaxe,
@@ -83,5 +97,18 @@ public class FireCraftItems {
 				new FluidStack(FireCraftFluids.silmarillium, TConstruct.ingotLiquidValue),
 				TConstructRegistry.getItemStack("ingotCast"),
 				100);
+		
+		PulverizerManager.addRecipe(2400, RailcraftToolItems.getCoalCoke(), pulverizedCoke);
+		SmelterManager.addAlloyRecipe(2400, "sand", 1, "dustCoke", 1, carborundum);
+		SmelterManager.addAlloyRecipe(2400, "sand", 1, "dustCoal", 1, carborundum);
+		SmelterManager.addAlloyRecipe(2400, "sand", 1, "dustCharcoal", 1, carborundum);
+
+		ItemStack ingotSteel = ItemHelper.cloneStack(OreDictionary.getOres("ingotSteel").get(0), 1);
+		SmelterManager.addAlloyRecipe(4000, "dustCoke", 1, "dustSteel", 1, ingotSteel);
+		SmelterManager.addAlloyRecipe(4000, "dustCoke", 1, "dustIron", 1, ingotSteel);
+		SmelterManager.addAlloyRecipe(4000, "dustCoke", 1, "ingotIron", 1, ingotSteel);
+		
+		ItemStack ingotGraphite = ItemHelper.cloneStack(OreDictionary.getOres("ingotGraphite").get(0), 1);
+		FurnaceManager.addRecipe(4000, carborundum, ingotGraphite, false);
 	}
 }

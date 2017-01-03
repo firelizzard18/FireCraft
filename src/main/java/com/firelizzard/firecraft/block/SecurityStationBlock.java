@@ -23,6 +23,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
@@ -104,8 +105,12 @@ public class SecurityStationBlock extends Block {
 		}
 
 		if (hasSecureRecipe(world, stack)) {
-			player.addChatMessage(getMessageTranslation("isecurable"));
-			return true;
+			if (player.capabilities.isCreativeMode)
+				player.addChatMessage(new ChatComponentText("You're a cheaty cheat"));
+			else {
+				player.addChatMessage(getMessageTranslation("isecurable"));
+				return true;
+			}
 		}
 		
 		boolean isSecure = SecurityHelper.isSecure(stack);

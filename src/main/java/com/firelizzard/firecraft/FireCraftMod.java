@@ -18,9 +18,8 @@ import net.minecraft.item.Item;
 @Mod(modid = FireCraftMod.MODID, version = FireCraftMod.VERSION)
 public class FireCraftMod extends BaseMod {
 	public static final String MODID = "firecraft";
-	public static final String VERSION = "1.1.1";
+	public static final String VERSION = "1.3";
 	
-	public static final int RENDERERID_DEFAULT;
 	public static final int ENTITYID_PLASMA_BOLT;
 	public static final CreativeTabs TAB;
 	public static final SimpleNetworkWrapper NETWORK;
@@ -34,9 +33,6 @@ public class FireCraftMod extends BaseMod {
 		inst = new FireCraftMod();
 		fakeDestroyer = fakeDestroyerInst;
 		
-		
-		int rID = 0;
-		RENDERERID_DEFAULT = rID++;
 		
 		int eID = 0;
 		ENTITYID_PLASMA_BOLT = eID++;

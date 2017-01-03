@@ -2,7 +2,6 @@ package com.firelizzard.firecraft.block;
 
 import com.firelizzard.firecraft.FireCraftMod;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockDragonEgg;
@@ -11,7 +10,7 @@ import net.minecraft.world.IBlockAccess;
 
 public class SilmarilBlock extends BlockDragonEgg {
 	public static final String NAME = "silmaril";
-	public static final int RENDERID = RenderingRegistry.getNextAvailableRenderId();
+//	public static final SimlarilBlockRender RENDERER = new SimlarilBlockRender();
 	
 	public SilmarilBlock() {
 //        super(Material.dragonEgg);
@@ -32,6 +31,13 @@ public class SilmarilBlock extends BlockDragonEgg {
 		return false;
 	}
 	
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return 1;
+    }
+	
 	@Override
 	public boolean renderAsNormalBlock() {
 		return false;
@@ -48,6 +54,6 @@ public class SilmarilBlock extends BlockDragonEgg {
     public int getRenderType()
     {
 		return 27;
-//        return RENDERID;
+//        return RENDERER.getRenderId();
     }
 }

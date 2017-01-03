@@ -23,7 +23,7 @@ public class SecureItemSinkGui extends ModuleBaseGui {
 		this.player = player;
 		this.module = module;
 		xSize = 160;
-		ySize = 200;
+		ySize = 60;
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -31,17 +31,14 @@ public class SecureItemSinkGui extends ModuleBaseGui {
 	public void initGui() {
 		super.initGui();
 
-		int left = width / 2 - xSize / 2;
-		int top = height / 2 - ySize / 2;
-
-		buttonList.add(new GuiButton(0, left + 60, top + 90, 40, 20, "Claim"));
+		buttonList.add(new GuiButton(0, guiLeft + 60, guiTop + 30, 40, 20, "Claim"));
 	}
 	
 	@Override
 	protected void actionPerformed(GuiButton guibutton) {
-		GameProfile name = player.getGameProfile();
-		module.setOwnerUUID(name.getId());
-		module.setOwnerName(name.getName());
+		GameProfile profile = player.getGameProfile();
+		module.setOwnerUUID(profile.getId());
+		module.setOwnerName(profile.getName());
 		
 		SecureItemSinkPacket packet = PacketHandler.getPacket(SecureItemSinkPacket.class);
 		packet.setOwnerUUID(module.getOwnerUUID());
@@ -56,11 +53,15 @@ public class SecureItemSinkGui extends ModuleBaseGui {
 
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float f, int x, int y) {
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		mc.renderEngine.bindTexture(TEXTURE);
-		int j = guiLeft;
-		int k = guiTop;
-		//drawRect(width/2 - xSize / 2, height / 2 - ySize /2, width/2 + xSize / 2, height / 2 + ySize /2, 0xFF404040);
-		drawTexturedModalRect(j, k, 0, 0, xSize, ySize);
+		logisticspipes.utils.gui.GuiGraphics.drawGuiBackGround(mc, guiLeft, guiTop, xSize + guiLeft, ySize + guiTop, 0, true);
+	}
+	
+	@Override
+	protected void drawGuiContainerForegroundLayer(int p1, int p2) {
+		super.drawGuiContainerForegroundLayer(p1, p2);
+		if (module.getOwnerName() == null)
+			mc.fontRenderer.drawString("Owner: None", 10, 10, 0x404040);
+		else
+			mc.fontRenderer.drawString("Owner: " + module.getOwnerName(), 10, 10, 0x404040);
 	}
 }

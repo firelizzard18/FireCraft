@@ -2,7 +2,6 @@ package com.firelizzard.firecraft.block;
 
 import com.firelizzard.firecraft.FireCraftMod;
 import com.firelizzard.firecraft.initialization.FireCraftMaterials;
-import com.firelizzard.firecraft.initialization.FireCraftOres;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -10,16 +9,18 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.world.IBlockAccess;
 
-public class SilmarilliumStorageBlock extends Block {
-	public SilmarilliumStorageBlock() {
-		super(FireCraftMaterials.silmarillium);
+public class PrismiumBlock extends Block {
+	public static final String NAME = "prismium";
+	
+	public PrismiumBlock() {
+		super(FireCraftMaterials.prismium);
 		setHardness(5.0F);
 		setResistance(10.0F);
         setLightOpacity(0);
         setLightLevel(1);
 		setStepSound(soundTypeMetal);
 		setCreativeTab(FireCraftMod.TAB);
-		setBlockName(FireCraftOres.SILMARILLIUM);
+		setBlockName(NAME);
 
 		setHarvestLevel("pickaxe", 3);
 	}
@@ -28,7 +29,7 @@ public class SilmarilliumStorageBlock extends Block {
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons (IIconRegister iconRegister)
     {
-        blockIcon = iconRegister.registerIcon(FireCraftMod.MODID + ":" + FireCraftOres.SILMARILLIUM + "Storage");
+        blockIcon = iconRegister.registerIcon(FireCraftMod.getAssetLocation(NAME));
     }
 
     @Override

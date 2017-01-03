@@ -3,8 +3,10 @@ package com.firelizzard.firecraft.item;
 import java.util.List;
 
 import com.firelizzard.firecraft.FireCraftMod;
+import com.firelizzard.firecraft.initialization.FireCraftItems;
 import com.firelizzard.firecraft.initialization.FireCraftOres;
 
+import cofh.lib.util.helpers.StringHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -14,29 +16,40 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
 public class GenericUselessItem extends Item {
-	public static int COUNT = 5;
-	
-	public static String USELESS_NAME = "useless";
-	public static String MAGNETRON_NAME = "magnetron";
-	public static String DESTROYERCORE_NAME = "destroyerCore";
-	public static String SILMARILLIUMINGOT_NAME = FireCraftOres.SILMARILLIUM + "Ingot";
-	public static String ELEMENTIUM_NAME = "elementium";
-
-	public static int USELESS_META = 0;
-	public static int MAGNETRON_META = 1;
-	public static int DESTROYERCORE_META = 2;
-	public static int SILMARILLIUMINGOT_META = 3;
-	public static int ELEMENTIUM_META = 4;
-	
-	static String[] NAMES = new String[COUNT];
-	
-	static {
-		NAMES[USELESS_META] = USELESS_NAME;
-		NAMES[MAGNETRON_META] = MAGNETRON_NAME;
-		NAMES[DESTROYERCORE_META] = DESTROYERCORE_NAME;
-		NAMES[SILMARILLIUMINGOT_META] = SILMARILLIUMINGOT_NAME;
-		NAMES[ELEMENTIUM_META] = ELEMENTIUM_NAME;
+	public static enum Items {
+		USELESS("uselesss"),
+		MAGNETRON("magnetron"),
+		DESTROYER_CORE("destroyerCore"),
+		SILMARILLIUM_INGOT(FireCraftOres.SILMARILLIUM + "Ingot"),
+		ELEMENTIUM("elementium"),
+		CARBORUNDUM(FireCraftOres.CARBORUNDUM + "Gem"),
+		PULVERIZED_COKE("pulverized" + StringHelper.titleCase(FireCraftOres.COKE));
+		
+		private final String name;
+		
+		Items(String name) {
+			this.name = name;
+		}
+		
+		@Override
+		public String toString() {
+			return name;
+		}
+		
+		public String getName() {
+			return name;
+		}
+		
+		public int getMeta() {
+			return ordinal();
+		}
+		
+		public ItemStack getStack() {
+			return FireCraftItems.useless_stacks[ordinal()];
+		}
 	}
+	
+	public final static int COUNT = Items.values().length;
 
 	IIcon[] icons = new IIcon[COUNT];
   
@@ -52,7 +65,7 @@ public class GenericUselessItem extends Item {
     @SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister register) {
 		for (int i = 0; i < COUNT; i++)
-			icons[i] = register.registerIcon(FireCraftMod.MODID + ":" + NAMES[i]);
+			icons[i] = register.registerIcon(FireCraftMod.MODID + ":" + Items.values()[i]);
 	}
 	
 	@Override
@@ -60,7 +73,7 @@ public class GenericUselessItem extends Item {
 		if (stack.getItem() != this || stack.getItemDamage() >= COUNT)
 			return super.getUnlocalizedName(stack);
 		
-		return NAMES[stack.getItemDamage()];
+		return "item." + Items.values()[stack.getItemDamage()].getName();
 	}
 	
 	@Override

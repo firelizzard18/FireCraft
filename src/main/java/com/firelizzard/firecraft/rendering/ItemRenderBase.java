@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.storage.MapData;
 import net.minecraftforge.client.IItemRenderer;
 
-public abstract class RenderBase implements IItemRenderer {
+public abstract class ItemRenderBase implements IItemRenderer {
 	protected void renderItemAsEntity(ItemRenderType type, ItemStack item, RenderBlocks renderBlocks, EntityItem entity) {}
 	protected void renderItemAsEquipped(ItemRenderType type, ItemStack item, RenderBlocks renderBlocks, EntityLivingBase entity, boolean firstPerson) {}
 	protected void renderItemAsFirstPersonMap(ItemRenderType type, ItemStack item, EntityClientPlayerMP player, TextureManager textureManager, MapData mapData) {}
@@ -36,10 +36,6 @@ public abstract class RenderBase implements IItemRenderer {
 			renderItemAsEquipped(type, item, renderBlocks, entity, true);
 			break;
 		}
-//		case EQUIPPED_FIRST_PERSON: {
-//			RenderBlocks renderBlocks = (RenderBlocks)data[0];
-//			break;
-//		}
 		case FIRST_PERSON_MAP:
 			EntityClientPlayerMP player = (EntityClientPlayerMP)data[0];
 			TextureManager textureManager = (TextureManager)data[1];

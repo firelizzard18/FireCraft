@@ -25,11 +25,11 @@ public class PlasmaBoltRender extends Render {
     protected static DrawableMuseCircle circle4;
 
     public PlasmaBoltRender() {
-        Colour c1 = new Colour(.3, .3, 1, 0.3);
+        Colour c1 = new Colour(.6, .3, 1, 0.3);
         circle1 = new DrawableMuseCircle(c1, c1);
-        c1 = new Colour(.3, .3, 1, 0.6);
+        c1 = new Colour(.6, .3, 1, 0.6);
         circle2 = new DrawableMuseCircle(c1, c1);
-        c1 = new Colour(.3, .3, 1, 1);
+        c1 = new Colour(.6, .3, 1, 1);
         circle3 = new DrawableMuseCircle(c1, c1);
         circle4 = new DrawableMuseCircle(c1, new Colour(1, 1, 1, 1));
     }

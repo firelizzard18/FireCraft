@@ -2,19 +2,16 @@ package com.firelizzard.firecraft.block;
 
 import com.firelizzard.firecraft.FireCraftMod;
 import com.firelizzard.firecraft.initialization.FireCraftMaterials;
-import com.firelizzard.firecraft.tile.SpeedLimitTile;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
-public class SpeedLimitBlock extends Block implements ITileEntityProvider {
+public class SpeedLimitBlock extends Block {// implements ITileEntityProvider {
 	public static final String NAME = "speedlimit";
 	
 	public static final double SPEED_LIMIT = 5d;
@@ -55,10 +52,10 @@ public class SpeedLimitBlock extends Block implements ITileEntityProvider {
         return false;
     }
 	
-	@Override
-	public TileEntity createNewTileEntity(World world, int meta) {
-		return new SpeedLimitTile();
-	}
+//	@Override
+//	public TileEntity createNewTileEntity(World world, int meta) {
+//		return new SpeedLimitTile();
+//	}
 	
 	@Override
 	public void breakBlock(World world, int x, int y, int z, Block block, int metadata) {

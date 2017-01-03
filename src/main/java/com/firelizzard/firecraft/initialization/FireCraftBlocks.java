@@ -1,12 +1,13 @@
 package com.firelizzard.firecraft.initialization;
 
 import com.firelizzard.firecraft.api.Initialization;
+import com.firelizzard.firecraft.block.OcclusionBlock;
+import com.firelizzard.firecraft.block.PrismiumBlock;
 import com.firelizzard.firecraft.block.SecurityStationBlock;
 import com.firelizzard.firecraft.block.SilmarilBlock;
 import com.firelizzard.firecraft.block.SilmarilliumFluidBlock;
 import com.firelizzard.firecraft.block.SilmarilliumStorageBlock;
 import com.firelizzard.firecraft.block.SpeedLimitBlock;
-import com.firelizzard.firecraft.tile.SpeedLimitTile;
 import com.rwtema.extrautils.ExtraUtils;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -19,16 +20,20 @@ public class FireCraftBlocks {
 	public static final SilmarilliumStorageBlock silmarilliumStorage = new SilmarilliumStorageBlock();
 	public static final SilmarilBlock silmaril = new SilmarilBlock();
 	public static final SecurityStationBlock securityStation = new SecurityStationBlock();
+	public static final OcclusionBlock occlusion = new OcclusionBlock();
+	public static final PrismiumBlock prismium = new PrismiumBlock();
 
 	public static final SilmarilliumFluidBlock silmarilliumMolten = new SilmarilliumFluidBlock();
 	
 	static {
 		GameRegistry.registerBlock(speedlimit, SpeedLimitBlock.NAME);
-		GameRegistry.registerTileEntity(SpeedLimitTile.class, SpeedLimitBlock.NAME);
+//		GameRegistry.registerTileEntity(SpeedLimitTile.class, SpeedLimitBlock.NAME);
 		GameRegistry.registerBlock(silmarilliumMolten, FireCraftOres.SILMARILLIUM + ".molten");
 		GameRegistry.registerBlock(silmarilliumStorage, FireCraftOres.SILMARILLIUM + ".storage");
 		GameRegistry.registerBlock(silmaril, SilmarilBlock.NAME);
 		GameRegistry.registerBlock(securityStation, SecurityStationBlock.NAME);
+		GameRegistry.registerBlock(occlusion, OcclusionBlock.NAME);
+		GameRegistry.registerBlock(prismium, PrismiumBlock.NAME);
 	}
 
 	@Initialization.Post
@@ -59,5 +64,20 @@ public class FireCraftBlocks {
 				'A', FireCraftItems.elementiumIngot,
 				'B', FireCraftItems.silmarilliumIngot,
 				'C', new ItemStack(ExtraUtils.decorative1, 1, ExtraUtils.dec1UnstableBlock));
+
+		GameRegistry.addRecipe(new ItemStack(occlusion, 8),
+				"ABA",
+				"BCB",
+				"ABA",
+				'A', Blocks.obsidian,
+				'B', Blocks.emerald_block,
+				'C', ExtraUtils.unstableIngot);
+		GameRegistry.addRecipe(new ItemStack(occlusion, 8),
+				"ABA",
+				"BCB",
+				"ABA",
+				'A', Blocks.obsidian,
+				'B', Blocks.emerald_block,
+				'C', new ItemStack(ExtraUtils.unstableIngot, 1, 2));
 	}
 }

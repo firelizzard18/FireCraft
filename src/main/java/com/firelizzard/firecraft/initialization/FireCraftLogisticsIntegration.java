@@ -3,6 +3,7 @@ package com.firelizzard.firecraft.initialization;
 import com.firelizzard.firecraft.api.Initialization;
 import com.firelizzard.firecraft.gui.SecureItemSinkInHand;
 import com.firelizzard.firecraft.gui.SecureItemSinkSlot;
+import com.firelizzard.firecraft.logistics.DisenchantModule;
 import com.firelizzard.firecraft.logistics.EnergyItemSinkModule;
 import com.firelizzard.firecraft.logistics.SecureItemSinkModule;
 import com.firelizzard.firecraft.network.SecureItemSinkMode;
@@ -22,6 +23,7 @@ public class FireCraftLogisticsIntegration {
 	public static void postInit() {
 		LogisticsPipes.ModuleItem.registerModule(1000, SecureItemSinkModule.class);
 		LogisticsPipes.ModuleItem.registerModule(1001, EnergyItemSinkModule.class);
+		LogisticsPipes.ModuleItem.registerModule(1002, DisenchantModule.class);
 		
 		
 		

@@ -17,6 +17,8 @@ public abstract class FireCraftProxy {
 		public void init() {
 			RenderingRegistry.registerEntityRenderingHandler(PlasmaBoltEntity.class, new PlasmaBoltRender());
 			MinecraftForgeClient.registerItemRenderer(FireCraftItems.destroyer, new DestroyerRender());
+			
+//			RenderingRegistry.registerBlockHandler(SilmarilliumStorageBlock.RENDER);
 		}
 	}
 	

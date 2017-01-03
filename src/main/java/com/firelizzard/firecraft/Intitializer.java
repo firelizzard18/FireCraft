@@ -12,6 +12,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -113,10 +114,23 @@ class Intitializer {
 			nodes.put(clazz, new ClassNode(clazz));
 		}
 
+		ArrayList<ClassNode> extras = new ArrayList<>();
 		for (ClassNode node : nodes.values()) {
 			Initialization anno = node.clazz.getAnnotation(Initialization.class);
-			node.prerequisites = Stream.of(anno.after()).map(x -> nodes.get(x)).collect(Collectors.toSet());
+			node.prerequisites = Stream.of(anno.after()).map(x -> {
+				if (nodes.containsKey(x))
+					return nodes.get(x);
+				
+				// handle after annotations for non-initializer classes
+				ClassNode _node = new ClassNode(x);
+				_node.prerequisites = new HashSet<>();
+				extras.add(_node);
+				return _node;
+			}).collect(Collectors.toSet());
 		}
+		
+		for (ClassNode node : extras)
+			nodes.put(node.clazz, node);
 		
 		call(nodes.values().stream());
 	}

@@ -24,6 +24,7 @@ import cofh.thermalexpansion.block.ender.BlockEnder;
 import cofh.thermalexpansion.block.light.BlockLight;
 import cofh.thermalexpansion.block.machine.BlockMachine;
 import cofh.thermalexpansion.block.plate.BlockPlate;
+import cofh.thermalexpansion.block.simple.BlockGlass;
 import cofh.thermalexpansion.block.strongbox.BlockStrongbox;
 import cofh.thermalexpansion.block.tank.BlockTank;
 import cofh.thermalexpansion.block.workbench.BlockWorkbench;
@@ -46,7 +47,6 @@ import logisticspipes.pipes.basic.CoreRoutedPipe;
 import logisticspipes.pipes.basic.CoreUnroutedPipe;
 import logisticspipes.pipes.basic.LogisticsBlockGenericPipe;
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -60,6 +60,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import powercrystals.minefactoryreloaded.block.BlockFactoryMachine;
@@ -68,6 +69,15 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	public static final String NAME = "destroyer";
 	public static final int MAX_USE_TICKS = 72000;
 	public static final int MAX_CHARGE_TICKS = 20;
+	
+	public static final float MIN_DAMAGE = 1f;
+	public static final float HIT_DAMAGE = 50f;
+	public static final float SILK_TOUCH_MULTIPLIER = 2f;
+	public static final float PLASMA_BOLT_MULTIPLIER = 5f;
+	
+	public static final int MAX_ENERGY = 20000000;
+	public static final int MAX_TRANSFER = 160000;
+	public static final int ENERGY_PER_USE = 10000;
 
 	public static enum Modes {
 		TOOL, WEAPON
@@ -100,6 +110,8 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 		if (block instanceof BlockWorkbench)
 			return true;
 		if (block instanceof BlockEnder)
+			return true;
+		if (block instanceof BlockGlass)
 			return true;
 
 		// thermal dynamics
@@ -147,18 +159,16 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 		return false;
 	}
 
-	public float minDamage = 1f;
-	public float hitDamage = 50f;
-	public float silkTouchMultiplier = 2f;
+	private IIcon weaponIcon;
 
 	public DestroyerTool() {
 		super(NAME);
 		setMaxStackSize(1);
 		setCreativeTab(FireCraftMod.TAB);
 
-		maxEnergy = 20000000;
-		maxTransfer = 160000;
-		energyPerUse = 10000;
+		maxEnergy = MAX_ENERGY;
+		maxTransfer = MAX_TRANSFER;
+		energyPerUse = ENERGY_PER_USE;
 
 		modName = "firecraft";
 	}
@@ -209,8 +219,11 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 		return null;
 	}
 
-	private boolean onItemUse_machine(ItemStack stack, EntityPlayer player, World world, Block block, int x, int y,
-			int z, int hitSide) {
+	private boolean onItemUse_machine(ItemStack stack, EntityPlayer player, World world, Block block, int x, int y, int z, int hitSide) {
+		if (block instanceof BlockGlass)
+			if (onItemUse_dismantle(stack, player, world, (IDismantleable) block, x, y, z, hitSide))
+				return true;
+		
 		if (block instanceof IDismantleable && player.isSneaking())
 			if (onItemUse_dismantle(stack, player, world, (IDismantleable) block, x, y, z, hitSide))
 				return true;
@@ -335,7 +348,34 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister register) {
-		itemIcon = register.registerIcon(FireCraftMod.MODID + ":" + NAME);
+		this.itemIcon = register.registerIcon(FireCraftMod.getAssetLocation(NAME));
+		this.weaponIcon = register.registerIcon(FireCraftMod.getAssetLocation(NAME + "Weapon"));
+	}
+	
+	public IIcon getIcon(ItemStack stack) {
+		switch (getModeEnum(stack)) {
+		case WEAPON:
+			return weaponIcon;
+			
+		case TOOL:
+		default:
+			return super.getIconIndex(stack);
+		}
+	}
+	
+	@Override
+	public IIcon getIconIndex(ItemStack stack) {
+		return getIcon(stack);
+	}
+	
+	@Override
+	public IIcon getIcon(ItemStack stack, int pass) {
+		return getIcon(stack);
+	}
+	
+	@Override
+	public IIcon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining) {
+		return getIcon(stack);
 	}
 
 	@Override
@@ -402,7 +442,7 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	public boolean hitEntity(ItemStack stack, EntityLivingBase entity, EntityLivingBase player) {
 		switch (getModeEnum(stack)) {
 		case TOOL:
-			float damage = Math.max(minDamage, hitDamage * extractEnergy(stack, energyPerUse, false) / energyPerUse);
+			float damage = Math.max(MIN_DAMAGE, HIT_DAMAGE * extractEnergy(stack, energyPerUse, false) / energyPerUse);
 			entity.attackEntityFrom(DamageSource.causePlayerDamage((EntityPlayer) player), damage);
 			return true;
 
@@ -445,7 +485,7 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 			if (!block.canSilkHarvest(world, player, x, y, z, metadata))
 				return false;
 
-			int cost = (int) (energyPerUse * silkTouchMultiplier);
+			int cost = (int) (energyPerUse * SILK_TOUCH_MULTIPLIER);
 			if (!player.capabilities.isCreativeMode && extractEnergy(stack, cost, false) != cost)
 				return false;
 
