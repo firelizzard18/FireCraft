@@ -23,7 +23,8 @@ public class GenericUselessItem extends Item {
 		SILMARILLIUM_INGOT(FireCraftOres.SILMARILLIUM + "Ingot"),
 		ELEMENTIUM("elementium"),
 		CARBORUNDUM(FireCraftOres.CARBORUNDUM + "Gem"),
-		PULVERIZED_COKE("pulverized" + StringHelper.titleCase(FireCraftOres.COKE));
+		PULVERIZED_COKE("pulverized" + StringHelper.titleCase(FireCraftOres.COKE)),
+		WORLDEDIT_WAND("worldeditWand");
 		
 		private final String name;
 		

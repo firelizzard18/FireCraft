@@ -1,11 +1,13 @@
 package com.firelizzard.firecraft.initialization;
 
 import com.firelizzard.firecraft.entity.PlasmaBoltEntity;
+import com.firelizzard.firecraft.events.ItemToolTipHandler;
 import com.firelizzard.firecraft.rendering.DestroyerRender;
 import com.firelizzard.firecraft.rendering.PlasmaBoltRender;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.common.MinecraftForge;
 
 public abstract class FireCraftProxy {
 	public void preInit() { }
@@ -19,6 +21,7 @@ public abstract class FireCraftProxy {
 			MinecraftForgeClient.registerItemRenderer(FireCraftItems.destroyer, new DestroyerRender());
 			
 //			RenderingRegistry.registerBlockHandler(SilmarilliumStorageBlock.RENDER);
+			MinecraftForge.EVENT_BUS.register(ItemToolTipHandler.INSTANCE);
 		}
 	}
 	

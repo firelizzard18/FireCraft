@@ -137,7 +137,7 @@ public class PlasmaBoltEntity extends EntityThrowable implements IThrowableEntit
 	@Override
 	public void onEntityUpdate() {
 		if (!Float.isNaN(detonationDamage)) {
-			worldObj.createExplosion(this, posX, posY, posZ, getExplosiveness() * detonationDamage * EXPLOSSIVENESS_SCALE, true);
+			worldObj.createExplosion(this, posX, posY, posZ, getExplosiveness()/* * detonationDamage * EXPLOSSIVENESS_SCALE*/, true);
 			setDead();
 		}
 		
@@ -201,7 +201,8 @@ public class PlasmaBoltEntity extends EntityThrowable implements IThrowableEntit
 	@Override
 	public boolean attackEntityFrom(DamageSource source, float damage) {
 		if (source.isExplosion())
-			this.detonationDamage = (float) Math.pow((damage - 1) / 8, DETONATION_EXP);
+//			this.detonationDamage = (float) Math.pow((damage - 1) / 8, DETONATION_EXP);
+			this.detonationDamage = damage;
 		return super.attackEntityFrom(source, damage);
 	}
 }

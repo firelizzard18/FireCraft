@@ -41,12 +41,12 @@ public class SecurityStationBlock extends Block {
 		setCreativeTab(FireCraftMod.TAB);
 	}
 	
-	private boolean isUnsafeToSecure(ItemStack stack) {
+	public static boolean isUnsafeToSecure(ItemStack stack) {
 		Item item = stack.getItem();
 		return item instanceof ItemModule || item instanceof ItemUpgrade;
 	}
 	
-	private boolean hasSecureRecipe(World world, ItemStack stack) {
+	public static boolean hasSecureRecipe(World world, ItemStack stack) {
 		Item item = stack.getItem();
 
 		if (item instanceof ISecurable || item instanceof ItemSatchel || item instanceof ItemEnderPouch)
@@ -82,7 +82,7 @@ public class SecurityStationBlock extends Block {
 	
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float xOffset, float yOffset, float zOffset) {
-		if (ServerHelper.isServerWorld(world))
+		if (ServerHelper.isClientWorld(world))
 			return true;
 		
 //		SecurityStationTile tile = (SecurityStationTile)world.getTileEntity(x, y, z);

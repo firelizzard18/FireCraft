@@ -26,7 +26,7 @@ public class FireCraftFluids {
 				new FluidStack(FluidRegistry.getFluid("enderium.molten"), TConstruct.ingotLiquidValue),
 				new FluidStack(FluidRegistry.getFluid("lumium.molten"), TConstruct.ingotLiquidValue),
 				new FluidStack(FluidRegistry.getFluid("signalum.molten"), TConstruct.ingotLiquidValue),
-				new FluidStack(FluidRegistry.getFluid("mithril.molten"), TConstruct.ingotLiquidValue),
+//				new FluidStack(FluidRegistry.getFluid("mithril.molten"), TConstruct.ingotLiquidValue),
 				new FluidStack(FluidRegistry.getFluid("molten.unstableingots"), TConstruct.ingotLiquidValue),
 				new FluidStack(FluidRegistry.getFluid("bedrockium.molten"), TConstruct.ingotLiquidValue),
 				new FluidStack(FluidRegistry.getFluid("manyullyn.molten"), TConstruct.ingotLiquidValue),

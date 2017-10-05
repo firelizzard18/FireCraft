@@ -7,6 +7,7 @@ import com.firelizzard.firecraft.block.SecurityStationBlock;
 import com.firelizzard.firecraft.entity.AutopickupEntityItem;
 import com.firelizzard.firecraft.network.PlasmaBoltPacket;
 
+import buildcraft.api.tools.IToolWrench;
 import codechicken.enderstorage.common.BlockEnderStorage;
 import cofh.api.block.IBlockConfigGui;
 import cofh.api.block.IBlockInfo;
@@ -39,14 +40,18 @@ import erogenousbeef.bigreactors.common.multiblock.block.BlockReactorPart;
 import erogenousbeef.bigreactors.common.multiblock.block.BlockReactorRedstonePort;
 import erogenousbeef.bigreactors.common.multiblock.block.BlockTurbinePart;
 import erogenousbeef.bigreactors.common.multiblock.block.BlockTurbineRotorPart;
+import ic2.api.item.IElectricItem;
+import ic2.api.item.IElectricItemManager;
+import ic2.api.item.ISpecialElectricItem;
 import logisticspipes.blocks.LogisticsSolidBlock;
-import logisticspipes.modules.abstractmodules.LogisticsGuiModule;
-import logisticspipes.modules.abstractmodules.LogisticsModule;
-import logisticspipes.pipes.PipeFluidRequestLogistics;
-import logisticspipes.pipes.basic.CoreRoutedPipe;
-import logisticspipes.pipes.basic.CoreUnroutedPipe;
+//import logisticspipes.modules.abstractmodules.LogisticsGuiModule;
+//import logisticspipes.modules.abstractmodules.LogisticsModule;
+//import logisticspipes.pipes.PipeFluidRequestLogistics;
+//import logisticspipes.pipes.basic.CoreRoutedPipe;
+//import logisticspipes.pipes.basic.CoreUnroutedPipe;
 import logisticspipes.pipes.basic.LogisticsBlockGenericPipe;
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -56,16 +61,23 @@ import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.ForgeDirection;
+//import net.minecraftforge.common.util.ForgeDirection;
 import powercrystals.minefactoryreloaded.block.BlockFactoryMachine;
+import cpw.mods.fml.common.Optional;
 
-public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyContainerItem {
+@Optional.InterfaceList({
+	@Optional.Interface(iface = "ic2.api.item.IElectricItem", modid = "IC2"),
+	@Optional.Interface(iface = "ic2.api.item.IElectricItemManager", modid = "IC2"),
+	@Optional.Interface(iface = "ic2.api.item.ISpecialElectricItem", modid = "IC2")
+})
+public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyContainerItem, IToolWrench, IElectricItem, ISpecialElectricItem {
 	public static final String NAME = "destroyer";
 	public static final int MAX_USE_TICKS = 72000;
 	public static final int MAX_CHARGE_TICKS = 20;
@@ -75,8 +87,8 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	public static final float SILK_TOUCH_MULTIPLIER = 2f;
 	public static final float PLASMA_BOLT_MULTIPLIER = 5f;
 	
-	public static final int MAX_ENERGY = 20000000;
-	public static final int MAX_TRANSFER = 160000;
+	public static final int MAX_ENERGY =  20000000;
+	public static final int MAX_TRANSFER = 1600000;
 	public static final int ENERGY_PER_USE = 10000;
 
 	public static enum Modes {
@@ -233,16 +245,18 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 
 		if (player.isSneaking())
 			return onItemUse_break(stack, player, world, block, x, y, z, hitSide);
+		
+		return true;
 
-		if (block instanceof IBlockConfigGui) {
-			return ((IBlockConfigGui) block).openConfigGui(world, x, y, z, ForgeDirection.VALID_DIRECTIONS[hitSide],
-					player);
-		}
-
-		if (block instanceof LogisticsBlockGenericPipe)
-			return onItemUse_logisticsPipe(stack, player, world, (LogisticsBlockGenericPipe) block, x, y, z, hitSide);
-
-		return false;
+//		if (block instanceof IBlockConfigGui) {
+//			return ((IBlockConfigGui) block).openConfigGui(world, x, y, z, ForgeDirection.VALID_DIRECTIONS[hitSide],
+//					player);
+//		}
+//
+//		if (block instanceof LogisticsBlockGenericPipe)
+//			return onItemUse_logisticsPipe(stack, player, world, (LogisticsBlockGenericPipe) block, x, y, z, hitSide);
+//
+//		return false;
 	}
 
 	private boolean onItemUse_dismantle(ItemStack stack, EntityPlayer player, World world, IDismantleable block, int x,
@@ -277,29 +291,29 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 		return true;
 	}
 
-	private boolean onItemUse_logisticsPipe(ItemStack stack, EntityPlayer player, World world,
-			LogisticsBlockGenericPipe block, int x, int y, int z, int hitSide) {
-		CoreUnroutedPipe pipe = LogisticsBlockGenericPipe.getPipe(world, x, y, z);
-
-		if (!LogisticsBlockGenericPipe.isValid(pipe))
-			return false;
-
-		if (!(pipe instanceof CoreRoutedPipe))
-			return false;
-
-		if (pipe instanceof PipeFluidRequestLogistics) {
-			((PipeFluidRequestLogistics) pipe).openGui(player);
-			return true;
-		}
-
-		LogisticsModule module = ((CoreRoutedPipe) pipe).getLogisticsModule();
-		if (module instanceof LogisticsGuiModule)
-			((LogisticsGuiModule) module).getPipeGuiProviderForModule().setTilePos(pipe.getContainer()).open(player);
-		else
-			((CoreRoutedPipe) pipe).onWrenchClicked(player);
-
-		return true;
-	}
+//	private boolean onItemUse_logisticsPipe(ItemStack stack, EntityPlayer player, World world,
+//			LogisticsBlockGenericPipe block, int x, int y, int z, int hitSide) {
+//		CoreUnroutedPipe pipe = LogisticsBlockGenericPipe.getPipe(world, x, y, z);
+//
+//		if (!LogisticsBlockGenericPipe.isValid(pipe))
+//			return false;
+//
+//		if (!(pipe instanceof CoreRoutedPipe))
+//			return false;
+//
+//		if (pipe instanceof PipeFluidRequestLogistics) {
+//			((PipeFluidRequestLogistics) pipe).openGui(player);
+//			return true;
+//		}
+//
+//		LogisticsModule module = ((CoreRoutedPipe) pipe).getLogisticsModule();
+//		if (module instanceof LogisticsGuiModule)
+//			((LogisticsGuiModule) module).getPipeGuiProviderForModule().setTilePos(pipe.getContainer()).open(player);
+//		else
+//			((CoreRoutedPipe) pipe).onWrenchClicked(player);
+//
+//		return true;
+//	}
 
 	private void tryGiveToPlayer(World world, EntityPlayer player, int x, int y, int z, List<ItemStack> drops) {
 		for (ItemStack drop : drops) {
@@ -489,9 +503,12 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 			if (!player.capabilities.isCreativeMode && extractEnergy(stack, cost, false) != cost)
 				return false;
 
+			if (ServerHelper.isClientWorld(world))
+				return true;
+
 			List<ItemStack> drops = BlockHelper.breakBlock(world, player, x, y, z, block, 0, true, true);
 			if (drops == null || drops.size() == 0)
-				return false;
+				return true;
 
 			tryGiveToPlayer(world, player, x, y, z, drops);
 			return true;
@@ -500,6 +517,25 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 		default:
 			return super.onItemUse(stack, player, world, x, y, z, hitSide, hitX, hitY, hitZ);
 		}
+	}
+
+	@Override
+	public boolean canWrench(EntityPlayer player, int x, int y, int z) {
+		ItemStack stack = player.getCurrentEquippedItem();
+		
+		switch (getModeEnum(stack)) {
+		default:
+			return isMachineBlock(Minecraft.getMinecraft().theWorld.getBlock(x, y, z));
+			
+		case TOOL:
+		case WEAPON:
+			return false;
+		}
+	}
+
+	@Override
+	public void wrenchUsed(EntityPlayer player, int x, int y, int z) {
+		
 	}
 
 	@Override
@@ -572,5 +608,49 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
 		return getUnlocalizedName();
+	}
+
+	@Override
+	@Optional.Method(modid = "IC2")
+	public boolean canProvideEnergy(ItemStack itemStack) {
+		return false;
+	}
+
+	@Override
+	@Optional.Method(modid = "IC2")
+	public Item getChargedItem(ItemStack itemStack) {
+		return this;
+	}
+
+	@Override
+	@Optional.Method(modid = "IC2")
+	public Item getEmptyItem(ItemStack itemStack) {
+		return this;
+	}
+
+	@Override
+	@Optional.Method(modid = "IC2")
+	public double getMaxCharge(ItemStack itemStack) {
+		return MAX_ENERGY/4;
+	}
+
+	@Override
+	@Optional.Method(modid = "IC2")
+	public int getTier(ItemStack itemStack) {
+		return 4;
+	}
+
+	@Override
+	@Optional.Method(modid = "IC2")
+	public double getTransferLimit(ItemStack itemStack) {
+		return MAX_TRANSFER/4;
+	}
+	
+	private static DestroyerToolManager mgr = new DestroyerToolManager();
+	
+	@Override
+	@Optional.Method(modid = "IC2")
+	public IElectricItemManager getManager(ItemStack itemStack) {
+		return mgr;
 	}
 }
