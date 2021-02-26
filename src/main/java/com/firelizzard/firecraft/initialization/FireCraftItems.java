@@ -30,7 +30,7 @@ public class FireCraftItems {
 	public final static DestroyerTool destroyer = new DestroyerTool();
 
 	public final static ItemStack[] useless_stacks = new ItemStack[GenericUselessItem.Items.values().length];
-	public final static ItemStack magnetron, destroyerCore, silmarilliumIngot, elementiumIngot, carborundum, pulverizedCoke;
+	public final static ItemStack magnetron, destroyerCore, silmarilliumIngot, silmarilliumNugget, elementiumIngot, carborundum, pulverizedCoke;
 
 	static {
 		for (int i = 0; i < useless_stacks.length; i++)
@@ -39,6 +39,7 @@ public class FireCraftItems {
 		magnetron = GenericUselessItem.Items.MAGNETRON.getStack();
 		destroyerCore = GenericUselessItem.Items.DESTROYER_CORE.getStack();
 		silmarilliumIngot = GenericUselessItem.Items.SILMARILLIUM_INGOT.getStack();
+		silmarilliumNugget = GenericUselessItem.Items.SILMARILLIUM_NUGGET.getStack();
 		elementiumIngot = GenericUselessItem.Items.ELEMENTIUM.getStack();
 		carborundum = GenericUselessItem.Items.CARBORUNDUM.getStack();
 		pulverizedCoke = GenericUselessItem.Items.PULVERIZED_COKE.getStack();
@@ -91,6 +92,14 @@ public class FireCraftItems {
 				'F', ExtraUtils.precisionShears,
 				'G', new ItemStack(TEItems.itemCapacitor, 1, ItemCapacitor.Types.RESONANT.ordinal()),
 				'H', ExtraUtils.healingAxe);
+
+		GameRegistry.addRecipe(silmarilliumIngot,
+				"AAA",
+				"AAA",
+				"AAA",
+				'A', silmarilliumNugget);
+
+		GameRegistry.addShapelessRecipe(ItemHelper.cloneStack(silmarilliumNugget, 9), silmarilliumIngot);
 
 		TConstructRegistry.getTableCasting().addCastingRecipe(
 				silmarilliumIngot,

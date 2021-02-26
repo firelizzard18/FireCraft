@@ -10,6 +10,7 @@ public class FireCraftOres {
 	public static final String AFFIX_DUST = "dust";
 	public static final String AFFIX_INGOT = "ingot";
 	public static final String AFFIX_BLOCK = "block";
+	public static final String AFFIX_NUGGET = "nugget";
 
 	public static final String SILMARILLIUM = "silmarillium";
 	public static final String COKE = "coke";
@@ -17,6 +18,7 @@ public class FireCraftOres {
 
 	static {
 		OreDictionary.registerOre(AFFIX_INGOT + StringHelper.titleCase(SILMARILLIUM), FireCraftItems.silmarilliumIngot);
+		OreDictionary.registerOre(AFFIX_NUGGET + StringHelper.titleCase(SILMARILLIUM), FireCraftItems.silmarilliumNugget);
 		OreDictionary.registerOre(AFFIX_BLOCK + StringHelper.titleCase(SILMARILLIUM), FireCraftBlocks.silmarilliumStorage);
 		OreDictionary.registerOre(AFFIX_DUST + StringHelper.titleCase(COKE), FireCraftItems.pulverizedCoke);
 	}

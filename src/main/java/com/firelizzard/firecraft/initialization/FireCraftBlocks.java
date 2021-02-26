@@ -8,11 +8,16 @@ import com.firelizzard.firecraft.block.SilmarilBlock;
 import com.firelizzard.firecraft.block.SilmarilliumFluidBlock;
 import com.firelizzard.firecraft.block.SilmarilliumStorageBlock;
 import com.firelizzard.firecraft.block.SpeedLimitBlock;
+import com.firelizzard.firecraft.block.StarfieldBlock;
+import com.firelizzard.firecraft.tile.StarfieldTile;
 import com.rwtema.extrautils.ExtraUtils;
 
+import cofh.thermalfoundation.fluid.TFFluids;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+import tconstruct.library.TConstructRegistry;
 
 @Initialization(after = {FireCraftFluids.class})
 public class FireCraftBlocks {
@@ -22,6 +27,7 @@ public class FireCraftBlocks {
 	public static final SecurityStationBlock securityStation = new SecurityStationBlock();
 	public static final OcclusionBlock occlusion = new OcclusionBlock();
 	public static final PrismiumBlock prismium = new PrismiumBlock();
+	public static final StarfieldBlock starfield = new StarfieldBlock();
 
 	public static final SilmarilliumFluidBlock silmarilliumMolten = new SilmarilliumFluidBlock();
 
@@ -34,6 +40,8 @@ public class FireCraftBlocks {
 		GameRegistry.registerBlock(securityStation, SecurityStationBlock.NAME);
 		GameRegistry.registerBlock(occlusion, OcclusionBlock.NAME);
 		GameRegistry.registerBlock(prismium, PrismiumBlock.NAME);
+		GameRegistry.registerBlock(starfield, StarfieldBlock.NAME);
+		GameRegistry.registerTileEntity(StarfieldTile.class, StarfieldBlock.NAME);
 	}
 
 	@Initialization.Post
@@ -79,5 +87,12 @@ public class FireCraftBlocks {
 				'A', Blocks.obsidian,
 				'B', Blocks.emerald_block,
 				'C', new ItemStack(ExtraUtils.unstableIngot, 1, 2));
+
+		TConstructRegistry.getBasinCasting().addCastingRecipe(
+				new ItemStack(starfield),
+				new FluidStack(TFFluids.fluidEnder, 50),
+				new ItemStack(Blocks.end_stone),
+				true,
+				100);
 	}
 }
