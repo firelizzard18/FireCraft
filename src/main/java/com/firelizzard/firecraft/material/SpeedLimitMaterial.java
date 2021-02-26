@@ -8,7 +8,7 @@ public class SpeedLimitMaterial extends Material {
 	{
 		super(MapColor.grayColor);
 	}
-	
+
 	@Override
 	public boolean isLiquid()
 	{

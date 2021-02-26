@@ -9,7 +9,7 @@ import net.minecraftforge.fluids.FluidStack;
 public interface ICannerEnrichRecipeManager {
 	/**
 	 * Adds a recipe to the machine.
-	 * 
+	 *
 	 * @param input Fluid input
 	 * @param additive Item to enrich the fluid with
 	 * @param output Output fluid
@@ -18,7 +18,7 @@ public interface ICannerEnrichRecipeManager {
 
 	/**
 	 * Gets the recipe output for the given input.
-	 * 
+	 *
 	 * @param input Fluid input
 	 * @param additive Item to enrich the fluid with
 	 * @param adjustInput modify the input according to the recipe's requirements
@@ -29,9 +29,9 @@ public interface ICannerEnrichRecipeManager {
 
 	/**
 	 * Gets a list of recipes.
-	 * 
+	 *
 	 * You're a mad evil scientist if you ever modify this.
-	 * 
+	 *
 	 * @return List of recipes
 	 */
 	public Map<Input, FluidStack> getRecipes();

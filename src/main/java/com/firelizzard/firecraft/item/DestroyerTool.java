@@ -81,12 +81,12 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	public static final String NAME = "destroyer";
 	public static final int MAX_USE_TICKS = 72000;
 	public static final int MAX_CHARGE_TICKS = 20;
-	
+
 	public static final float MIN_DAMAGE = 1f;
 	public static final float HIT_DAMAGE = 50f;
 	public static final float SILK_TOUCH_MULTIPLIER = 2f;
 	public static final float PLASMA_BOLT_MULTIPLIER = 5f;
-	
+
 	public static final int MAX_ENERGY =  20000000;
 	public static final int MAX_TRANSFER = 1600000;
 	public static final int ENERGY_PER_USE = 10000;
@@ -184,12 +184,12 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 
 		modName = "firecraft";
 	}
-	
+
 	public float getChargeLevel(ItemStack stack, int ticks) {
 		switch (getModeEnum(stack)) {
 		case WEAPON:
 			return Math.max(0, Math.min((float)ticks / MAX_CHARGE_TICKS, 1));
-			
+
 		case TOOL:
 		default:
 			return 0;
@@ -235,7 +235,7 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 		if (block instanceof BlockGlass)
 			if (onItemUse_dismantle(stack, player, world, (IDismantleable) block, x, y, z, hitSide))
 				return true;
-		
+
 		if (block instanceof IDismantleable && player.isSneaking())
 			if (onItemUse_dismantle(stack, player, world, (IDismantleable) block, x, y, z, hitSide))
 				return true;
@@ -245,7 +245,7 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 
 		if (player.isSneaking())
 			return onItemUse_break(stack, player, world, block, x, y, z, hitSide);
-		
+
 		return true;
 
 //		if (block instanceof IBlockConfigGui) {
@@ -346,13 +346,13 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	}
 
 	/* minecraft item */
-	
+
 	@Override
 	public int getMaxItemUseDuration(ItemStack stack) {
 		switch (getModeEnum(stack)) {
 		case WEAPON:
 			return MAX_USE_TICKS;
-			
+
 		case TOOL:
 		default:
 			return super.getMaxItemUseDuration(stack);
@@ -365,28 +365,28 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 		this.itemIcon = register.registerIcon(FireCraftMod.getAssetLocation(NAME));
 		this.weaponIcon = register.registerIcon(FireCraftMod.getAssetLocation(NAME + "Weapon"));
 	}
-	
+
 	public IIcon getIcon(ItemStack stack) {
 		switch (getModeEnum(stack)) {
 		case WEAPON:
 			return weaponIcon;
-			
+
 		case TOOL:
 		default:
 			return super.getIconIndex(stack);
 		}
 	}
-	
+
 	@Override
 	public IIcon getIconIndex(ItemStack stack) {
 		return getIcon(stack);
 	}
-	
+
 	@Override
 	public IIcon getIcon(ItemStack stack, int pass) {
 		return getIcon(stack);
 	}
-	
+
 	@Override
 	public IIcon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining) {
 		return getIcon(stack);
@@ -522,11 +522,11 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	@Override
 	public boolean canWrench(EntityPlayer player, int x, int y, int z) {
 		ItemStack stack = player.getCurrentEquippedItem();
-		
+
 		switch (getModeEnum(stack)) {
 		default:
 			return isMachineBlock(Minecraft.getMinecraft().theWorld.getBlock(x, y, z));
-			
+
 		case TOOL:
 		case WEAPON:
 			return false;
@@ -535,7 +535,7 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 
 	@Override
 	public void wrenchUsed(EntityPlayer player, int x, int y, int z) {
-		
+
 	}
 
 	@Override
@@ -566,7 +566,7 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 			super.onPlayerStoppedUsing(stack, world, player, ticksLeft);
 		}
 	}
-	
+
 	@Override
 	public void onUpdate(ItemStack stack, World world, Entity entity, int metadata, boolean isHolding) {
 //		switch (getModeEnum(stack)) {
@@ -578,7 +578,7 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 //			if (Minecraft.getMinecraft().gameSettings.keyBindAttack.getIsKeyPressed())
 //				System.out.println("Hi");
 //			return;
-//			
+//
 //		case TOOL:
 //		default:
 //			return;
@@ -645,9 +645,9 @@ public class DestroyerTool extends ItemEnergyContainerBase implements IEnergyCon
 	public double getTransferLimit(ItemStack itemStack) {
 		return MAX_TRANSFER/4;
 	}
-	
+
 	private static DestroyerToolManager mgr = new DestroyerToolManager();
-	
+
 	@Override
 	@Optional.Method(modid = "IC2")
 	public IElectricItemManager getManager(ItemStack itemStack) {

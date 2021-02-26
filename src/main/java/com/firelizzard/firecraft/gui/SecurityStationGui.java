@@ -7,10 +7,10 @@
 //public class SecurityStationGui extends GuiBase {
 //	private SecurityStationContainer container;
 //	private SecurityStationTile tile;
-//	
+//
 //	public SecurityStationGui(SecurityStationContainer container, SecurityStationTile tile) {
 //		super(container, tile.getGuiTextureLocation());
-//		
+//
 //		this.container = container;
 //		this.tile = tile;
 //	}

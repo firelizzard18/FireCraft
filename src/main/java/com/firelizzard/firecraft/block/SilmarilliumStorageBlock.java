@@ -44,7 +44,7 @@ public class SilmarilliumStorageBlock extends Block {
     {
         return 1;
     }
-	
+
 	@Override
 	public boolean isOpaqueCube() {
 		return false;

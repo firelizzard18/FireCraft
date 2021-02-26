@@ -52,7 +52,7 @@ public final class StatementManager {
 	public static void registerParameterClass(Class<? extends IStatementParameter> param) {
 		parameters.put(createParameter(param).getUniqueTag(), param);
 	}
-	
+
 	@Deprecated
 	public static void registerParameterClass(String name, Class<? extends IStatementParameter> param) {
 		parameters.put(name, param);
@@ -67,9 +67,9 @@ public final class StatementManager {
 				return result;
 			}
 		}
-		
+
 		result = new LinkedList<ITriggerExternal>();
-		
+
 		for (ITriggerProvider provider : triggerProviders) {
 			Collection<ITriggerExternal> toAdd = provider.getExternalTriggers(side, entity);
 
@@ -96,7 +96,7 @@ public final class StatementManager {
 				result = new LinkedList<IActionExternal>();
 			}
 		}
-		
+
 		for (IActionProvider provider : actionProviders) {
 			Collection<IActionExternal> toAdd = provider.getExternalActions(side, entity);
 
@@ -151,7 +151,7 @@ public final class StatementManager {
 	public static IStatementParameter createParameter(String kind) {
 		return createParameter(parameters.get(kind));
 	}
-	
+
 	private static IStatementParameter createParameter(Class<? extends IStatementParameter> param) {
 		try {
 			return param.newInstance();
@@ -163,7 +163,7 @@ public final class StatementManager {
 
 		return null;
 	}
-	
+
 	/**
 	 * Generally, this function should be called by every mod implementing
 	 * the Statements API ***as a container*** (that is, adding its own gates)

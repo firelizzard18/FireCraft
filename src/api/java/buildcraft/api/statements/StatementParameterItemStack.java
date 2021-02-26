@@ -13,7 +13,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
 
 public class StatementParameterItemStack implements IStatementParameter {
-	
+
 	protected ItemStack stack;
 
 	@Override
@@ -78,7 +78,7 @@ public class StatementParameterItemStack implements IStatementParameter {
 
 	@Override
 	public void registerIcons(IIconRegister iconRegister) {
-		
+
 	}
 
 	@Override

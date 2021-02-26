@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 public final class ElectricItem {
 	/**
 	 * IElectricItemManager to use for interacting with IElectricItem ItemStacks.
-	 * 
+	 *
 	 * This manager will act as a gateway and delegate the tasks to the final implementation
 	 * (rawManager or a custom one) as necessary.
 	 */
@@ -25,12 +25,12 @@ public final class ElectricItem {
 
 	/**
 	 * Register an electric item manager for items not implementing IElectricItem.
-	 * 
+	 *
 	 * This method is only designed for special purposes, implementing IElectricItem or
 	 * ISpecialElectricItem instead of using this is faster.
-	 * 
+	 *
 	 * Managers used with ISpecialElectricItem shouldn't be registered.
-	 * 
+	 *
 	 * @param manager Manager to register.
 	 */
 	public static void registerBackupManager(IBackupElectricItemManager manager) {
@@ -39,9 +39,9 @@ public final class ElectricItem {
 
 	/**
 	 * Get the electric item manager suitable for the supplied item stack.
-	 * 
+	 *
 	 * This method is for internal use only.
-	 * 
+	 *
 	 * @param stack ItemStack to be handled.
 	 * @return First suitable electric item manager.
 	 */

@@ -40,7 +40,7 @@ public class LaserEvent extends WorldEvent {
 
 	/**
 	 * Event when the Laser is getting shot by a Player.
-	 * 
+	 *
 	 * The Item is the Laser Gun which the "Player" has shot
 	 */
 	public static class LaserShootEvent extends LaserEvent {
@@ -54,7 +54,7 @@ public class LaserEvent extends WorldEvent {
 
 	/**
 	 * Event when the Laser is exploding for some Reason.
-	 * 
+	 *
 	 * The Laser will no longer exist after this Event is posted as it either Explodes or despawns after the Event is fired.
 	 */
 	public static class LaserExplodesEvent extends LaserEvent {
@@ -72,7 +72,7 @@ public class LaserEvent extends WorldEvent {
 	/**
 	 * Event when the Laser is hitting a Block
 	 * x, y and z are the Coords of the Block.
-	 * 
+	 *
 	 * Canceling this Event stops the Laser from attempting to break the Block, what is very useful for Glass.
 	 * Use lasershot.setDead() to remove the Shot entirely.
 	 */
@@ -98,7 +98,7 @@ public class LaserEvent extends WorldEvent {
 
 	/**
 	 * Event when the Laser is getting at a Living Entity
-	 * 
+	 *
 	 * Canceling this Event ignores the Entity
 	 * Use lasershot.setDead() to remove the Shot entirely.
 	 */

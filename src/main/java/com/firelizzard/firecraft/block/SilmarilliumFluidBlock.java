@@ -15,7 +15,7 @@ import net.minecraft.world.IBlockAccess;
 
 public class SilmarilliumFluidBlock extends BlockFluidCoFHBase {
 	public static final int LEVELS = 8;
-	
+
 	public SilmarilliumFluidBlock() {
 		super(FireCraftMod.MODID, FireCraftFluids.silmarillium, Material.lava, FireCraftOres.SILMARILLIUM);
 		setQuantaPerBlock(LEVELS);
@@ -28,7 +28,7 @@ public class SilmarilliumFluidBlock extends BlockFluidCoFHBase {
 	public int getLightValue(IBlockAccess world, int x, int y, int z) {
 		return FireCraftFluids.silmarillium.getLuminosity();
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister register) {

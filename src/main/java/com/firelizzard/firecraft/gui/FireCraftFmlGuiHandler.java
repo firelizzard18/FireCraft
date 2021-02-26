@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 
 public class FireCraftFmlGuiHandler implements IGuiHandler {
 	public static final int TILE_GUI = 0;
-	
+
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		if (ID == FireCraftFmlGuiHandler.TILE_GUI) {
@@ -21,7 +21,7 @@ public class FireCraftFmlGuiHandler implements IGuiHandler {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		if (ID == FireCraftFmlGuiHandler.TILE_GUI) {

@@ -18,7 +18,7 @@ import net.minecraft.util.ResourceLocation;
 public class PlasmaBoltRender extends Render {
 	public static final double CHARGE_MIN_SIZE = 0.5;
 	public static final double CHARGE_SCALE = 1.0/16;
-	
+
     protected static DrawableMuseCircle circle1;
     protected static DrawableMuseCircle circle2;
     protected static DrawableMuseCircle circle3;

@@ -11,18 +11,18 @@ import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 
 @SideOnly(Side.CLIENT)
 public class ItemToolTipHandler {
-	public static final ItemToolTipHandler INSTANCE = new ItemToolTipHandler(); 
-	
+	public static final ItemToolTipHandler INSTANCE = new ItemToolTipHandler();
+
 	private ItemToolTipHandler() { }
-	
+
     @SubscribeEvent
     public void addSecuredItemTooltip(ItemTooltipEvent event) {
     	if (SecurityStationBlock.isUnsafeToSecure(event.itemStack))
     		return;
-    	
+
     	if (SecurityStationBlock.hasSecureRecipe(Minecraft.getMinecraft().theWorld, event.itemStack))
     		return;
-    	
+
     	if (!SecurityHelper.isSecure(event.itemStack))
     		return;
 

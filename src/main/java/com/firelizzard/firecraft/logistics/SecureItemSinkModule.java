@@ -29,29 +29,29 @@ public class SecureItemSinkModule extends LogisticsGuiModule {
 	public static final String NAME = "secureItemSinkModule";
 	public static final String OWNER_UUID_KEY = "OwnerUUID";
 	public static final String OWNER_NAME_KEY = "Owner";
-	
+
 	SinkReply _sinkReply;
 
 	public SecureItemSinkModule() {}
-	
-	
-	
+
+
+
 	/* settings */
 	private UUID ownerUUID;
 	private String ownerName;
-	
+
 	public UUID getOwnerUUID() {
 		return ownerUUID;
 	}
-	
+
 	public void setOwnerUUID(UUID uuid) {
 		ownerUUID = uuid;
 	}
-	
+
 	public String getOwnerName() {
 		return ownerName;
 	}
-	
+
 	public void setOwnerName(String name) {
 		ownerName = name;
 	}
@@ -61,7 +61,7 @@ public class SecureItemSinkModule extends LogisticsGuiModule {
 		String uuid = tag.getString(OWNER_UUID_KEY);
 		if (!Strings.isNullOrEmpty(uuid))
 			ownerUUID = UUID.fromString(uuid);
-		
+
 		String name = tag.getString(OWNER_NAME_KEY);
 		if (!Strings.isNullOrEmpty(name))
 			ownerName = name;
@@ -75,10 +75,10 @@ public class SecureItemSinkModule extends LogisticsGuiModule {
 			tag.setString(OWNER_NAME_KEY, ownerName);
 	}
 
-	
-	
+
+
 	/* module stuff */
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon getIconTexture(IIconRegister register) {
@@ -96,13 +96,13 @@ public class SecureItemSinkModule extends LogisticsGuiModule {
 	public SinkReply sinksItem(ItemIdentifier item, int bestPriority, int bestCustomPriority, boolean allowDefault, boolean includeInTransit) {
 		if (ownerUUID == null && ownerName == null)
 			return null;
-		
+
 		if (bestPriority > _sinkReply.fixedPriority.ordinal())
 			return null;
-		
+
 		if (bestPriority == _sinkReply.fixedPriority.ordinal() && bestCustomPriority >= _sinkReply.customPriority)
 			return null;
-		
+
 		ItemStack stack = item.makeNormalStack(0);
 		if (!SecurityHelper.isSecure(stack))
 			return null;
@@ -112,10 +112,10 @@ public class SecureItemSinkModule extends LogisticsGuiModule {
 				return null;
 		} else if (!ownerName.equals(stack.stackTagCompound.getString(OWNER_NAME_KEY)))
 			return null;
-		
+
 		if (_service.canUseEnergy(5))
 			return _sinkReply;
-		
+
 		return null;
 	}
 
@@ -151,9 +151,9 @@ public class SecureItemSinkModule extends LogisticsGuiModule {
 	public boolean recievePassive() {
 		return true;
 	}
-	
-	
-	
+
+
+
 	/* gui stuff */
 	@Override
 	protected ModuleCoordinatesGuiProvider getPipeGuiProvider() {

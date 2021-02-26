@@ -26,35 +26,35 @@ public class PlasmaBoltEntity extends EntityThrowable implements IThrowableEntit
 	public static final float EXPLOSSIVENESS_BASE = 2;
 	public static final float EXPLOSSIVENESS_EXP = 2;
 	public static final float DETONATION_EXP = 0.3f;
-	
+
 	private Entity shooter;
 	private float chargeLevel;
 	private float detonationDamage = Float.NaN;
-	
+
 	public PlasmaBoltEntity(World world) {
 		super(world);
 	}
-	
+
 	public PlasmaBoltEntity(World world, Entity shooter, float chargeLevel) {
 		super(world);
 		this.shooter = shooter;
 		this.chargeLevel = Math.min(chargeLevel, 1);
-		
+
 		Vec3 direction = shooter.getLookVec().normalize();
 		calculateMotion(direction);
 		calculatePosition(direction, shooter);
-		
+
 		double size = chargeLevel * MAX_SIZE;
 		this.boundingBox.setBounds(posX - size, posY - size, posZ - size, posX + size, posY + size, posZ + size);
 	}
-	
+
 	private void calculateMotion(Vec3 direction) {
 		double scale = 1.0;
 		this.motionX = direction.xCoord * scale;
 		this.motionY = direction.yCoord * scale;
 		this.motionZ = direction.zCoord * scale;
 	}
-	
+
 	private void calculatePosition(Vec3 direction, Entity shooter) {
 		double xoffset = 1.3f + this.chargeLevel - direction.yCoord * shooter.getEyeHeight();
 		double yoffset = -.2;
@@ -66,7 +66,7 @@ public class PlasmaBoltEntity extends EntityThrowable implements IThrowableEntit
 		this.posY = shooter.posY + shooter.getEyeHeight() + direction.yCoord * xoffset + (1 - Math.abs(direction.yCoord)) * yoffset;
 		this.posZ = shooter.posZ + direction.zCoord * xoffset - direction.yCoord * horzz * yoffset + horzx * zoffset;
 	}
-	
+
 	public double getChargeLevel() {
 		return chargeLevel;
 	}
@@ -107,7 +107,7 @@ public class PlasmaBoltEntity extends EntityThrowable implements IThrowableEntit
 	{
 		return false;
 	}
-	
+
 	@Override
 	public boolean canBeCollidedWith() {
 		return true;
@@ -133,20 +133,20 @@ public class PlasmaBoltEntity extends EntityThrowable implements IThrowableEntit
 	{
 		return 0;
 	}
-	
+
 	@Override
 	public void onEntityUpdate() {
 		if (!Float.isNaN(detonationDamage)) {
 			worldObj.createExplosion(this, posX, posY, posZ, getExplosiveness()/* * detonationDamage * EXPLOSSIVENESS_SCALE*/, true);
 			setDead();
 		}
-		
+
 		super.onEntityUpdate();
 		if (ticksExisted > MAX_LIFETIME) {
 			setDead();
 			return;
 		}
-		
+
 		if (isInWater()) {
 			setDead();
 			for (int var3 = 0; var3 < chargeLevel * MAX_FLAMES; ++var3)
@@ -158,11 +158,11 @@ public class PlasmaBoltEntity extends EntityThrowable implements IThrowableEntit
 			return;
 		}
 	}
-	
+
 	public float getExplosiveness() {
 		return (float) Math.pow(EXPLOSSIVENESS_BASE, EXPLOSSIVENESS_EXP * chargeLevel);
 	}
-	
+
 	public float getExplosiveness(PlasmaBoltEntity other) {
 		return  getExplosiveness() * other.getExplosiveness();
 	}
@@ -171,9 +171,9 @@ public class PlasmaBoltEntity extends EntityThrowable implements IThrowableEntit
 	protected void onImpact(MovingObjectPosition mop) {
 		if (mop.entityHit != null && mop.entityHit == shooter)
 			return;
-		
+
 		float explosiveness = getExplosiveness();
-		
+
 		if (mop.typeOfHit == MovingObjectType.ENTITY) {
 			if (mop.entityHit instanceof PlasmaBoltEntity) {
 				PlasmaBoltEntity other = (PlasmaBoltEntity)mop.entityHit;
@@ -185,7 +185,7 @@ public class PlasmaBoltEntity extends EntityThrowable implements IThrowableEntit
 			} else
 				return;
 		}
-		
+
 		for (int var3 = 0; var3 < chargeLevel * MAX_FLAMES; ++var3)
 			worldObj.spawnParticle("flame",
 					posX + Math.random(),
@@ -197,7 +197,7 @@ public class PlasmaBoltEntity extends EntityThrowable implements IThrowableEntit
 			setDead();
 		}
 	}
-	
+
 	@Override
 	public boolean attackEntityFrom(DamageSource source, float damage) {
 		if (source.isExplosion())

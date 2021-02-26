@@ -13,19 +13,19 @@ public abstract class FireCraftProxy {
 	public void preInit() { }
 	public void init() { }
 	public void postInit() { }
-	
+
 	public static class Client extends FireCraftProxy {
 		@Override
 		public void init() {
 			RenderingRegistry.registerEntityRenderingHandler(PlasmaBoltEntity.class, new PlasmaBoltRender());
 			MinecraftForgeClient.registerItemRenderer(FireCraftItems.destroyer, new DestroyerRender());
-			
+
 //			RenderingRegistry.registerBlockHandler(SilmarilliumStorageBlock.RENDER);
 			MinecraftForge.EVENT_BUS.register(ItemToolTipHandler.INSTANCE);
 		}
 	}
-	
+
 	public static class Server extends FireCraftProxy {
-		
+
 	}
 }

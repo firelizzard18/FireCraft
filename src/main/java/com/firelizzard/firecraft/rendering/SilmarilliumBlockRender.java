@@ -19,12 +19,12 @@
 //
 //        block.setBlockBoundsForItemRender();
 //        renderer.setRenderBoundsFromBlock(block);
-//        
+//
 //        GL11.glPushMatrix();
-//        
+//
 //        GL11.glEnable(GL11.GL_BLEND);
 //        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-//        
+//
 //        GL11.glRotatef(90.0F, 0.0F, 1.0F, 0.0F);
 //        GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
 //        tessellator.startDrawingQuads();
@@ -64,7 +64,7 @@
 //        GL11.glPushMatrix();
 //        GL11.glEnable(GL11.GL_BLEND);
 //        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-//        
+//
 //		boolean ret = renderer.renderStandardBlock(block, x, y, z);
 //
 ////        GL11.glDisable(GL11.GL_BLEND);

@@ -34,7 +34,7 @@ public interface IPipeTile extends IInjectable {
 
 	/**
 	 * True if the pipe is connected to the block/pipe in the specific direction
-	 * 
+	 *
 	 * @param with
 	 * @return true if connect
 	 */
@@ -43,7 +43,7 @@ public interface IPipeTile extends IInjectable {
 	Block getNeighborBlock(ForgeDirection dir);
 	TileEntity getNeighborTile(ForgeDirection dir);
 	IPipe getNeighborPipe(ForgeDirection dir);
-	
+
 	IPipe getPipe();
 	int getPipeColor();
 

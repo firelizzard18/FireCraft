@@ -4,11 +4,11 @@ import net.minecraft.item.ItemStack;
 
 /**
  * Provides access to IC2 blocks and items.
- * 
+ *
  * Some items can be acquired through the ore dictionary which is the recommended way.
  * The items are initialized while IC2 is being loaded - try to use ModsLoaded() or load your mod after IC2.
  * Some blocks/items can be disabled by a config setting, so it's recommended to check if they're null first.
- * 
+ *
  * Getting the associated Block/Item for an ItemStack x:
  *   Blocks: Block.blocksList[x.itemID]
  *   Items: x.getItem()
@@ -578,7 +578,7 @@ public final class IC2Items {
 
 	/**
 	 * Get the base IC2 package name, used internally.
-	 * 
+	 *
 	 * @return IC2 package name, if unable to be determined defaults to ic2
 	 */
 	private static String getPackage() {

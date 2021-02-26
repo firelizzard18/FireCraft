@@ -11,7 +11,7 @@ public class SecureItemSinkPacket extends SecureModulePacket {
 	public SecureItemSinkPacket(int id) {
 		super(id);
 	}
-	
+
 	@Override
 	public ModernPacket template() {
 		return new SecureItemSinkPacket(getId());
@@ -25,7 +25,7 @@ public class SecureItemSinkPacket extends SecureModulePacket {
 		}
 		module.setOwnerUUID(getOwnerUUID());
 		module.setOwnerName(getOwnerName());
-		
+
 		SecureItemSinkMode packet = PacketHandler.getPacket(SecureItemSinkMode.class);
 		packet.setOwnerUUID(module.getOwnerUUID());
 		packet.setOwnerName(module.getOwnerName());

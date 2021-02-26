@@ -12,14 +12,14 @@ import net.minecraft.world.World;
 public class PlasmaBoltPacket implements IMessage {
 	private int shooterId;
 	private float chargeLevel;
-	
+
 	public PlasmaBoltPacket() { }
-	
+
 	public PlasmaBoltPacket(int shooterId, float chargeLevel) {
 		this.shooterId = shooterId;
 		this.chargeLevel = chargeLevel;
 	}
-	
+
 	@Override
 	public void fromBytes(ByteBuf buf) {
 		this.shooterId = buf.readInt();
@@ -31,7 +31,7 @@ public class PlasmaBoltPacket implements IMessage {
 		buf.writeInt(shooterId);
 		buf.writeFloat(chargeLevel);
 	}
-	
+
 	public static class Handler implements IMessageHandler<PlasmaBoltPacket, IMessage> {
 		@Override
 		public IMessage onMessage(PlasmaBoltPacket message, MessageContext ctx) {

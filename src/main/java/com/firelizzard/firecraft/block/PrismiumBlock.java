@@ -11,7 +11,7 @@ import net.minecraft.world.IBlockAccess;
 
 public class PrismiumBlock extends Block {
 	public static final String NAME = "prismium";
-	
+
 	public PrismiumBlock() {
 		super(FireCraftMaterials.prismium);
 		setHardness(5.0F);
@@ -45,7 +45,7 @@ public class PrismiumBlock extends Block {
     {
         return 1;
     }
-	
+
 	@Override
 	public boolean isOpaqueCube() {
 		return false;

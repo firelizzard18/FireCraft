@@ -25,35 +25,35 @@ public class GenericUselessItem extends Item {
 		CARBORUNDUM(FireCraftOres.CARBORUNDUM + "Gem"),
 		PULVERIZED_COKE("pulverized" + StringHelper.titleCase(FireCraftOres.COKE)),
 		WORLDEDIT_WAND("worldeditWand");
-		
+
 		private final String name;
-		
+
 		Items(String name) {
 			this.name = name;
 		}
-		
+
 		@Override
 		public String toString() {
 			return name;
 		}
-		
+
 		public String getName() {
 			return name;
 		}
-		
+
 		public int getMeta() {
 			return ordinal();
 		}
-		
+
 		public ItemStack getStack() {
 			return FireCraftItems.useless_stacks[ordinal()];
 		}
 	}
-	
+
 	public final static int COUNT = Items.values().length;
 
 	IIcon[] icons = new IIcon[COUNT];
-  
+
 	public GenericUselessItem() {
 		super();
 		setMaxStackSize(64);
@@ -61,30 +61,30 @@ public class GenericUselessItem extends Item {
 		setHasSubtypes(true);
 		setMaxDamage(0);
 	}
-	
+
 	@Override
     @SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister register) {
 		for (int i = 0; i < COUNT; i++)
 			icons[i] = register.registerIcon(FireCraftMod.MODID + ":" + Items.values()[i]);
 	}
-	
+
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
 		if (stack.getItem() != this || stack.getItemDamage() >= COUNT)
 			return super.getUnlocalizedName(stack);
-		
+
 		return "item." + Items.values()[stack.getItemDamage()].getName();
 	}
-	
+
 	@Override
 	public IIcon getIconFromDamage(int damage) {
 		if (damage >= COUNT)
 			return super.getIconFromDamage(damage);
-		
+
 		return icons[damage];
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	@Override
 	public void getSubItems(Item item, CreativeTabs tabs, @SuppressWarnings("rawtypes") List list) {

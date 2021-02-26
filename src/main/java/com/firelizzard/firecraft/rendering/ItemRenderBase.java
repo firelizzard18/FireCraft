@@ -14,7 +14,7 @@ public abstract class ItemRenderBase implements IItemRenderer {
 	protected void renderItemAsEquipped(ItemRenderType type, ItemStack item, RenderBlocks renderBlocks, EntityLivingBase entity, boolean firstPerson) {}
 	protected void renderItemAsFirstPersonMap(ItemRenderType type, ItemStack item, EntityClientPlayerMP player, TextureManager textureManager, MapData mapData) {}
 	protected void renderItemAsInventory(ItemRenderType type, ItemStack item, RenderBlocks renderBlocks) {}
-	
+
 	@Override
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
 		switch (type) {

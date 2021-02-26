@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Initialization {
 	Class<?>[] after() default {};
-	
+
 	@Target({java.lang.annotation.ElementType.METHOD})
 	@Retention(RetentionPolicy.RUNTIME)
 	public static @interface Pre {

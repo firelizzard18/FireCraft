@@ -24,7 +24,7 @@ public class FireCraftBlocks {
 	public static final PrismiumBlock prismium = new PrismiumBlock();
 
 	public static final SilmarilliumFluidBlock silmarilliumMolten = new SilmarilliumFluidBlock();
-	
+
 	static {
 		GameRegistry.registerBlock(speedlimit, SpeedLimitBlock.NAME);
 //		GameRegistry.registerTileEntity(SpeedLimitTile.class, SpeedLimitBlock.NAME);
@@ -50,13 +50,13 @@ public class FireCraftBlocks {
 				"AAA",
 				'A', Blocks.soul_sand,
 				'B', new ItemStack(ExtraUtils.unstableIngot, 1, 2));
-		
+
 		GameRegistry.addRecipe(new ItemStack(silmarilliumStorage),
 				"AAA",
 				"AAA",
 				"AAA",
 				'A', FireCraftItems.silmarilliumIngot);
-		
+
 		GameRegistry.addRecipe(new ItemStack(silmaril),
 				"ABA",
 				"BCB",

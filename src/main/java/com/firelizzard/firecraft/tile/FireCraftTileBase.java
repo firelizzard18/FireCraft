@@ -11,8 +11,8 @@ import net.minecraft.util.ResourceLocation;
 public abstract class FireCraftTileBase extends TileEntity {
 	@SideOnly(Side.CLIENT)
 	public abstract GuiBase getGui(InventoryPlayer inventoryPlayer);
-	
+
 	public abstract ContainerBase getContainer(InventoryPlayer inventoryPlayer);
-	
+
 	public abstract ResourceLocation getGuiTextureLocation();
 }

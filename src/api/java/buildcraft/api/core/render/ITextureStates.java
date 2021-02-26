@@ -14,9 +14,9 @@ import net.minecraft.util.IIcon;
 public interface ITextureStates extends ICullable {
 
 	ITextureStateManager getTextureState();
-	
+
 	IIcon getIcon(int side, int meta);
-	
+
 	Block getBlock();
-	
+
 }

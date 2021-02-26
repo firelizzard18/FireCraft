@@ -1,0 +1,1326 @@
+[00:00:00] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:00:00] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:00:02] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:00:02] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:00:14] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:00:14] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:00:18] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:00:18] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:00:31] [Client thread/INFO]: [CHAT] §aRequested: §a40 Sulfur§f
+[00:00:31] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:00:39] [Client thread/INFO]: [CHAT] §aRequested: §a10 Mystical Red Flower§f
+[00:00:39] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:00:41] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:00:41] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:00:45] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:00:45] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:00:58] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiSatchel
+[00:00:58] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerSatchel
+[00:01:13] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:01:13] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:01:36] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:01:36] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:01:54] [Client thread/INFO]: [CHAT] §aRequested: §a20 Logistics Chassis Mk2§f
+[00:01:54] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:01:58] [Client thread/INFO]: [CHAT] §aRequested: §a20 Logistics Chassis Mk2§f
+[00:01:58] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:02:08] [Client thread/INFO]: [CHAT] §cMissing: §c19 Floral Red Powder§f
+[00:02:15] [Client thread/INFO]: [CHAT] §cMissing: §c9 Floral Red Powder§f
+[00:02:33] [Client thread/INFO]: [CHAT] §aRequested: §a20 Polymorphic ItemSink module§f
+[00:02:33] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:02:41] [Client thread/INFO]: [CHAT] §aRequested: §a20 Blank Module§f
+[00:02:41] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:02:45] [Client thread/INFO]: [CHAT] §aRequested: §a20 Iron Chipset§f
+[00:02:45] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:02:50] [Client thread/INFO]: [CHAT] §aRequested: §a20 Floral Orange Powder§f
+[00:02:50] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:02:51] [Client thread/INFO]: [CHAT] §aRequested: §a20 Floral Orange Powder§f
+[00:02:51] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:02:58] [Client thread/INFO]: [CHAT] §aRequested: §a20 ItemSink module§f
+[00:02:58] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:02:58] [Client thread/INFO]: [CHAT] §aRequested: §a20 ItemSink module§f
+[00:02:58] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:03:01] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:03:01] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:03:05] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:03:05] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:03:09] [Client thread/INFO]: net.machinemuse.general.gui.PortableCraftingGui
+[00:03:09] [Client thread/INFO]: net.machinemuse.general.gui.frame.PortableCraftingContainer
+[00:03:21] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:03:21] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:03:26] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:03:26] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:04:53] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:04:53] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:04:58] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:04:58] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:05:00] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:05:00] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:05:03] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:05:03] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:05:52] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:05:52] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:05:55] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:05:55] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:06:41] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:06:41] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:06:52] [Client thread/INFO]: [CHAT] §aRequested: §a20 Inverted White Cage Lamp§f
+[00:06:52] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:06:54] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:06:54] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:07:12] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:07:12] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:07:18] [Client thread/INFO]: [CHAT] §aRequested: §a64 Stone Bricks§f
+[00:07:18] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:07:24] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:07:24] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:08:36] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:08:36] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:08:46] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:08:46] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:08:49] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:08:49] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:09:32] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:09:32] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:11:00] [Client thread/INFO]: net.minecraft.client.gui.GuiIngameMenu
+[00:12:02] [Client thread/INFO]: net.minecraft.client.gui.GuiIngameMenu
+[00:12:14] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:12:14] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:12:17] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:12:17] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:12:21] [Client thread/INFO]: [CHAT] §aRequested: §a1 Chunk Loader§f
+[00:12:21] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:12:42] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:12:42] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:12:45] [Client thread/INFO]: logisticspipes.gui.modules.GuiItemSink
+[00:12:45] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:12:54] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:12:54] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:12:57] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:12:57] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:13:10] [Client thread/INFO]: [CHAT] §aRequested: §a40 Diamond Chipset§f
+[00:13:10] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:13:16] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:13:16] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:13:22] [Client thread/INFO]: codechicken.chunkloader.GuiChunkLoader
+[00:13:28] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:13:28] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:14:04] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:14:04] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:14:07] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:14:07] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:14:08] [Client thread/INFO]: net.minecraft.client.gui.GuiChat
+[00:14:10] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:14:10] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:14:16] [Client thread/INFO]: [CHAT] §aRequested: §a96 Warp Itemduct§f
+[00:14:16] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:14:28] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:14:28] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:14:47] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:14:47] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:15:37] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:15:37] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:15:52] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:15:52] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:16:02] [Client thread/INFO]: net.minecraft.client.gui.GuiIngameMenu
+[00:16:03] [Client thread/INFO]: net.minecraft.client.gui.GuiChat
+[00:16:06] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[00:16:08] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:16:12] [Client thread/INFO]: [CHAT] Teleported firelizzard to -1491.5,43.5,1395.5
+[00:16:19] [Client thread/INFO]: net.minecraft.client.gui.GuiIngameMenu
+[00:16:20] [Client thread/INFO]: net.minecraft.client.gui.GuiChat
+[00:16:22] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[00:16:25] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:16:25] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:16:52] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:16:58] [Client thread/INFO]: [CHAT] Teleported firelizzard to -392.5,66.5,1021.5
+[00:17:00] [JM-task-5/WARN]: Iconloader failed to get base color for BlockMD [MineFactoryReloaded:laserair:5] (Error)
+[00:17:00] [JM-task-5/WARN]: Iconloader failed to get base color for BlockMD [MineFactoryReloaded:laserair:3] (Error)
+[00:17:00] [JM-task-5/WARN]: Iconloader failed to get base color for BlockMD [MineFactoryReloaded:laserair:4] (Error)
+[00:17:00] [JM-task-5/WARN]: Iconloader failed to get base color for BlockMD [MineFactoryReloaded:laserair:6] (Error)
+[00:17:02] [Client thread/INFO]: Mapping halted in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM-112
+[00:17:02] [Client thread/INFO]: Requesting World ID
+[00:17:04] [Client thread/INFO]: Requesting World ID
+[00:17:05] [Client thread/INFO]: Received handshake from server
+[00:17:05] [Client thread/INFO]: Available server commands: SetAE2FakeSlot
+[00:17:05] [Client thread/INFO]: Requesting speed packet from server
+[00:17:05] [Client thread/INFO]: Server speed is set to 20.0
+[00:17:05] [Client thread/INFO]: Requesting World ID
+[00:17:05] [Client thread/INFO]: Loaded 15 waypoints from C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\waypoints
+[00:17:05] [Client thread/INFO]: Blocks and textures are current
+[00:17:05] [Client thread/INFO]: Mapping started in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM0. Memory: 2658MB total, 734MB free 
+[00:17:06] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[00:17:07] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:17:10] [Client thread/INFO]: [CHAT] Teleported firelizzard to 1953.5,10.5,282.5
+[00:17:14] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:17:14] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:17:21] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:17:21] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:17:43] [Client thread/INFO]: [CHAT] §cMissing: §c1 Hardened Energy Cell§f
+[00:18:05] [Client thread/INFO]: [CHAT] §aRequested: §a1 Leadstone Energy Cell Frame§f
+[00:18:05] [Client thread/INFO]: [CHAT] §aRequested: §a4 Invar Ingot§f
+[00:18:05] [Client thread/INFO]: [CHAT] §aRequested: §a1 Redstone Conductance Coil§f
+[00:18:05] [Client thread/INFO]: [CHAT] §aRequested: §a3 Copper Ingot§f
+[00:18:05] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:18:06] [Client thread/INFO]: [CHAT] §aRequested: §a3 Copper Ingot§f
+[00:18:06] [Client thread/INFO]: [CHAT] §aRequested: §a1 Redstone Conductance Coil§f
+[00:18:06] [Client thread/INFO]: [CHAT] §aRequested: §a1 Leadstone Energy Cell Frame§f
+[00:18:06] [Client thread/INFO]: [CHAT] §aRequested: §a4 Invar Ingot§f
+[00:18:06] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:18:07] [Client thread/INFO]: [CHAT] §aRequested: §a1 Leadstone Energy Cell Frame§f
+[00:18:07] [Client thread/INFO]: [CHAT] §aRequested: §a4 Invar Ingot§f
+[00:18:07] [Client thread/INFO]: [CHAT] §aRequested: §a1 Redstone Conductance Coil§f
+[00:18:07] [Client thread/INFO]: [CHAT] §aRequested: §a3 Copper Ingot§f
+[00:18:07] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:18:07] [Client thread/INFO]: [CHAT] §aRequested: §a1 Redstone Conductance Coil§f
+[00:18:07] [Client thread/INFO]: [CHAT] §aRequested: §a3 Copper Ingot§f
+[00:18:07] [Client thread/INFO]: [CHAT] §aRequested: §a1 Leadstone Energy Cell Frame§f
+[00:18:07] [Client thread/INFO]: [CHAT] §aRequested: §a4 Invar Ingot§f
+[00:18:07] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:18:26] [Client thread/INFO]: logisticspipes.gui.GuiLogisticsCraftingTable
+[00:18:26] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:18:34] [Client thread/INFO]: logisticspipes.gui.GuiLogisticsCraftingTable
+[00:18:34] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:18:42] [Client thread/INFO]: [CHAT] Server Backup started!
+[00:18:42] [Client thread/INFO]: [CHAT] [Server: Turned off world auto-saving]
+[00:18:42] [Client thread/INFO]: [CHAT] [Server: Saved the world]
+[00:18:44] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:18:44] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:18:54] [Client thread/INFO]: [CHAT] §aRequested: §a24 Nether Quartz§f
+[00:18:54] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:1] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:3] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:7] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:6] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:14] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:8] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:5] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:2] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:15] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:13] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:10] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:11] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:9] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:4] (CustomBiomeColor)
+[00:18:57] [JM-task-16/INFO]: Custom biome color will be used with BlockMD [minecraft:reeds:12] (CustomBiomeColor)
+[00:19:04] [Client thread/INFO]: crazypants.enderio.machine.alloy.GuiAlloySmelter
+[00:19:04] [Client thread/INFO]: crazypants.enderio.machine.alloy.ContainerAlloySmelter
+[00:19:07] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:19:07] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:19:12] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiFurnace
+[00:19:12] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerFurnace
+[00:19:13] [Client thread/INFO]: crazypants.enderio.machine.alloy.GuiAlloySmelter
+[00:19:13] [Client thread/INFO]: crazypants.enderio.machine.alloy.ContainerAlloySmelter
+[00:19:22] [Client thread/INFO]: buildcraft.silicon.gui.GuiAssemblyTable
+[00:19:22] [Client thread/INFO]: buildcraft.silicon.gui.ContainerAssemblyTable
+[00:19:26] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:19:26] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:19:40] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:19:40] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:20:29] [Client thread/INFO]: [CHAT] §aRequested: §a3 Bronze Ingot§f
+[00:20:29] [Client thread/INFO]: [CHAT] §aRequested: §a4 Enderium Ingot§f
+[00:20:29] [Client thread/INFO]: [CHAT] §aRequested: §a1 Translocation Plate§f
+[00:20:29] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:20:30] [Client thread/INFO]: [CHAT] §cMissing: §c1 Translocation Plate§f
+[00:20:33] [Client thread/INFO]: [CHAT] §cMissing: §c1 Translocation Plate§f
+[00:20:44] [Client thread/INFO]: [CHAT] §cMissing: §c8 Signalum Ingot§f
+[00:20:55] [Client thread/INFO]: [CHAT] §cMissing: §c16 Destabilized Redstone Bucket§f
+[00:21:06] [Client thread/INFO]: [CHAT] §cMissing: §c16 Destabilized Redstone Bucket§f
+[00:21:09] [Client thread/INFO]: [CHAT] §aRequested: §a64 Bucket§f
+[00:21:09] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:21:21] [Client thread/INFO]: [CHAT] §aRequested: §a64 Block of Redstone§f
+[00:21:21] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:21:32] [Client thread/INFO]: [CHAT] §aRequested: §a64 Redstone§f
+[00:21:32] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:21:52] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:21:52] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:22:06] [Client thread/INFO]: cofh.thermalexpansion.gui.client.ender.GuiTesseract
+[00:22:06] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:22:20] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiCrucible
+[00:22:20] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerCrucible
+[00:22:24] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:22:24] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:22:33] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiCrucible
+[00:22:33] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerCrucible
+[00:22:38] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:22:38] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:22:42] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiCrucible
+[00:22:42] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerCrucible
+[00:22:50] [Client thread/INFO]: [CHAT] Server backup done in 00:04:07! (2.0GB | 16.5GB)
+[00:22:50] [Client thread/INFO]: [CHAT] [Server: Turned on world auto-saving]
+[00:23:08] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:23:08] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:23:24] [Client thread/INFO]: InvTweaks: net.minecraft.inventory.ContainerHopper
+[00:23:24] [Client thread/INFO]: net.minecraft.client.gui.GuiHopper
+[00:23:24] [Client thread/INFO]: net.minecraft.inventory.ContainerHopper
+[00:23:28] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:23:28] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:23:44] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:23:44] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:23:50] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:23:50] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:23:55] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiSatchel
+[00:23:55] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerSatchel
+[00:24:01] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:24:01] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:24:07] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiSatchel
+[00:24:07] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerSatchel
+[00:24:14] [Client thread/INFO]: net.minecraft.client.gui.GuiHopper
+[00:24:14] [Client thread/INFO]: net.minecraft.inventory.ContainerHopper
+[00:24:16] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:24:16] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:24:54] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:24:54] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:24:55] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiSatchel
+[00:24:55] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerSatchel
+[00:25:00] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:25:00] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:25:10] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:25:10] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:25:32] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiSatchel
+[00:25:32] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerSatchel
+[00:25:37] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:25:37] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:25:49] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:25:49] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:25:55] [Client thread/INFO]: [CHAT] §aRequested: §a256 Signalum Blend§f
+[00:25:55] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:26:18] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiSmelter
+[00:26:18] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerSmelter
+[00:26:21] [Client thread/INFO]: ic2.core.block.machine.gui.GuiInduction
+[00:26:21] [Client thread/INFO]: ic2.core.block.machine.container.ContainerInduction
+[00:27:09] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:27:09] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:27:13] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:27:13] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:27:19] [Client thread/INFO]: [CHAT] §aRequested: §a3 Plate Frame§f
+[00:27:19] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:27:27] [Client thread/INFO]: [CHAT] §aRequested: §a4 Enderium Ingot§f
+[00:27:27] [Client thread/INFO]: [CHAT] §aRequested: §a3 Bronze Ingot§f
+[00:27:27] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:27:28] [Client thread/INFO]: [CHAT] §aRequested: §a4 Enderium Ingot§f
+[00:27:28] [Client thread/INFO]: [CHAT] §aRequested: §a3 Bronze Ingot§f
+[00:27:28] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:27:28] [Client thread/INFO]: [CHAT] §aRequested: §a3 Bronze Ingot§f
+[00:27:28] [Client thread/INFO]: [CHAT] §aRequested: §a4 Enderium Ingot§f
+[00:27:28] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:27:52] [Client thread/INFO]: logisticspipes.gui.orderer.FluidGuiOrderer
+[00:27:52] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:27:55] [Client thread/INFO]: [CHAT] §aRequested: §a3000mB Resonant Ender§f
+[00:27:55] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:27:58] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:27:58] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:28:27] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:28:27] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:28:46] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:28:46] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:28:53] [Client thread/INFO]: [CHAT] §aRequested: §a4 RedNet Energy Cable§f
+[00:28:53] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:29:07] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:29:07] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:29:24] [Client thread/INFO]: cofh.thermalexpansion.gui.client.plate.GuiPlateTeleport
+[00:29:24] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:29:46] [Client thread/INFO]: cofh.thermalexpansion.gui.client.plate.GuiPlateTeleport
+[00:29:46] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:29:51] [Client thread/INFO]: Mapping halted in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM0
+[00:29:52] [Client thread/INFO]: Requesting World ID
+[00:29:55] [Client thread/INFO]: Requesting World ID
+[00:29:55] [Client thread/INFO]: Received handshake from server
+[00:29:55] [Client thread/INFO]: Available server commands: SetAE2FakeSlot
+[00:29:55] [Client thread/INFO]: Requesting speed packet from server
+[00:29:56] [Client thread/INFO]: Server speed is set to 20.0
+[00:29:56] [Client thread/INFO]: Loaded 15 waypoints from C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\waypoints
+[00:29:56] [Client thread/INFO]: Blocks and textures are current
+[00:29:56] [Client thread/INFO]: Mapping started in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM-112. Memory: 3038MB total, 1341MB free 
+[00:29:56] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[00:30:07] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:30:07] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:30:09] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiSatchel
+[00:30:09] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerSatchel
+[00:30:15] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:30:15] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:30:19] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:30:19] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:30:37] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:30:37] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:30:40] [Client thread/INFO]: [CHAT] §aRequested: §a1 Resonant Fluxduct§f
+[00:30:40] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:30:42] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:30:42] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:30:45] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:30:45] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:30:49] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:30:49] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:30:58] [Client thread/INFO]: cofh.thermalexpansion.gui.client.plate.GuiPlateTeleport
+[00:30:58] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:31:10] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:31:17] [Client thread/INFO]: cofh.thermalexpansion.gui.client.ender.GuiTesseract
+[00:31:17] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:31:25] [Client thread/INFO]: cofh.thermalexpansion.gui.client.plate.GuiPlateTeleport
+[00:31:25] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:31:41] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:31:45] [Client thread/INFO]: [CHAT] Teleported firelizzard to -393.5,46.5,1909.5
+[00:32:20] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:32:20] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:32:26] [Client thread/INFO]: cofh.thermalexpansion.gui.client.plate.GuiPlateTeleport
+[00:32:26] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:32:42] [Client thread/INFO]: cofh.thermalexpansion.gui.client.plate.GuiPlateTeleport
+[00:32:42] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:32:50] [Client thread/INFO]: cofh.thermalexpansion.gui.client.plate.GuiPlateTeleport
+[00:32:50] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:32:57] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:32:59] [Client thread/INFO]: cofh.thermalexpansion.gui.client.ender.GuiTesseract
+[00:32:59] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:33:01] [Client thread/INFO]: cofh.thermalexpansion.gui.client.ender.GuiTesseract
+[00:33:01] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:33:03] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:33:11] [Client thread/INFO]: [CHAT] Teleported firelizzard to -1491.5,43.5,1395.5
+[00:33:15] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:33:15] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:33:19] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:33:25] [Client thread/INFO]: [CHAT] Teleported firelizzard to -393.5,46.5,1909.5
+[00:33:29] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:33:31] [Client thread/INFO]: [CHAT] Teleported firelizzard to -392.5,66.5,1021.5
+[00:33:40] [Client thread/INFO]: journeymap.client.ui.waypoint.WaypointEditor
+[00:33:50] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:34:05] [Client thread/INFO]: erogenousbeef.bigreactors.client.gui.GuiTurbineController
+[00:34:05] [Client thread/INFO]: erogenousbeef.bigreactors.gui.container.ContainerSlotless
+[00:34:22] [Client thread/INFO]: erogenousbeef.bigreactors.client.gui.GuiReactorStatus
+[00:34:22] [Client thread/INFO]: erogenousbeef.bigreactors.gui.container.ContainerReactorController
+[00:34:28] [Client thread/INFO]: erogenousbeef.bigreactors.client.gui.GuiReactorControlRod
+[00:34:28] [Client thread/INFO]: erogenousbeef.bigreactors.gui.container.ContainerBasic
+[00:34:35] [Client thread/INFO]: erogenousbeef.bigreactors.client.gui.GuiReactorStatus
+[00:34:35] [Client thread/INFO]: erogenousbeef.bigreactors.gui.container.ContainerReactorController
+[00:35:07] [Client thread/INFO]: erogenousbeef.bigreactors.client.gui.GuiTurbineController
+[00:35:07] [Client thread/INFO]: erogenousbeef.bigreactors.gui.container.ContainerSlotless
+[00:35:11] [Client thread/INFO]: erogenousbeef.bigreactors.client.gui.GuiTurbineController
+[00:35:11] [Client thread/INFO]: erogenousbeef.bigreactors.gui.container.ContainerSlotless
+[00:35:30] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:35:30] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:35:36] [Client thread/INFO]: Mapping halted in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM-112
+[00:35:36] [Client thread/INFO]: Requesting World ID
+[00:35:40] [Client thread/INFO]: Requesting World ID
+[00:35:40] [Client thread/INFO]: Received handshake from server
+[00:35:40] [Client thread/INFO]: Available server commands: SetAE2FakeSlot
+[00:35:40] [Client thread/INFO]: Requesting speed packet from server
+[00:35:41] [Client thread/INFO]: Requesting World ID
+[00:35:41] [Client thread/INFO]: Loaded 15 waypoints from C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\waypoints
+[00:35:41] [Client thread/INFO]: Blocks and textures are current
+[00:35:41] [Client thread/INFO]: Mapping started in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM0. Memory: 2984MB total, 832MB free 
+[00:35:44] [Client thread/INFO]: Server speed is set to 20.0
+[00:35:44] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[00:35:50] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:35:50] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:35:55] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:35:55] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:35:59] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:35:59] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:36:01] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:36:01] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:36:03] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:36:03] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:36:11] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:36:11] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:36:15] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:36:15] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:36:20] [Client thread/INFO]: [CHAT] §aRequested: §a40 Provider module MK2§f
+[00:36:20] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:36:33] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:36:33] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:36:34] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:36:34] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:36:35] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:36:35] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:36:41] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:36:41] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:36:46] [Client thread/INFO]: [CHAT] §cMissing: §c144 Nether Quartz§f
+[00:37:03] [Client thread/INFO]: tconstruct.smeltery.gui.SmelteryGui
+[00:37:03] [Client thread/INFO]: tconstruct.smeltery.inventory.SmelteryContainer
+[00:37:21] [Client thread/INFO]: logisticspipes.gui.orderer.NormalMk2GuiOrderer
+[00:37:21] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:37:33] [Client thread/INFO]: [CHAT] §aRequested: §a36 Shiny Ingot§f
+[00:37:33] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:37:39] [Client thread/INFO]: [CHAT] §aRequested: §a36 Silver Dust§f
+[00:37:39] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:37:45] [Client thread/INFO]: [CHAT] §aRequested: §a36 Tin Dust§f
+[00:37:45] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:37:45] [Client thread/INFO]: [CHAT] §aRequested: §a36 Tin Dust§f
+[00:37:45] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:37:48] [Client thread/INFO]: logisticspipes.gui.orderer.FluidGuiOrderer
+[00:37:48] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:37:53] [Client thread/INFO]: [CHAT] §aRequested: §a36000mB Resonant Ender§f
+[00:37:53] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:37:56] [Client thread/INFO]: tconstruct.smeltery.gui.SmelteryGui
+[00:37:56] [Client thread/INFO]: tconstruct.smeltery.inventory.SmelteryContainer
+[00:38:08] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:38:08] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:38:16] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:38:16] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:38:20] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:38:20] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:38:22] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:38:22] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:38:33] [Client thread/INFO]: tconstruct.smeltery.gui.SmelteryGui
+[00:38:33] [Client thread/INFO]: tconstruct.smeltery.inventory.SmelteryContainer
+[00:38:42] [Client thread/INFO]: logisticspipes.gui.orderer.NormalMk2GuiOrderer
+[00:38:42] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:38:51] [Client thread/INFO]: [CHAT] §aRequested: §a36 Tin Dust§f
+[00:38:51] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:38:53] [Client thread/INFO]: [CHAT] §aRequested: §a27 Tin Dust§f
+[00:38:53] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:38:57] [Client thread/INFO]: tconstruct.smeltery.gui.SmelteryGui
+[00:38:57] [Client thread/INFO]: tconstruct.smeltery.inventory.SmelteryContainer
+[00:39:33] [Client thread/INFO]: tconstruct.smeltery.gui.SmelteryGui
+[00:39:33] [Client thread/INFO]: tconstruct.smeltery.inventory.SmelteryContainer
+[00:40:51] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:40:51] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:40:59] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:40:59] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:41:01] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:41:01] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:41:05] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:41:05] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:41:09] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:41:09] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:41:11] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:41:11] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:41:13] [Client thread/INFO]: net.minecraft.client.gui.GuiChat
+[00:41:26] [Client thread/INFO]: cofh.thermalexpansion.gui.client.plate.GuiPlateTeleport
+[00:41:26] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:41:38] [Client thread/INFO]: Mapping halted in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM0
+[00:41:38] [Client thread/INFO]: Requesting World ID
+[00:41:42] [Client thread/INFO]: Requesting World ID
+[00:41:42] [Client thread/INFO]: net.minecraft.client.gui.GuiDownloadTerrain
+[00:41:42] [Client thread/INFO]: Received handshake from server
+[00:41:42] [Client thread/INFO]: Available server commands: SetAE2FakeSlot
+[00:41:42] [Client thread/INFO]: Requesting speed packet from server
+[00:41:42] [Client thread/INFO]: Server speed is set to 20.0
+[00:41:42] [Client thread/INFO]: Loaded 15 waypoints from C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\waypoints
+[00:41:42] [Client thread/INFO]: Blocks and textures are current
+[00:41:42] [Client thread/INFO]: Mapping started in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM-112. Memory: 3036MB total, 1291MB free 
+[00:41:43] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[00:41:46] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:41:46] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:41:54] [Client thread/INFO]: [CHAT] §aRequested: §a640 Nether Quartz Ore§f
+[00:41:54] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:41:56] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:41:56] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:42:00] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:42:00] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:42:04] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiPulverizer
+[00:42:04] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerPulverizer
+[00:42:06] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiPulverizer
+[00:42:06] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerPulverizer
+[00:42:14] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:42:14] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:42:23] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiPulverizer
+[00:42:23] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerPulverizer
+[00:42:26] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiPulverizer
+[00:42:26] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerPulverizer
+[00:42:28] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:42:28] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:42:32] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:42:32] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:42:34] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:42:34] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:42:36] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:42:36] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:42:47] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiPulverizer
+[00:42:47] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerPulverizer
+[00:42:49] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:42:49] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:42:53] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:42:53] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:43:00] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:43:00] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:43:04] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:43:04] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:43:07] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:43:07] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:43:10] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:43:10] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:43:13] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:43:13] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:43:16] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiPulverizer
+[00:43:16] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerPulverizer
+[00:43:35] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiPulverizer
+[00:43:35] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerPulverizer
+[00:43:37] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiPulverizer
+[00:43:37] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerPulverizer
+[00:43:39] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiPulverizer
+[00:43:39] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerPulverizer
+[00:43:48] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:43:48] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:44:04] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:44:04] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:44:09] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:44:09] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:44:13] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:44:13] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:44:18] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:44:18] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:44:23] [Client thread/INFO]: [CHAT] §aRequested: §a10 Tesseract Frame (Empty)§f
+[00:44:23] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:44:24] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:44:24] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:44:31] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:44:31] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:44:40] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:44:40] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:44:48] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:44:48] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:44:58] [Client thread/INFO]: [CHAT] §aRequested: §a1728 Nether Quartz Ore§f
+[00:44:58] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:45:02] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:45:02] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:45:12] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:45:12] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:45:14] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:45:14] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:45:19] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:45:19] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:45:22] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:45:22] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:45:25] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:45:25] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:45:28] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:45:28] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:45:32] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:45:32] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:45:38] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:45:38] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:45:43] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:45:43] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:45:45] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:45:45] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:45:48] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:45:48] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:45:52] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:45:52] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:45:56] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:45:56] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:46:05] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:46:05] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:46:08] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:46:08] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:46:11] [Client thread/INFO]: Mapping halted in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM-112
+[00:46:11] [Client thread/INFO]: Requesting World ID
+[00:46:15] [Client thread/INFO]: Requesting World ID
+[00:46:15] [Client thread/INFO]: Received handshake from server
+[00:46:15] [Client thread/INFO]: Available server commands: SetAE2FakeSlot
+[00:46:16] [Client thread/INFO]: Requesting speed packet from server
+[00:46:16] [Thread-31/INFO]: [paulscode.sound.SoundSystemLogger:errorMessage:131]: Error in class 'SourceLWJGL OpenAL'
+[00:46:16] [Thread-31/INFO]: [paulscode.sound.SoundSystemLogger:errorMessage:132]:     Channel null in method 'stop'
+[00:46:17] [Client thread/INFO]: Requesting World ID
+[00:46:17] [Client thread/INFO]: Loaded 15 waypoints from C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\waypoints
+[00:46:17] [Client thread/INFO]: Blocks and textures are current
+[00:46:17] [Client thread/INFO]: Mapping started in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM0. Memory: 3041MB total, 985MB free 
+[00:46:17] [Client thread/INFO]: Server speed is set to 20.0
+[00:46:17] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[00:46:18] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:46:18] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:47:16] [Client thread/INFO]: logisticspipes.gui.GuiLogisticsCraftingTable
+[00:47:16] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:47:19] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:47:19] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:47:23] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:47:23] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:47:40] [Client thread/INFO]: crazypants.enderio.machine.alloy.GuiAlloySmelter
+[00:47:40] [Client thread/INFO]: crazypants.enderio.machine.alloy.ContainerAlloySmelter
+[00:47:48] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:47:48] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:47:52] [Client thread/INFO]: [CHAT] §aRequested: §a192 Nether Quartz§f
+[00:47:52] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:47:55] [Client thread/INFO]: crazypants.enderio.machine.alloy.GuiAlloySmelter
+[00:47:55] [Client thread/INFO]: crazypants.enderio.machine.alloy.ContainerAlloySmelter
+[00:47:59] [Client thread/INFO]: crazypants.enderio.machine.alloy.GuiAlloySmelter
+[00:47:59] [Client thread/INFO]: crazypants.enderio.machine.alloy.ContainerAlloySmelter
+[00:48:28] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:48:28] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:48:35] [Client thread/INFO]: logisticspipes.gui.orderer.FluidGuiOrderer
+[00:48:35] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:48:40] [Client thread/INFO]: [CHAT] §aRequested: §a10000mB Resonant Ender§f
+[00:48:40] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:48:43] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:48:43] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:50:18] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:50:18] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:50:22] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:50:22] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:50:28] [Client thread/INFO]: [CHAT] §aRequested: §a10 Tesseract§f
+[00:50:28] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:50:38] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:50:38] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:50:44] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiSatchel
+[00:50:44] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerSatchel
+[00:50:54] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:50:54] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:50:59] [Client thread/INFO]: [CHAT] §cMissing: §c64 Redstone Energy Fluxduct§f
+[00:51:10] [Client thread/INFO]: [CHAT] §aRequested: §a64 Redstone Energy Fluxduct (Empty)§f
+[00:51:10] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:51:13] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:51:13] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:51:18] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiSatchel
+[00:51:18] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerSatchel
+[00:51:23] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiSatchel
+[00:51:23] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerSatchel
+[00:51:32] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:51:32] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:51:44] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiStrongbox
+[00:51:44] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerStrongbox
+[00:51:55] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiStrongbox
+[00:51:55] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerStrongbox
+[00:52:18] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:52:18] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:52:21] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:52:21] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:52:29] [Client thread/INFO]: cofh.thermalexpansion.gui.client.GuiSatchel
+[00:52:29] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerSatchel
+[00:52:33] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:52:33] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: java.io.FileNotFoundException: C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\saves\NEI\remote\52.44.37.36~25565\world\NEI.dat (The requested operation cannot be performed on a file with a user-mapped section open)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at java.io.FileOutputStream.open(Native Method)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at codechicken.nei.NEIServerUtils.writeNBT(NEIServerUtils.java:399)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at codechicken.nei.config.ConfigSet.saveNBT(ConfigSet.java:38)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at codechicken.nei.NEIClientConfig.setSearchExpression(NEIClientConfig.java:378)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at codechicken.nei.SearchField.onTextChange(SearchField.java:89)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at codechicken.nei.TextField.setText(TextField.java:114)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at codechicken.nei.TextField.handleKeyPress(TextField.java:64)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at codechicken.nei.LayoutManager.keyTyped(LayoutManager.java:135)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at codechicken.nei.guihook.GuiContainerManager.firstKeyTyped(GuiContainerManager.java:318)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at codechicken.nei.guihook.GuiContainerManager.keyTyped(GuiContainerManager.java:472)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at codechicken.nei.guihook.GuiContainerManager.handleKeyboardInput(GuiContainerManager.java:465)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at net.minecraft.client.gui.inventory.GuiContainer.func_146282_l(GuiContainer.java)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at net.minecraft.client.gui.GuiScreen.func_146269_k(GuiScreen.java:276)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1640)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:973)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:898)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at net.minecraft.client.main.Main.main(SourceFile:148)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at java.lang.reflect.Method.invoke(Method.java:483)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+[00:52:37] [Client thread/INFO]: [java.lang.Throwable$WrappedPrintStream:println:748]: 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+[00:52:57] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiCrucible
+[00:52:57] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerCrucible
+[00:53:01] [Client thread/INFO]: logisticspipes.gui.orderer.NormalMk2GuiOrderer
+[00:53:01] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:53:04] [Client thread/INFO]: [CHAT] §aRequested: §a64 Redstone§f
+[00:53:04] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:53:07] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:53:07] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:53:11] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiCrucible
+[00:53:11] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerCrucible
+[00:53:35] [Client thread/INFO]: logisticspipes.gui.orderer.NormalMk2GuiOrderer
+[00:53:35] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:53:39] [Client thread/INFO]: [CHAT] §aRequested: §a64 Redstone§f
+[00:53:39] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:53:41] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:53:41] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:53:44] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiCrucible
+[00:53:44] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerCrucible
+[00:54:07] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:54:07] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:54:16] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:54:16] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:54:21] [Client thread/INFO]: logisticspipes.gui.orderer.NormalMk2GuiOrderer
+[00:54:21] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:54:27] [Client thread/INFO]: [CHAT] §aRequested: §a64 Redstone§f
+[00:54:27] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:54:30] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:54:30] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:54:36] [Client thread/INFO]: [CHAT] §aRequested: §a32 Redstone Energy Fluxduct (Empty)§f
+[00:54:36] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:54:42] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:54:42] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:54:45] [Client thread/INFO]: logisticspipes.gui.orderer.GuiRequestTable
+[00:54:45] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:54:49] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[00:54:49] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:54:57] [Client thread/INFO]: [CHAT] §aRequested: §a64 Cryo-Stabilized Fluxduct (Empty)§f
+[00:54:57] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:55:01] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:55:01] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:55:05] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:55:05] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:55:10] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:55:10] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:55:11] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiCrucible
+[00:55:11] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerCrucible
+[00:55:12] [Client thread/INFO]: cofh.thermalexpansion.gui.client.machine.GuiTransposer
+[00:55:12] [Client thread/INFO]: cofh.thermalexpansion.gui.container.machine.ContainerTransposer
+[00:55:16] [Client thread/INFO]: logisticspipes.gui.orderer.FluidGuiOrderer
+[00:55:16] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[00:55:23] [Client thread/INFO]: [CHAT] §aRequested: §a32000mB Gelid Cryotheum§f
+[00:55:23] [Client thread/INFO]: [CHAT] §aRequest successful!
+[00:55:30] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:55:30] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:55:51] [Client thread/INFO]: cofh.thermalexpansion.gui.client.plate.GuiPlateTeleport
+[00:55:51] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[00:56:04] [Client thread/INFO]: Mapping halted in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM0
+[00:56:04] [Client thread/INFO]: Requesting World ID
+[00:56:08] [Client thread/INFO]: Requesting World ID
+[00:56:08] [Client thread/INFO]: net.minecraft.client.gui.GuiDownloadTerrain
+[00:56:08] [Client thread/INFO]: Received handshake from server
+[00:56:08] [Client thread/INFO]: Available server commands: SetAE2FakeSlot
+[00:56:08] [Client thread/INFO]: Requesting speed packet from server
+[00:56:09] [Client thread/INFO]: Server speed is set to 20.0
+[00:56:09] [Client thread/INFO]: Loaded 15 waypoints from C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\waypoints
+[00:56:09] [Client thread/INFO]: Blocks and textures are current
+[00:56:09] [Client thread/INFO]: Mapping started in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM-112. Memory: 3039MB total, 1159MB free 
+[00:56:10] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[00:56:17] [Client thread/INFO]: cpw.mods.ironchest.client.GUIChest
+[00:56:17] [Client thread/INFO]: cpw.mods.ironchest.ContainerIronChest
+[00:56:32] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:56:35] [Client thread/INFO]: [CHAT] Teleported firelizzard to -1491.5,43.5,1395.5
+[00:56:39] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:56:42] [Client thread/INFO]: [CHAT] Teleported firelizzard to -1491.5,43.5,1395.5
+[00:56:43] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:56:47] [Client thread/INFO]: [CHAT] Teleported firelizzard to -393.5,46.5,1909.5
+[00:57:00] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:57:13] [Client thread/INFO]: [CHAT] Teleported firelizzard to -393.5,46.5,1909.5
+[00:57:15] [Client thread/INFO]: journeymap.client.ui.fullscreen.Fullscreen
+[00:57:17] [Client thread/INFO]: [CHAT] Teleported firelizzard to -1491.5,43.5,1395.5
+[00:57:19] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:57:19] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:57:21] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:57:21] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:57:26] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[00:57:26] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[00:58:41] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:58:41] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[00:59:02] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[00:59:02] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[01:00:00] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[01:00:00] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[01:00:03] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[01:00:03] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[01:00:07] [Client thread/INFO]: [CHAT] §aRequested: §a4 Warp Itemduct§f
+[01:00:07] [Client thread/INFO]: [CHAT] §aRequest successful!
+[01:00:39] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[01:00:39] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[01:00:44] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[01:00:44] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[01:01:19] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[01:01:19] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[01:01:51] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[01:01:51] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[01:01:56] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[01:01:56] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[01:02:01] [Client thread/INFO]: cofh.thermalexpansion.gui.client.ender.GuiTesseract
+[01:02:01] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[01:02:19] [Client thread/INFO]: cofh.thermalexpansion.gui.client.ender.GuiTesseract
+[01:02:19] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[01:02:21] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[01:02:21] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[01:02:24] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[01:02:24] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[01:02:28] [Client thread/INFO]: cofh.thermalexpansion.gui.client.plate.GuiPlateTeleport
+[01:02:28] [Client thread/INFO]: cofh.thermalexpansion.gui.container.ContainerTEBase
+[01:03:03] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[01:03:03] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[01:03:06] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[01:03:06] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[01:04:04] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[01:04:04] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[01:04:06] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[01:04:06] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[01:04:10] [Client thread/INFO]: [CHAT] §aRequested: §a1 Structuralduct (Opaque)§f
+[01:04:10] [Client thread/INFO]: [CHAT] §aRequest successful!
+[01:04:21] [Client thread/INFO]: logisticspipes.gui.orderer.NormalGuiOrderer
+[01:04:21] [Client thread/INFO]: logisticspipes.utils.gui.DummyContainer
+[01:04:25] [Client thread/INFO]: [CHAT] §aRequested: §a2 Iron Ingot§f
+[01:04:25] [Client thread/INFO]: [CHAT] §aRequest successful!
+[01:04:31] [Client thread/INFO]: [CHAT] §aRequested: §a9 Lead Ingot§f
+[01:04:31] [Client thread/INFO]: [CHAT] §aRequest successful!
+[01:04:34] [Client thread/INFO]: codechicken.enderstorage.storage.item.GuiEnderItemStorage
+[01:04:34] [Client thread/INFO]: codechicken.enderstorage.storage.item.ContainerEnderItemStorage
+[01:04:36] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[01:04:36] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[01:04:42] [Client thread/INFO]: net.machinemuse.general.gui.PortableCraftingGui
+[01:04:42] [Client thread/INFO]: net.machinemuse.general.gui.frame.PortableCraftingContainer
+[01:04:48] [Client thread/INFO]: net.minecraft.client.gui.inventory.GuiInventory
+[01:04:48] [Client thread/INFO]: net.minecraft.inventory.ContainerPlayer
+[01:05:13] [Client thread/INFO]: Mapping halted in C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\journeymap\data\mp\NiusWorks\DIM-112
+[01:05:13] [Client thread/INFO]: Applying holder lookups
+[01:05:13] [Client thread/INFO]: Holder lookups applied
+[01:05:18] [Client thread/FATAL]: Unreported exception thrown!
+java.lang.NullPointerException
+	at cofh.thermalexpansion.block.plate.TilePlateTeleporter.blockBroken(TilePlateTeleporter.java:492) ~[TilePlateTeleporter.class:?]
+	at cofh.core.block.TileCoFHBase.blockDismantled(TileCoFHBase.java:46) ~[TileCoFHBase.class:?]
+	at cofh.thermalexpansion.block.BlockTEBase.dismantleBlock(BlockTEBase.java:131) ~[BlockTEBase.class:?]
+	at cofh.core.block.BlockCoFHBase.dismantleBlock(BlockCoFHBase.java:338) ~[BlockCoFHBase.class:?]
+	at com.firelizzard.firecraft.item.DestroyerTool.onItemUse_dismantle(DestroyerTool.java:253) ~[DestroyerTool.class:?]
+	at com.firelizzard.firecraft.item.DestroyerTool.onItemUse_machine(DestroyerTool.java:228) ~[DestroyerTool.class:?]
+	at com.firelizzard.firecraft.item.DestroyerTool.func_77648_a(DestroyerTool.java:483) ~[DestroyerTool.class:?]
+	at net.minecraft.item.ItemStack.func_77943_a(ItemStack.java:129) ~[add.class:?]
+	at net.minecraft.client.multiplayer.PlayerControllerMP.func_78760_a(PlayerControllerMP.java:360) ~[bje.class:?]
+	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1447) ~[bao.class:?]
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1953) ~[bao.class:?]
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:973) ~[bao.class:?]
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:898) [bao.class:?]
+	at net.minecraft.client.main.Main.main(SourceFile:148) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[?:1.8.0_25]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+[01:05:18] [Client thread/INFO]: [net.minecraft.client.Minecraft:func_71377_b:349]: ---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 10/4/17 1:05 AM
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at cofh.thermalexpansion.block.plate.TilePlateTeleporter.blockBroken(TilePlateTeleporter.java:492)
+	at cofh.core.block.TileCoFHBase.blockDismantled(TileCoFHBase.java:46)
+	at cofh.thermalexpansion.block.BlockTEBase.dismantleBlock(BlockTEBase.java:131)
+	at cofh.core.block.BlockCoFHBase.dismantleBlock(BlockCoFHBase.java:338)
+	at com.firelizzard.firecraft.item.DestroyerTool.onItemUse_dismantle(DestroyerTool.java:253)
+	at com.firelizzard.firecraft.item.DestroyerTool.onItemUse_machine(DestroyerTool.java:228)
+	at com.firelizzard.firecraft.item.DestroyerTool.func_77648_a(DestroyerTool.java:483)
+	at net.minecraft.item.ItemStack.func_77943_a(ItemStack.java:129)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.func_78760_a(PlayerControllerMP.java:360)
+	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1447)
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1953)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:973)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:898)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at cofh.thermalexpansion.block.plate.TilePlateTeleporter.blockBroken(TilePlateTeleporter.java:492)
+	at cofh.core.block.TileCoFHBase.blockDismantled(TileCoFHBase.java:46)
+	at cofh.thermalexpansion.block.BlockTEBase.dismantleBlock(BlockTEBase.java:131)
+	at cofh.core.block.BlockCoFHBase.dismantleBlock(BlockCoFHBase.java:338)
+	at com.firelizzard.firecraft.item.DestroyerTool.onItemUse_dismantle(DestroyerTool.java:253)
+	at com.firelizzard.firecraft.item.DestroyerTool.onItemUse_machine(DestroyerTool.java:228)
+	at com.firelizzard.firecraft.item.DestroyerTool.func_77648_a(DestroyerTool.java:483)
+	at net.minecraft.item.ItemStack.func_77943_a(ItemStack.java:129)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.func_78760_a(PlayerControllerMP.java:360)
+	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1447)
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1953)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [GCEntityClientPlayerMP['firelizzard'/22046541, l='MpServer', x=-1493.46, y=44.54, z=1393.55]]
+	Chunk stats: MultiplayerChunkCache: 441, 441
+	Level seed: 0
+	Level generator: ID 04 - BIOMESOP, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (8,64,8), Chunk: (at 8,4,8 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 109227365 game time, 12085319 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: true), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 3 total; [EntityHat['unknown'/4911369, l='MpServer', x=-1493.46, y=44.54, z=1393.55], GCEntityClientPlayerMP['firelizzard'/22046541, l='MpServer', x=-1493.46, y=44.54, z=1393.55], EntityTrail['unknown'/4911265, l='MpServer', x=-1493.46, y=44.54, z=1393.55]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2444)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:927)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_25, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 474810528 bytes (452 MB) / 3173515264 bytes (3026 MB) up to 3173515264 bytes (3026 MB)
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx3072m -Xms256m -XX:PermSize=256m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 15, tallocated: 95
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 204 mods loaded, 199 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJA	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJA	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJA	AM2-Preloader{0.0.3} [AMCore] (minecraft.jar) 
+	UCHIJA	appliedenergistics2-core{rv3-beta-6} [Applied Energistics 2 Core] (minecraft.jar) 
+	UCHIJA	Aroma1997Core{1.0.2.16} [Aroma1997Core] (Aroma1997Core-1.7.10-1.0.2.16.jar) 
+	UCHIJA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJA	Micdoodlecore{} [Micdoodle8 Core] (minecraft.jar) 
+	UCHIJA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal.jar) 
+	UCHIJA	ThE-core{1.0.0.1} [Thaumic Energistics Core] (minecraft.jar) 
+	UCHIJA	ThaumicTinkerer-preloader{0.1} [Thaumic Tinkerer Core] (minecraft.jar) 
+	UCHIJA	ChocoPatcher{1.1} [Choco Patcher] (minecraft.jar) 
+	UCHIJA	OpenModsCore{0.10} [OpenModsCore] (minecraft.jar) 
+	UCHIJA	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UCHIJA	BinniePatcher{1.8.2} [Binnie Patcher] (minecraft.jar) 
+	UCHIJA	FastCraft{1.23} [FastCraft] (fastcraft-1.23.jar) 
+	UCHIJA	debug{1.0} [debug] (denseores-1.6.2.jar) 
+	UCHIJA	AnimationAPI{1.2.4} [AnimationAPI] (AnimationAPI-1.7.10-1.2.4.jar) 
+	UCHIJA	arsmagica2{1.4.0.009} [Ars Magica 2] (1.7.10_AM2-1.4.0.009.jar) 
+	UCHIJA	IC2{2.2.827-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.827-experimental.jar) 
+	UCHIJA	AdvancedSolarPanel{1.7.10-3.5.1} [Advanced Solar Panels] (AdvancedSolarPanel-1.7.10-3.5.1.jar) 
+	UCHIJA	AgriCraft{1.7.10-1.5.0} [AgriCraft] (AgriCraft-1.7.10-1.5.0.jar) 
+	UCHIJA	appliedenergistics2{rv3-beta-6} [Applied Energistics 2] (appliedenergistics2-rv3-beta-6.jar) 
+	UCHIJA	Aroma1997CoreHelper{1.0.2.16} [Aroma1997Core|Helper] (Aroma1997Core-1.7.10-1.0.2.16.jar) 
+	UCHIJA	Aroma1997sDimension{1.0} [Aroma1997's Dimensional World] (Aroma1997s-Dimensional-World-1.7.10-1.1.0.1.jar) 
+	UCHIJA	CoFHCore{1.7.10R3.1.4} [CoFH Core] (CoFHCore-[1.7.10]3.1.4-329.jar) 
+	UCHIJA	MineFactoryReloaded{1.7.10R2.8.1} [MineFactory Reloaded] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	Baubles{1.0.1.10} [Baubles] (Baubles-1.7.10-1.0.1.10.jar) 
+	UCHIJA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-1.7.10-4.2.3.5.jar) 
+	UCHIJA	MineFactoryReloaded|CompatThaumcraft{1.7.10R2.8.1} [MFR Compat: Thaumcraft] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UCHIJA	Automagy{0.28.2} [Automagy] (Automagy-1.7.10-0.28.2.jar) 
+	UCHIJA	AWWayofTime{v1.3.3} [Blood Magic: Alchemical Wizardry] (BloodMagic-1.7.10-1.3.3-17.jar) 
+	UCHIJA	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UCHIJA	Avaritia{1.11} [Avaritia] (Avaritia-1.11.jar) 
+	UCHIJA	ThermalFoundation{1.7.10R1.2.6} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.2.6-118.jar) 
+	UCHIJA	ThermalExpansion{1.7.10R4.1.5} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.1.5-248.jar) 
+	UCHIJA	BigReactors{0.4.3A} [Big Reactors] (BigReactors-0.4.3A.jar) 
+	UCHIJA	Mantle{1.7.10-0.3.2.jenkins191} [Mantle] (Mantle-1.7.10-0.3.2b.jar) 
+	UCHIJA	Natura{2.2.0} [Natura] (natura-1.7.10-2.2.0.1.jar) 
+	UCHIJA	BiomesOPlenty{2.1.0} [Biomes O' Plenty] (BiomesOPlenty-1.7.10-2.1.0.1889-universal.jar) 
+	UCHIJA	BrandonsCore{1.0.0.12} [Brandon's Core] (BrandonsCore-1.0.0.12.jar) 
+	UCHIJA	DraconicEvolution{1.0.2h} [Draconic Evolution] (Draconic-Evolution-1.7.10-1.0.2h.jar) 
+	UCHIJA	Forestry{4.2.16.64} [Forestry for Minecraft] (forestry_1.7.10-4.2.16.64.jar) 
+	UCHIJA	BuildCraft|Core{7.1.22} [BuildCraft] (buildcraft-7.1.22.jar) 
+	UCHIJA	BuildCraft|Energy{7.1.22} [BC Energy] (buildcraft-7.1.22.jar) 
+	UCHIJA	GalacticraftCore{3.0.12} [Galacticraft Core] (GalacticraftCore-1.7-3.0.12.502.jar) 
+	UCHIJA	GalacticraftMars{3.0.12} [Galacticraft Planets] (Galacticraft-Planets-1.7-3.0.12.502.jar) 
+	UCHIJA	Project_Alchemy{1.0.18} [FullThrottle Alchemist] (FullThrottle_Alchemist-1.7.10-1.0.18a.jar) 
+	UCHIJA	Railcraft{9.12.2.0} [Railcraft] (Railcraft_1.7.10-9.12.2.0.jar) 
+	UCHIJA	ForgeMultipart{1.2.0.345} [Forge Multipart] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	UCHIJA	ExtraUtilities{1.2.12} [Extra Utilities] (extrautilities-1.2.12.jar) 
+	UCHIJA	ImmersiveEngineering{0.7.7} [Immersive Engineering] (ImmersiveEngineering-0.7.7.jar) 
+	UCHIJA	TConstruct{1.7.10-1.8.8.build988} [Tinkers' Construct] (TConstruct-1.7.10-1.8.8.jar) 
+	UCHIJA	B0bGrowsOre{2.5.4} [B0bGary's Growable Ores] (B0bGary's Growable Ores-2.5.4 for 1.7.10.jar) 
+	UCHIJA	bdlib{1.9.4.109} [BD Lib] (bdlib-1.9.4.109-mc1.7.10.jar) 
+	UCHIJA	BiblioCraft{1.11.7} [BiblioCraft] (BiblioCraft[v1.11.7][MC1.7.10].jar) 
+	UCHIJA	BiblioWoodsBoP{1.9} [BiblioWoods Biomes O'Plenty Edition] (BiblioWoods[BiomesOPlenty][v1.9].jar) 
+	UCHIJA	BiblioWoodsForestry{1.7} [BiblioWoods Forestry Edition] (BiblioWoods[Forestry][v1.7].jar) 
+	UCHIJA	BiblioWoodsNatura{1.5} [BiblioWoods Natura Edition] (BiblioWoods[Natura][v1.5].jar) 
+	UCHIJA	BinnieCore{2.0-pre14} [Binnie Core] (binnie-mods-2.0-pre14.jar) 
+	UCHIJA	Botany{2.0-pre14} [Botany] (binnie-mods-2.0-pre14.jar) 
+	UCHIJA	ExtraBees{2.0-pre14} [Extra Bees] (binnie-mods-2.0-pre14.jar) 
+	UCHIJA	ExtraTrees{2.0-pre14} [Extra Trees] (binnie-mods-2.0-pre14.jar) 
+	UCHIJA	Genetics{2.0-pre14} [Genetics] (binnie-mods-2.0-pre14.jar) 
+	UCHIJA	BuildCraft|Transport{7.1.22} [BC Transport] (buildcraft-7.1.22.jar) 
+	UCHIJA	BuildCraft|Factory{7.1.22} [BC Factory] (buildcraft-7.1.22.jar) 
+	UCHIJA	BuildCraft|Silicon{7.1.22} [BC Silicon] (buildcraft-7.1.22.jar) 
+	UCHIJA	BuildCraft|Robotics{7.1.22} [BC Robotics] (buildcraft-7.1.22.jar) 
+	UCHIJA	BuildCraft|Builders{7.1.22} [BC Builders] (buildcraft-7.1.22.jar) 
+	UCHIJA	BuildCraft|Compat{7.1.5} [BuildCraft Compat] (buildcraft-compat-7.1.5.jar) 
+	UCHIJA	TwilightForest{2.3.7} [The Twilight Forest] (twilightforest-1.7.10-2.3.7.jar) 
+	UCHIJA	chisel{2.9.5.11} [Chisel] (Chisel-2.9.5.11.jar) 
+	UCHIJA	CarpentersBlocks{3.3.8.1} [Carpenter's Blocks] (Carpenter's Blocks v3.3.8.1 - MC 1.7.10.jar) 
+	UCHIJA	ChickenChunks{1.3.4.19} [ChickenChunks] (ChickenChunks-1.7.10-1.3.4.19-universal.jar) 
+	UCHIJA	ComputerCraft{1.75} [ComputerCraft] (ComputerCraft1.75.jar) 
+	UCHIJA	MineTweaker3{3.0.13} [MineTweaker 3] (CraftTweaker-1.7.10-3.0.13.jar) 
+	UCHIJA	creeperhost{unspecified} [CreeperHost] (creeperhost-1.7.10-1.1.0.jar) 
+	UCHIJA	CustomMainMenu{1.9.2} [Custom Main Menu] (CustomMainMenu-MC1.7.10-1.9.2.jar) 
+	UCHIJA	PTRModelLib{1.0.0} [PTRModelLib] (Decocraft-2.4.2_1.7.10.jar) 
+	UCHIJA	props{2.4.2} [Decocraft] (Decocraft-2.4.2_1.7.10.jar) 
+	UCHIJA	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UCHIJA	EnderIO{1.7.10-2.3.0.429_beta} [Ender IO] (EnderIO-1.7.10-2.3.0.429_beta.jar) 
+	UCHIJA	EnderStorage{1.4.7.37} [EnderStorage] (EnderStorage-1.7.10-1.4.7.37-universal.jar) 
+	UCHIJA	EnderTech{1.7.10-0.3.2.405} [EnderTech] (EnderTech-1.7.10-0.3.2.405.jar) 
+	UCHIJA	EnderZoo{1.7.10-1.0.15.32} [Ender Zoo] (EnderZoo-1.7.10-1.0.15.32.jar) 
+	UCHIJA	extracells{2.3.14} [Extra Cells 2] (ExtraCells-1.7.10-2.3.14b197.jar) 
+	UCHIJA	harvestcraft{1.7.10j} [Pam's HarvestCraft] (Pam's HarvestCraft 1.7.10Lb.jar) 
+	UCHIJA	ExtraTiC{1.4.6} [ExtraTiC] (ExtraTiC-1.7.10-1.4.6.jar) 
+	UCHIJA	fastleafdecay{1.4} [Fast Leaf Decay] (FastLeafDecay-1.7.10-1.4.jar) 
+	UCHIJA	firecraft{1.3} [FireCraft] (firecraft-0.4.jar) 
+	UCHIJA	ThaumicTinkerer{unspecified} [Thaumic Tinkerer] (ThaumicTinkerer-2.5-1.7.10-512.jar) 
+	UCHIJA	ForbiddenMagic{1.7.10-0.575} [Forbidden Magic] (Forbidden Magic-1.7.10-0.575.jar) 
+	UCHIJA	FTBL{1.0.18.2} [FTBLib] (FTBLib-1.7.10-1.0.18.3.jar) 
+	UCHIJA	FTBT{1.0.2} [FTB Tweaks] (FTBTweaks-1.0.2.jar) 
+	UCHIJA	FTBU{1.0.18.2} [FTBUtilities] (FTBUtilities-1.7.10-1.0.18.3.jar) 
+	UCHIJA	funkylocomotion{1.0} [Funky Locomotion] (funky-locomotion-1.7.10-beta-7.jar) 
+	UCHIJA	gadomancy{1.0.7.3} [Gadomancy] (gadomancy-1.7.10-1.0.7.3.jar) 
+	UCHIJA	RedstoneArsenal{1.7.10R1.1.2} [Redstone Arsenal] (RedstoneArsenal-[1.7.10]1.1.2-92.jar) 
+	UCHIJA	MagicBees{2.4.3} [Magic Bees] (magicbees-1.7.10-2.4.3.jar) 
+	UCHIJA	gendustry{1.6.3.132} [GenDustry] (gendustry-1.6.3.132-mc1.7.10.jar) 
+	UCHIJA	GraviSuite{1.7.10-2.0.3} [Graviation Suite] (GraviSuite-1.7.10-2.0.3.jar) 
+	UCHIJA	guideapi{1.7.10-1.0.1-20} [Guide-API] (Guide-API-1.7.10-1.0.1-20.jar) 
+	UCHIJA	iChunUtil{4.2.3} [iChunUtil] (iChunUtil-4.2.3.jar) 
+	UCHIJA	Hats{4.0.1} [Hats] (Hats-4.0.1.jar) 
+	UCHIJA	HatStand{4.0.0} [HatStand] (HatStand-4.0.0.jar) 
+	UCHIJA	headcrumbs{1.7.4} [Headcrumbs] (Headcrumbs-1.7.4.jar) 
+	UCHIJA	HardcoreQuesting{4.4.4} [Hardcore Questing Mode] (HQM-The Journey-4.4.4.jar) 
+	UCHIJA	IC2NuclearControl{2.4.2a} [Nuclear Control 2] (IC2NuclearControl-2.4.2a.jar) 
+	UCHIJA	immersiveintegration{0.6.8} [Immersive Integration] (immersiveintegration-0.6.8.jar) 
+	UCHIJA	inpure|core{1.7.10R1.0.0B9} [INpureCore] (INpureCore-[1.7.10]1.0.0B9-62.jar) 
+	UCHIJA	inventorytweaks{1.59-dev-152-cf6e263} [Inventory Tweaks] (InventoryTweaks-1.59-dev-152.jar) 
+	UCHIJA	IronChest{6.0.62.742} [Iron Chest] (ironchest-1.7.10-6.0.62.742-universal.jar) 
+	UCHIJA	JABBA{1.2.2} [JABBA] (Jabba-1.2.2_1.7.10.jar) 
+	UCHIJA	journeymap{5.1.4p2} [JourneyMap] (journeymap-1.7.10-5.1.4p2-unlimited.jar) 
+	UCHIJA	llibrary{1.5.1} [LLibrary] (llibrary-1.5.1-1.7.10.jar) 
+	UCHIJA	jurassicraft{1.5.0} [JurassiCraft] (JurassiCraft-1.4.0.jar) 
+	UCHIJA	LogisticsPipes{0.9.3.132} [Logistics Pipes] (logisticspipes-0.9.3.132.jar) 
+	UCHIJA	MineFactoryReloaded|CompatAppliedEnergistics{1.7.10R2.8.1} [MFR Compat: Applied Energistics] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	MineFactoryReloaded|CompatBuildCraft{1.7.10R2.8.1} [MFR Compat: BuildCraft] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	MineFactoryReloaded|CompatForestry{1.7.10R2.8.1} [MFR Compat: Forestry] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	MineFactoryReloaded|CompatForgeMicroblock{1.7.10R2.8.1} [MFR Compat: ForgeMicroblock] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	MineFactoryReloaded|CompatIC2{1.7.10R2.8.1} [MFR Compat: IC2] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	MrTJPCoreMod{1.1.0.33} [MrTJPCore] (MrTJPCore-1.1.0.33-universal.jar) 
+	UCHIJA	ProjRed|Core{4.7.0pre12.95} [ProjectRed Core] (ProjectRed-1.7.10-4.7.0pre12.95-Base.jar) 
+	UCHIJA	ProjRed|Exploration{4.7.0pre12.95} [ProjectRed Exploration] (ProjectRed-1.7.10-4.7.0pre12.95-World.jar) 
+	UCHIJA	MineFactoryReloaded|CompatProjRed{1.7.10R2.8.1} [MFR Compat ProjectRed] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	MineFactoryReloaded|CompatRailcraft{1.7.10R2.8.1} [MFR Compat: Railcraft] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	MineFactoryReloaded|CompatThermalExpansion{1.7.10R2.8.1} [MFR Compat: Thermal Expansion] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	MineFactoryReloaded|CompatTConstruct{1.7.10R2.8.1} [MFR Compat: Tinkers' Construct] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	MineFactoryReloaded|CompatTwilightForest{1.7.10R2.8.1} [MFR Compat: TwilightForest] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	MineFactoryReloaded|CompatVanilla{1.7.10R2.8.1} [MFR Compat: Vanilla] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UCHIJA	modtweaker2{0.9.6} [Mod Tweaker 2] (ModTweaker2-0.9.6.jar) 
+	UCHIJA	numina{1.7.10} [Numina] (Numina-0.4.1.105.jar) 
+	UCHIJA	powersuits{1.7.10-0.11.1.114} [MachineMuse's Modular Powersuits] (ModularPowersuits-1.7.10-0.11.1.114.jar) 
+	UCHIJA	Morpheus{1.7.10-1.6.21} [Morpheus] (Morpheus-1.7.10-1.6.21.jar) 
+	UCHIJA	Mystcraft{0.12.3.04} [Mystcraft] (mystcraft-1.7.10-0.12.3.04.jar) 
+	UCHIJA	NEIAddons{1.12.14.40} [NEI Addons] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJA	NEIAddons|Developer{1.12.14.40} [NEI Addons: Developer Tools] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJA	NEIAddons|AppEng{1.12.14.40} [NEI Addons: Applied Energistics 2] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJA	NEIAddons|Botany{1.12.14.40} [NEI Addons: Botany] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJA	NEIAddons|Forestry{1.12.14.40} [NEI Addons: Forestry] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJA	NEIAddons|CraftingTables{1.12.14.40} [NEI Addons: Crafting Tables] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJA	NEIAddons|ExNihilo{1.12.14.40} [NEI Addons: Ex Nihilo] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJA	neiintegration{1.1.2} [NEI Integration] (NEIIntegration-MC1.7.10-1.1.2.jar) 
+	UCHIJA	NetherOres{1.7.10R2.3.1} [Nether Ores] (NetherOres-[1.7.10]2.3.1-22.jar) 
+	UCHIJA	neresources{0.1.0.ManuallyBuilt} [Not Enough Resources] (NotEnoughResources-1.7.10-0.1.0-122.jar) 
+	UCHIJA	OpenMods{0.10} [OpenMods] (OpenModsLib-1.7.10-0.10.jar) 
+	UCHIJA	OpenBlocks{1.6} [OpenBlocks] (OpenBlocks-1.7.10-1.6.jar) 
+	UCHIJA	OpenPeripheralCore{1.4} [OpenPeripheralCore] (OpenPeripheralCore-1.7.10-1.4.jar) 
+	UCHIJA	OpenPeripheral{0.6} [OpenPeripheralAddons] (OpenPeripheralAddons-1.7.10-0.6.jar) 
+	UCHIJA	OpenPeripheralIntegration{0.6} [OpenPeripheralIntegration] (OpenPeripheralIntegration-1.7.10-0.6.jar) 
+	UCHIJA	PortalGun{4.0.0-beta-6} [PortalGun] (PortalGun-4.0.0-beta-6.jar) 
+	UCHIJA	ProjRed|Transmission{4.7.0pre12.95} [ProjectRed Transmission] (ProjectRed-1.7.10-4.7.0pre12.95-Integration.jar) 
+	UCHIJA	ProjRed|Transportation{4.7.0pre12.95} [ProjectRed Transportation] (ProjectRed-1.7.10-4.7.0pre12.95-Mechanical.jar) 
+	UCHIJA	ProjRed|Compatibility{4.7.0pre12.95} [ProjectRed Compatibility] (ProjectRed-1.7.10-4.7.0pre12.95-Compat.jar) 
+	UCHIJA	ProjRed|Integration{4.7.0pre12.95} [ProjectRed Integration] (ProjectRed-1.7.10-4.7.0pre12.95-Integration.jar) 
+	UCHIJA	ProjRed|Illumination{4.7.0pre12.95} [ProjectRed Illumination] (ProjectRed-1.7.10-4.7.0pre12.95-Lighting.jar) 
+	UCHIJA	ProjRed|Expansion{4.7.0pre12.95} [ProjectRed Expansion] (ProjectRed-1.7.10-4.7.0pre12.95-Mechanical.jar) 
+	UCHIJA	ResourceLoader{1.3} [Resource Loader] (ResourceLoader-MC1.7.10-1.3.jar) 
+	UCHIJA	rftools{4.23} [RFTools] (rftools-4.23.jar) 
+	UCHIJA	runicdungeons{1.1.7b} [Runic Dungeons] (RunicDungeons-1.1.7b.jar) 
+	UCHIJA	simplyjetpacks{1.5.3} [Simply Jetpacks] (SimplyJetpacks-MC1.7.10-1.5.3.jar) 
+	UCHIJA	SolarExpansion{1.6a} [Solar Expansion] (SolarExpansion-Basic-1.6a.jar) 
+	UCHIJA	springboards{0.1} [Spring Boards] (Springboards-1.7.10-0.1.jar) 
+	UCHIJA	StevesFactoryManager{A93} [Steve's Factory Manager] (StevesFactoryManagerA93.jar) 
+	UCHIJA	StevesAddons{0.10.16} [Steve's Addons] (StevesAddons-1.7.10-0.10.16.jar) 
+	UCHIJA	StevesCarts{2.0.0.b18} [Steve's Carts 2] (StevesCarts2.0.0.b18.jar) 
+	UCHIJA	StevesWorkshop{0.5.1} [Steve's Workshop] (StevesWorkshop-0.5.1.jar) 
+	UCHIJA	StorageDrawers{1.7.10-1.10.8} [Storage Drawers] (StorageDrawers-1.7.10-1.10.8.jar) 
+	UCHIJA	StorageDrawersBop{1.7.10-1.1.1} [Storage Drawers: Biomes O' Plenty Pack] (StorageDrawers-BiomesOPlenty-1.7.10-1.1.1.jar) 
+	UCHIJA	StorageDrawersForestry{1.7.10-1.1.2} [Storage Drawers: Forestry Pack] (StorageDrawers-Forestry-1.7.10-1.1.2.jar) 
+	UCHIJA	StorageDrawersMisc{1.7.10-1.1.2} [Storage Drawers: Misc Pack] (StorageDrawers-Misc-1.7.10-1.1.2.jar) 
+	UCHIJA	StorageDrawersNatura{1.7.10-1.1.1} [Storage Drawers: Natura Pack] (StorageDrawers-Natura-1.7.10-1.1.1.jar) 
+	UCHIJA	TaintedMagic{r7.81} [Tainted Magic] (Tainted-Magic-r7.81.jar) 
+	UCHIJA	tcinventoryscan{1.0.11} [TC Inventory Scanning] (tcinventoryscan-mc1.7.10-1.0.11.jar) 
+	UCHIJA	ThaumcraftMobAspects{1.7.2-2A} [Thaumcraft Mob Aspects] (ThaumcraftMobAspects-1.7.2-2A.jar) 
+	UCHIJA	thaumcraftneiplugin{@VERSION@} [Thaumcraft NEI Plugin] (thaumcraftneiplugin-1.7.10-1.7a.jar) 
+	UCHIJA	thaumicenergistics{1.0.0.5} [Thaumic Energistics] (thaumicenergistics-1.0.0.5.jar) 
+	UCHIJA	ThaumicExploration{0.6.0} [Thaumic Exploration] (ThaumicExploration-1.7.10-1.1-53.jar) 
+	UCHIJA	ThermalDynamics{1.7.10R1.2.1} [Thermal Dynamics] (ThermalDynamics-[1.7.10]1.2.1-172.jar) 
+	UCHIJA	TiCTooltips{1.2.5} [TiC Tooltips] (TiCTooltips-mc1.7.10-1.2.5.jar) 
+	UCHIJA	TMechworks{0.2.15.106} [Tinkers' Mechworks] (TMechworks-1.7.10-0.2.15.106.jar) 
+	UCHIJA	Translocator{1.1.2.16} [Translocator] (Translocator-1.7.10-1.1.2.16-universal.jar) 
+	UCHIJA	WailaHarvestability{1.1.6} [Waila Harvestability] (WailaHarvestability-mc1.7.10-1.1.6.jar) 
+	UCHIJA	wawla{1.3.1} [What Are We Looking At] (Wawla-1.0.5.120.jar) 
+	UCHIJA	witchery{0.24.1} [Witchery] (witchery-1.7.10-0.24.1.jar) 
+	UCHIJA	worldedit{6.0-beta-01} [WorldEdit] (worldedit-forge-mc1.7.10-6.0-beta-01.jar) 
+	UCHIJA	WorldEditCuiFe{1.0.7} [WorldEdit CUI Forge Edition] (WorldEditCuiFe-v1.0.7-mf-1.7.10-10.13.4.1566.jar) 
+	UCHIJA	WR-CBE|Core{1.4.1.9} [WR-CBE Core] (WR-CBE-1.7.10-1.4.1.9-universal.jar) 
+	UCHIJA	WR-CBE|Addons{1.4.1.9} [WR-CBE Addons] (WR-CBE-1.7.10-1.4.1.9-universal.jar) 
+	UCHIJA	WR-CBE|Logic{1.4.1.9} [WR-CBE Logic] (WR-CBE-1.7.10-1.4.1.9-universal.jar) 
+	UCHIJA	McMultipart{1.2.0.345} [Minecraft Multipart Plugin] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	UCHIJA	ForgeRelocation{0.0.1.4} [ForgeRelocation] (ForgeRelocation-0.0.1.4-universal.jar) 
+	UCHIJA	MCFrames{1.0} [MCFrames] (ForgeRelocation-0.0.1.4-universal.jar) 
+	UCHIJA	RelocationFMP{0.0.1.2} [RelocationFMP] (ForgeRelocationFMP-0.0.1.2-universal.jar) 
+	UCHIJA	aobd{2.9.2} [Another One Bites The Dust] (AOBD-2.9.2.jar) 
+	UCHIJA	denseores{1.0} [Dense Ores] (denseores-1.6.2.jar) 
+	UCHIJA	ForgeMicroblock{1.2.0.345} [Forge Microblocks] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	UD	MineFactoryReloaded|CompatAtum{1.7.10R2.8.1} [MFR Compat: Atum] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatBackTools{1.7.10R2.8.1} [MFR Compat: BackTools] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatChococraft{1.7.10R2.8.1} [MFR Compat: Chococraft] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatExtraBiomes{1.7.10R2.8.1} [MFR Compat: ExtraBiomes] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatSufficientBiomes{1.7.10R2.8.1} [MFR Compat: Sufficient Biomes] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 376.53' Renderer: 'GeForce GTX 970/PCIe/SSE2'
+	OpenModsLib class transformers: [stencil_patches:FINISHED],[movement_callback:FINISHED],[player_damage_hook:FINISHED],[map_gen_fix:FINISHED],[gl_capabilities_hook:FINISHED],[player_render_hook:FINISHED]
+	Class transformer null safety: all safe
+	AE2 Version: beta rv3-beta-6 for Forge 10.13.4.1448
+	CoFHCore: -[1.7.10]3.1.4-329
+	MineFactoryReloaded: -[1.7.10]2.8.1-174
+	ThermalFoundation: -[1.7.10]1.2.6-118
+	ThermalExpansion: -[1.7.10]4.1.5-248
+	Mantle Environment: Environment healthy.
+	TConstruct Environment: Environment healthy.
+	firecraft: Lacking version information.
+	RedstoneArsenal: -[1.7.10]1.1.2-92
+	NetherOres: -[1.7.10]2.3.1-22
+	ThermalDynamics: -[1.7.10]1.2.1-172
+	List of loaded APIs: 
+		* AgriCraftAPI (1.0) from AgriCraft-1.7.10-1.5.0.jar
+		* appliedenergistics2|API (rv3) from appliedenergistics2-rv3-beta-6.jar
+		* Baubles|API (1.0.1.10) from RunicDungeons-1.1.7b.jar
+		* BiomesOPlentyAPI (1.0.0) from BiomesOPlenty-1.7.10-2.1.0.1889-universal.jar
+		* BloodMagicAPI (1.3.3-13) from BloodMagic-1.7.10-1.3.3-17.jar
+		* BotaniaAPI (61) from Avaritia-1.11.jar
+		* BuildCraftAPI|blocks (1.0) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|blueprints (1.5) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|boards (2.0) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|core (1.0) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|crops (1.1) from Railcraft_1.7.10-9.12.2.0.jar
+		* BuildCraftAPI|events (2.0) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|facades (1.1) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|filler (4.0) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|fuels (2.0) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|gates (4.1) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|items (1.1) from Railcraft_1.7.10-9.12.2.0.jar
+		* BuildCraftAPI|library (2.0) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|lists (1.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* BuildCraftAPI|power (1.3) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|recipes (3.0) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|robotics (3.0) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|statements (1.1) from Railcraft_1.7.10-9.12.2.0.jar
+		* BuildCraftAPI|tablet (1.0) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|tiles (1.2) from buildcraft-7.1.22.jar
+		* BuildCraftAPI|tools (1.0) from extrautilities-1.2.12.jar
+		* BuildCraftAPI|transport (4.1) from Railcraft_1.7.10-9.12.2.0.jar
+		* CarpentersBlocks|API (3.3.7) from Carpenter's Blocks v3.3.8.1 - MC 1.7.10.jar
+		* ChiselAPI (0.1.1) from Chisel-2.9.5.11.jar
+		* ChiselAPI|Carving (0.1.1) from Chisel-2.9.5.11.jar
+		* ChiselAPI|Rendering (0.1.1) from Chisel-2.9.5.11.jar
+		* CoFHAPI (1.7.10R1.0.0) from funky-locomotion-1.7.10-beta-7.jar
+		* CoFHAPI|block (1.7.10R1.0.3) from SolarExpansion-Basic-1.6a.jar
+		* CoFHAPI|core (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.4-329.jar
+		* CoFHAPI|energy (1.7.10R1.0.2) from forestry_1.7.10-4.2.16.64.jar
+		* CoFHAPI|fluid (1.7.10R1.0.13B2) from CoFHLib-[1.7.10]1.2.1-185.jar
+		* CoFHAPI|inventory (1.7.10R1.0.1) from buildcraft-compat-7.1.5.jar
+		* CoFHAPI|item (1.7.10R1.0.13) from ImmersiveEngineering-0.7.7.jar
+		* CoFHAPI|items (1.7.10R1.0.3) from SolarExpansion-Basic-1.6a.jar
+		* CoFHAPI|modhelpers (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.4-329.jar
+		* CoFHAPI|tileentity (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.4-329.jar
+		* CoFHAPI|transport (1.7.10R1.0.13) from EnderIO-1.7.10-2.3.0.429_beta.jar
+		* CoFHAPI|world (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.4-329.jar
+		* CoFHLib (1.7.10R1.0.3B3) from CoFHLib-[1.7.10]1.2.1-185.jar
+		* CoFHLib|audio (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|gui (1.7.10R1.0.3B3) from CoFHLib-[1.7.10]1.2.1-185.jar
+		* CoFHLib|gui|container (1.7.10R1.2.1) from CoFHCore-[1.7.10]3.1.4-329.jar
+		* CoFHLib|gui|element (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|gui|element|listbox (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|gui|slot (1.7.10R1.0.3B3) from CoFHLib-[1.7.10]1.2.1-185.jar
+		* CoFHLib|inventory (1.7.10R1.2.1) from CoFHCore-[1.7.10]3.1.4-329.jar
+		* CoFHLib|render (1.7.10R1.0.3B3) from CoFHLib-[1.7.10]1.2.1-185.jar
+		* CoFHLib|render|particle (1.7.10R1.0.3B3) from CoFHLib-[1.7.10]1.2.1-185.jar
+		* CoFHLib|util (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|util|helpers (1.7.10R1.2.1) from CoFHCore-[1.7.10]3.1.4-329.jar
+		* CoFHLib|util|position (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|world (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|world|feature (1.7.10R1.0.3B3) from CoFHLib-[1.7.10]1.2.1-185.jar
+		* ComputerCraft|API (1.75) from ComputerCraft1.75.jar
+		* ComputerCraft|API|FileSystem (1.75) from ComputerCraft1.75.jar
+		* ComputerCraft|API|Lua (1.75) from ComputerCraft1.75.jar
+		* ComputerCraft|API|Media (1.75) from ComputerCraft1.75.jar
+		* ComputerCraft|API|Peripheral (1.75) from ComputerCraft1.75.jar
+		* ComputerCraft|API|Permissions (1.75) from ComputerCraft1.75.jar
+		* ComputerCraft|API|Redstone (1.75) from ComputerCraft1.75.jar
+		* ComputerCraft|API|Turtle (1.75) from ComputerCraft1.75.jar
+		* creeperhost|api (1.0) from creeperhost-1.7.10-1.1.0.jar
+		* CSLib|API (0.3.0) from Decocraft-2.4.2_1.7.10.jar
+		* DraconicEvolution|API (1.2) from Draconic-Evolution-1.7.10-1.0.2h.jar
+		* EnderIOAPI (0.0.2) from EnderIO-1.7.10-2.3.0.429_beta.jar
+		* EnderIOAPI|Redstone (0.0.2) from EnderIO-1.7.10-2.3.0.429_beta.jar
+		* EnderIOAPI|Teleport (0.0.2) from EnderIO-1.7.10-2.3.0.429_beta.jar
+		* EnderIOAPI|Tools (0.0.2) from EnderIO-1.7.10-2.3.0.429_beta.jar
+		* ForestryAPI|apiculture (4.8.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|arboriculture (4.2.1) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|circuits (3.1.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|core (5.0.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|farming (2.1.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|food (1.1.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|fuels (2.0.1) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|genetics (4.7.1) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|hives (4.1.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|lepidopterology (1.3.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|mail (3.0.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|multiblock (3.0.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|recipes (5.4.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|storage (3.0.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForestryAPI|world (2.1.0) from forestry_1.7.10-4.2.16.64.jar
+		* ForgeRelocation|API (0.0.1.4) from ForgeRelocation-0.0.1.4-universal.jar
+		* Galacticraft API (1.0) from GalacticraftCore-1.7-3.0.12.502.jar
+		* gendustryAPI (2.3.0) from gendustry-1.6.3.132-mc1.7.10.jar
+		* Guide-API|API (1.7.10-1.0.1-20) from Guide-API-1.7.10-1.0.1-20.jar
+		* IC2API (1.0) from industrialcraft-2-2.2.827-experimental.jar
+		* ImmersiveEngineering|API (1.0) from ImmersiveEngineering-0.7.7.jar
+		* inpure|api (1.7) from INpureCore-[1.7.10]1.0.0B9-62.jar
+		* McJtyLib (1.8.1) from mcjtylib-1.8.1.jar
+		* Mystcraft|API (0.1) from mystcraft-1.7.10-0.12.3.04.jar
+		* neresources|API (1.0) from NotEnoughResources-1.7.10-0.1.0-122.jar
+		* NuclearControlAPI (v1.0.5) from IC2NuclearControl-2.4.2a.jar
+		* OpenBlocks|API (1.1) from OpenBlocks-1.7.10-1.6.jar
+		* OpenPeripheralAddonsApi (1.0) from OpenPeripheralAddons-1.7.10-0.6.jar
+		* OpenPeripheralApi (3.4.2) from OpenPeripheralCore-1.7.10-1.4.jar
+		* RailcraftAPI|bore (1.0.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* RailcraftAPI|carts (1.6.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* RailcraftAPI|core (1.5.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* RailcraftAPI|crafting (1.0.0) from ImmersiveEngineering-0.7.7.jar
+		* RailcraftAPI|electricity (2.0.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* RailcraftAPI|events (1.0.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* RailcraftAPI|fuel (1.0.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* RailcraftAPI|helpers (1.1.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* RailcraftAPI|items (1.0.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* RailcraftAPI|locomotive (1.1.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* RailcraftAPI|signals (2.3.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* RailcraftAPI|tracks (2.3.0) from Railcraft_1.7.10-9.12.2.0.jar
+		* StorageDrawersAPI (1.7.10-1.2.0) from StorageDrawers-1.7.10-1.10.8.jar
+		* StorageDrawersAPI|config (1.7.10-1.2.0) from StorageDrawers-1.7.10-1.10.8.jar
+		* StorageDrawersAPI|event (1.7.10-1.2.0) from StorageDrawers-1.7.10-1.10.8.jar
+		* StorageDrawersAPI|inventory (1.7.10-1.2.0) from StorageDrawers-1.7.10-1.10.8.jar
+		* StorageDrawersAPI|pack (1.7.10-1.2.0) from StorageDrawers-1.7.10-1.10.8.jar
+		* StorageDrawersAPI|registry (1.7.10-1.2.0) from StorageDrawers-1.7.10-1.10.8.jar
+		* StorageDrawersAPI|render (1.7.10-1.2.0) from StorageDrawers-1.7.10-1.10.8.jar
+		* StorageDrawersAPI|storage (1.7.10-1.2.0) from StorageDrawers-1.7.10-1.10.8.jar
+		* StorageDrawersAPI|storage-attribute (1.7.10-1.2.0) from StorageDrawers-1.7.10-1.10.8.jar
+		* Thaumcraft|API (4.2.2.0) from Pam's HarvestCraft 1.7.10Lb.jar
+		* thaumicenergistics|API (1.1) from thaumicenergistics-1.0.0.5.jar
+		* WailaAPI (1.2) from Waila-1.5.10_1.7.10.jar
+	Chisel: Errors like "[FML]: Unable to lookup ..." are NOT the cause of this crash. You can safely ignore these errors. And update forge while you're at it.
+	EnderIO: Found the following problem(s) with your installation:
+                  * An unknown AE2 API is installed (rv3 from appliedenergistics2-rv3-beta-6.jar).
+                    Ender IO was build against API version rv2 and may or may not work with a newer version.
+                 This may have caused the error. Try reproducing the crash WITHOUT this/these mod(s) before reporting it.
+	Stencil buffer state: Function set: GL30, pool: forge, bits: 8
+	AE2 Integration: IC2:ON, RotaryCraft:OFF, RC:ON, BuildCraftCore:ON, BuildCraftTransport:ON, BuildCraftBuilder:ON, RF:ON, RFItem:ON, MFR:ON, DSU:ON, FZ:OFF, FMP:ON, RB:OFF, CLApi:OFF, Waila:ON, InvTweaks:ON, NEI:ON, CraftGuide:OFF, Mekanism:OFF, ImmibisMicroblocks:OFF, BetterStorage:OFF, OpenComputers:OFF, PneumaticCraft:OFF
+	Launched Version: forge-10.13.4.1614
+	LWJGL: 2.9.1
+	OpenGL: GeForce GTX 970/PCIe/SSE2 GL version 4.5.0 NVIDIA 376.53, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)
+[01:05:18] [Client thread/INFO]: [net.minecraft.client.Minecraft:func_71377_b:359]: #@!@# Game crashed! Crash report saved to: #@!@# C:\Users\firelizzard\Documents\Curse\Minecraft\Instances\FTB Infinity Evolved\crash-reports\crash-2017-10-04_01.05.18-client.txt

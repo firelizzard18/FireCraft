@@ -10,37 +10,37 @@ import net.minecraft.world.World;
 public interface IReactor {
 	/**
 	 * Get the reactor's position in the world.
-	 * 
+	 *
 	 * @return Position of the reactor
 	 */
 	public ChunkCoordinates getPosition();
 
 	/**
 	 * Get the reactor's corresponding world.
-	 * 
+	 *
 	 * @return The reactor's world
 	 */
 	public World getWorld();
 
 	/**
 	 * Get the reactor's heat.
-	 * 
+	 *
 	 * @return The reactor's heat
 	 */
 	public int getHeat();
 
 	/**
 	 * Set the reactor's heat.
-	 * 
+	 *
 	 * @param heat reactor heat
 	 */
 	public void setHeat(int heat);
 
 	/**
 	 * Increase the reactor's heat.
-	 * 
+	 *
 	 * Use negative values to decrease.
-	 * 
+	 *
 	 * @param amount amount of heat to add
 	 * @return The reactor's heat after adding the specified amount
 	 */
@@ -48,7 +48,7 @@ public interface IReactor {
 
 	/**
 	 * Get the reactor's maximum heat before exploding.
-	 * 
+	 *
 	 * @return Maximum heat value
 	 */
 	public int getMaxHeat();
@@ -75,7 +75,7 @@ public interface IReactor {
 	 * Basic value is 1.0F.
 	 * Reducing the value causes a weakening/reduction of the heat-based sideeffects of reactors
 	 * (F.e. water evaporation, melting, damaging entitys, etc)
-	 * 
+	 *
 	 * @return HEM
 	 */
 	public float getHeatEffectModifier();
@@ -88,28 +88,28 @@ public interface IReactor {
 
 	/**
 	 * Get the reactor's energy output.
-	 * 
+	 *
 	 * @return Energy output, not multiplied by the base EU/t value
 	 */
 	public float getReactorEnergyOutput();
 
 	/**
 	 * Get the reactor's energy output.
-	 * 
+	 *
 	 * @return Energy output, multiplied with base EU/t value and MainConfig.get().getFloat("balance/energy/generator/nuclear")
 	 */
 	public double getReactorEUEnergyOutput();
 
 	/**
 	 * Add's the given amount of energy to the Reactor's output.
-	 * 
+	 *
 	 * @return Energy output after adding the value, not multiplied by the base EU/t value
 	 */
 	public float addOutput(float energy);
 
 	/**
 	 * Get the item at the specified grid coordinates.
-	 * 
+	 *
 	 * @param x X position of the item, out of bounds returns null
 	 * @param y Y position of the item, out of bounds returns null
 	 * @return The item or null if there is no item
@@ -118,7 +118,7 @@ public interface IReactor {
 
 	/**
 	 * Set the item at the specified grid coordinates.
-	 * 
+	 *
 	 * @param x X position of the item, out of bounds is a no-op
 	 * @param y Y position of the item, out of bounds is a no-op
 	 * @param item The item to set.
@@ -132,7 +132,7 @@ public interface IReactor {
 
 	/**
 	 * Get the reactor's tick rate (game ticks per reactor tick).
-	 * 
+	 *
 	 * @return Tick rate
 	 */
 	public int getTickRate();
@@ -145,7 +145,7 @@ public interface IReactor {
 
 	/**
 	 * Set Redstone Signal without direct contact
-	 * 
+	 *
 	 */
 
 	public void setRedstoneSignal(boolean redstone);

@@ -122,7 +122,7 @@ public final class StackKey {
 			return o1.equals(o2);
 		}
 	}
-	
+
 	private int objectHashCode(Object o) {
 		return o != null ? o.hashCode() : 0;
 	}

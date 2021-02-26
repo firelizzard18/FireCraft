@@ -6,15 +6,15 @@ package ic2.api.reactor;
 public interface IReactorChamber {
 	/**
 	 * Get the chamber's reactor.
-	 * 
+	 *
 	 * @return The reactor
 	 */
 	public IReactor getReactor();
 
 	/**
 	 * Set Redstone Signal without direct contact
-	 * 
+	 *
 	 */
-	
+
 	public void setRedstoneSignal(boolean redstone);
 }

@@ -8,7 +8,7 @@ import net.minecraftforge.fluids.Fluid;
 public interface IFluidHeatManager extends ILiquidAcceptManager {
 	/**
 	 * Add a new fluid to the Fluid Heat Generator.
-	 * 
+	 *
 	 * @param fluidName the fluid to burn
 	 * @param amount amount of fluid to consume per tick
 	 * @param heat amount of heat generated per tick

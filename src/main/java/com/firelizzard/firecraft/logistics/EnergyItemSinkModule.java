@@ -20,35 +20,35 @@ import net.minecraft.util.IIcon;
 public class EnergyItemSinkModule extends LogisticsModule {
 	public static final String NAME = "energyItemSinkModule";
 	public static final String ENERGY_KEY = "Energy";
-	
+
 	SinkReply _sinkReply;
 
 	public EnergyItemSinkModule() {}
-	
-	
-	
+
+
+
 	/* module stuff */
 	@Override
 	public void readFromNBT(NBTTagCompound paramNBTTagCompound) {}
 
 	@Override
 	public void writeToNBT(NBTTagCompound paramNBTTagCompound) {}
-	
+
 	@Override
 	public int getX() {
 		return _service.getX();
 	}
-	
+
 	@Override
 	public int getY() {
 		return _service.getY();
 	}
-	
+
 	@Override
 	public int getZ() {
 		return _service.getZ();
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon getIconTexture(IIconRegister register) {
@@ -66,10 +66,10 @@ public class EnergyItemSinkModule extends LogisticsModule {
 	public SinkReply sinksItem(ItemIdentifier item, int bestPriority, int bestCustomPriority, boolean allowDefault, boolean includeInTransit) {
 		if (bestPriority > _sinkReply.fixedPriority.ordinal())
 			return null;
-		
+
 		if (bestPriority == _sinkReply.fixedPriority.ordinal() && bestCustomPriority >= _sinkReply.customPriority)
 			return null;
-		
+
 		if (!(item.item instanceof IEnergyContainerItem))
 			return null;
 
@@ -77,10 +77,10 @@ public class EnergyItemSinkModule extends LogisticsModule {
 		IEnergyContainerItem container = (IEnergyContainerItem)item.item;
 		if (container.getEnergyStored(stack) == container.getMaxEnergyStored(stack))
 			return null;
-		
+
 		if (_service.canUseEnergy(5))
 			return _sinkReply;
-		
+
 		return null;
 	}
 

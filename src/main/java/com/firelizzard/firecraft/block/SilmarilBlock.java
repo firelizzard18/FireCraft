@@ -11,7 +11,7 @@ import net.minecraft.world.IBlockAccess;
 public class SilmarilBlock extends BlockDragonEgg {
 	public static final String NAME = "silmaril";
 //	public static final SimlarilBlockRender RENDERER = new SimlarilBlockRender();
-	
+
 	public SilmarilBlock() {
 //        super(Material.dragonEgg);
         setCreativeTab(FireCraftMod.TAB);
@@ -20,29 +20,29 @@ public class SilmarilBlock extends BlockDragonEgg {
         setLightLevel(1);
         setBlockName(NAME);
     }
-	
+
 	@Override
 	public void registerBlockIcons(IIconRegister register) {
 		blockIcon = register.registerIcon(FireCraftMod.MODID + ":" + NAME);
 	}
-	
+
 	@Override
 	public boolean isOpaqueCube() {
 		return false;
 	}
-	
+
     @Override
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()
     {
         return 1;
     }
-	
+
 	@Override
 	public boolean renderAsNormalBlock() {
 		return false;
 	}
-	
+
     @SideOnly(Side.CLIENT)
 	@Override
     public boolean shouldSideBeRendered(IBlockAccess blockAccess, int x, int y, int z, int side)

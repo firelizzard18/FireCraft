@@ -16,7 +16,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public interface IStatementParameter {
-	
+
 	/**
 	 * Every parameter needs a unique tag, it should be in the format of
 	 * "&lt;modi&gt;:&lt;name&gt;".
@@ -24,7 +24,7 @@ public interface IStatementParameter {
 	 * @return the unique id
 	 */
 	String getUniqueTag();
-	
+
 	@SideOnly(Side.CLIENT)
 	IIcon getIcon();
 
@@ -39,7 +39,7 @@ public interface IStatementParameter {
 	 */
 	@SideOnly(Side.CLIENT)
 	void registerIcons(IIconRegister iconRegister);
-	
+
 	/**
 	 * Return the parameter description in the UI
 	 */

@@ -8,7 +8,7 @@ import net.minecraftforge.fluids.Fluid;
 public interface ISemiFluidFuelManager extends ILiquidAcceptManager {
 	/**
 	 * Add a new fluid to the semi fluid generator.
-	 * 
+	 *
 	 * @param fluidName the fluid to burn
 	 * @param amount amount of fluid to consume per tick
 	 * @param power amount of energy generated per tick

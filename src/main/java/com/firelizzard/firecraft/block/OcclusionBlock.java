@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 public class OcclusionBlock extends Block {
 	public static final String NAME = "occlusion";
-	
+
 	public OcclusionBlock()
 	{
 		super(FireCraftMaterials.occlusion);
@@ -28,7 +28,7 @@ public class OcclusionBlock extends Block {
     {
         blockIcon = iconRegister.registerIcon(FireCraftMod.getAssetLocation(NAME));
     }
-	
+
 	@Override
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
     {

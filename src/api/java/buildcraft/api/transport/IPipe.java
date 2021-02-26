@@ -16,10 +16,10 @@ public interface IPipe {
 	IPipeTile getTile();
 
 	IGate getGate(ForgeDirection side);
-	
+
 	boolean hasGate(ForgeDirection side);
-	
+
 	boolean isWired(PipeWire wire);
-	
+
 	boolean isWireActive(PipeWire wire);
 }

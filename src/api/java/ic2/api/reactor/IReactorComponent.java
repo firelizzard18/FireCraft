@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
  * Design custom Reactor components by implementing this Interface
  * Items implementing the interface will not be ejected from Reactors in their clean-up
  * and can/will be interacted with by other elements, f.e. Uranium Cells.
- * 
+ *
  * All IC2 ReactorComponents implement and use this Interface
  *
  */
@@ -14,7 +14,7 @@ public interface IReactorComponent {
 	/**
 	 * Called by reactor upon iterating through it's inventory (every cycle).
 	 * Perform all necessary calculation/interaction here
-	 * 
+	 *
 	 * @param reactor Reference to the Reactor
 	 * @param yourStack Reference to the specific instance of iterated ItemStack
 	 * @param x X-coordinate of the stack in the grid
@@ -74,7 +74,7 @@ public interface IReactorComponent {
 	 * Called by components to distribute heat to your component.
 	 * Perform heating-calculations and increase your heat (dmg) level accordingly.
 	 * This method will as well be called to REDUCE heat, by providing a negative amount.
-	 * 
+	 *
 	 * @param reactor Reference to the Reactor
 	 * @param yourStack Reference to the specific instance of iterated ItemStack
 	 * @param x X-coordinate of the stack in the grid
@@ -89,7 +89,7 @@ public interface IReactorComponent {
 	 * Alter the explosion size.
 	 * Returning a float 0 < f < 1 will be counted as multiplier.
 	 * Anything else will be counted as a flat addition (in case of <0 = reduction).
-	 * 
+	 *
 	 * @param reactor Reference to the Reactor
 	 * @param yourStack Reference to the specific instance of iterated ItemStack
 	 * @return your explosion modifier

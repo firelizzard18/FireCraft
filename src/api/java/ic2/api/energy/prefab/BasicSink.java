@@ -17,17 +17,17 @@ import ic2.api.item.ElectricItem;
 
 /**
  * BasicSink is a simple adapter to provide an ic2 energy sink.
- * 
+ *
  * It's designed to be attached to a tile entity as a delegate. Functionally BasicSink acts as a
  * one-time configurable input energy buffer, thus providing a common use case for machines.
- * 
+ *
  * Sub-classing BasicSink instead of using it as a delegate works as well, but isn't recommended.
  * The delegate can be extended with additional functionality through a sub class though.
- * 
+ *
  * The constraints set by BasicSink like the strict tank-like energy buffering should provide a
  * more easy to use and stable interface than using IEnergySink directly while aiming for
  * optimal performance.
- * 
+ *
  * Using BasicSink involves the following steps:
  * - create a BasicSink instance in your TileEntity, typically in a field
  * - forward invalidate, onChunkUnload, readFromNBT, writeToNBT and updateEntity to the BasicSink
@@ -44,36 +44,36 @@ import ic2.api.item.ElectricItem;
  * public class SomeTileEntity extends TileEntity {
  *     // new basic energy sink, 1000 EU buffer, tier 1 (32 EU/t, LV)
  *     private BasicSink ic2EnergySink = new BasicSink(this, 1000, 1);
- * 
+ *
  *     @Override
  *     public void invalidate() {
  *         ic2EnergySink.invalidate(); // notify the energy sink
  *         ...
  *         super.invalidate(); // this is important for mc!
  *     }
- * 
+ *
  *     @Override
  *     public void onChunkUnload() {
  *         ic2EnergySink.onChunkUnload(); // notify the energy sink
  *         ...
  *     }
- * 
+ *
  *     @Override
  *     public void readFromNBT(NBTTagCompound tag) {
  *         super.readFromNBT(tag);
- * 
+ *
  *         ic2EnergySink.readFromNBT(tag);
  *         ...
  *     }
- * 
+ *
  *     @Override
  *     public void writeToNBT(NBTTagCompound tag) {
  *         super.writeToNBT(tag);
- * 
+ *
  *         ic2EnergySink.writeToNBT(tag);
  *         ...
  *     }
- * 
+ *
  *     @Override
  *     public void updateEntity() {
  *         ic2EnergySink.updateEntity(); // notify the energy sink
@@ -83,7 +83,7 @@ import ic2.api.item.ElectricItem;
  *         }
  *         ...
  *     }
- * 
+ *
  *     ...
  * }
  * @endcode
@@ -95,7 +95,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Constructor for a new BasicSink delegate.
-	 * 
+	 *
 	 * @param parent1 TileEntity represented by this energy sink.
 	 * @param capacity1 Maximum amount of eu to store.
 	 * @param tier1 IC2 tier, 1 = LV, 2 = MV, ...
@@ -163,7 +163,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Forward for the base TileEntity's readFromNBT(), used for loading the state.
-	 * 
+	 *
 	 * @param tag Compound tag as supplied by TileEntity.readFromNBT()
 	 */
 	@Override
@@ -177,7 +177,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Forward for the base TileEntity's writeToNBT(), used for saving the state.
-	 * 
+	 *
 	 * @param tag Compound tag as supplied by TileEntity.writeToNBT()
 	 */
 	@Override
@@ -200,7 +200,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Get the maximum amount of energy this sink can hold in its buffer.
-	 * 
+	 *
 	 * @return Capacity in EU.
 	 */
 	public int getCapacity() {
@@ -209,7 +209,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Set the maximum amount of energy this sink can hold in its buffer.
-	 * 
+	 *
 	 * @param capacity1 Capacity in EU.
 	 */
 	public void setCapacity(int capacity1) {
@@ -218,7 +218,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Get the IC2 energy tier for this sink.
-	 * 
+	 *
 	 * @return IC2 Tier.
 	 */
 	public int getTier() {
@@ -227,7 +227,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Set the IC2 energy tier for this sink.
-	 * 
+	 *
 	 * @param tier1 IC2 Tier.
 	 */
 	public void setTier(int tier1) {
@@ -236,7 +236,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Determine the energy stored in the sink's input buffer.
-	 * 
+	 *
 	 * @return amount in EU, may be above capacity
 	 */
 	public double getEnergyStored() {
@@ -245,10 +245,10 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Set the stored energy to the specified amount.
-	 * 
+	 *
 	 * This is intended for server -> client synchronization, e.g. to display the stored energy in
 	 * a GUI through getEnergyStored().
-	 * 
+	 *
 	 * @param amount
 	 */
 	public void setEnergyStored(double amount) {
@@ -257,7 +257,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Determine if the specified amount of energy is available.
-	 * 
+	 *
 	 * @param amount in EU
 	 * @return true if the amount is available
 	 */
@@ -267,7 +267,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Use the specified amount of energy, if available.
-	 * 
+	 *
 	 * @param amount amount to use
 	 * @return true if the amount was available
 	 */
@@ -282,7 +282,7 @@ public class BasicSink extends TileEntity implements IEnergySink {
 
 	/**
 	 * Discharge the supplied ItemStack into this sink's energy buffer.
-	 * 
+	 *
 	 * @param stack ItemStack to discharge (null is ignored)
 	 * @param limit Transfer limit, values <= 0 will use the battery's limit
 	 * @return true if energy was transferred

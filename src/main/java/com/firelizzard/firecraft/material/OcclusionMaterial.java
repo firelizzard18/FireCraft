@@ -8,7 +8,7 @@ public class OcclusionMaterial extends Material {
 	{
 		super(MapColor.magentaColor);
 	}
-	
+
 	@Override
 	public boolean isLiquid()
 	{

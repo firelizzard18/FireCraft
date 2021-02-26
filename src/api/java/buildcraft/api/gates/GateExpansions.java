@@ -53,13 +53,13 @@ public final class GateExpansions {
 	public static Map<IGateExpansion, ItemStack> getRecipesForPostInit() {
 		return recipes;
 	}
-	
+
 	// The code below is used by networking.
-	
+
 	public static IGateExpansion getExpansionByID(int id) {
 		return expansionIDs.get(id);
 	}
-	
+
 	public static int getExpansionID(IGateExpansion expansion) {
 		return expansionIDs.indexOf(expansion);
 	}

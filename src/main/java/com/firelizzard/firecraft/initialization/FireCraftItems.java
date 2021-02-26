@@ -28,21 +28,21 @@ import tconstruct.library.TConstructRegistry;
 public class FireCraftItems {
 	public final static GenericUselessItem useless = new GenericUselessItem();
 	public final static DestroyerTool destroyer = new DestroyerTool();
-	
+
 	public final static ItemStack[] useless_stacks = new ItemStack[GenericUselessItem.Items.values().length];
 	public final static ItemStack magnetron, destroyerCore, silmarilliumIngot, elementiumIngot, carborundum, pulverizedCoke;
 
 	static {
 		for (int i = 0; i < useless_stacks.length; i++)
 			useless_stacks[i] = new ItemStack(useless, 1, GenericUselessItem.Items.values()[i].getMeta());
-		
+
 		magnetron = GenericUselessItem.Items.MAGNETRON.getStack();
 		destroyerCore = GenericUselessItem.Items.DESTROYER_CORE.getStack();
 		silmarilliumIngot = GenericUselessItem.Items.SILMARILLIUM_INGOT.getStack();
 		elementiumIngot = GenericUselessItem.Items.ELEMENTIUM.getStack();
 		carborundum = GenericUselessItem.Items.CARBORUNDUM.getStack();
 		pulverizedCoke = GenericUselessItem.Items.PULVERIZED_COKE.getStack();
-		
+
 		GameRegistry.registerItem(useless, GenericUselessItem.Items.USELESS.getName());
 		GameRegistry.registerItem(destroyer, DestroyerTool.NAME);
 	}
@@ -50,7 +50,7 @@ public class FireCraftItems {
 	@Initialization.Post
 	public static void recipes() {
 		ItemStack superConductor = TDDucts.energySuperCond.itemStack;
-		
+
 		GameRegistry.addRecipe(magnetron,
 				"ABA",
 				"BCB",
@@ -58,7 +58,7 @@ public class FireCraftItems {
 				'A', silmarilliumIngot,
 				'B', TEItems.powerCoilGold,
 				'C', superConductor);
-		
+
 		GameRegistry.addRecipe(elementiumIngot,
 				" A ",
 				"BEC",
@@ -68,7 +68,7 @@ public class FireCraftItems {
 				'C', TFItems.dustPetrotheum,
 				'D', TFItems.dustCryotheum,
 				'E', Items.diamond);
-		
+
 		GameRegistry.addRecipe(destroyerCore,
 				" A ",
 				"BCB",
@@ -78,7 +78,7 @@ public class FireCraftItems {
 				'C', FireCraftBlocks.silmaril,
 				'D', superConductor,
 				'E', new ItemStack(TEBlocks.blockDynamo, 1, BlockDynamo.Types.ENERVATION.ordinal()));
-		
+
 		GameRegistry.addRecipe(new ItemStack(destroyer),
 				"ABA",
 				"CDE",
@@ -91,13 +91,13 @@ public class FireCraftItems {
 				'F', ExtraUtils.precisionShears,
 				'G', new ItemStack(TEItems.itemCapacitor, 1, ItemCapacitor.Types.RESONANT.ordinal()),
 				'H', ExtraUtils.healingAxe);
-		
+
 		TConstructRegistry.getTableCasting().addCastingRecipe(
 				silmarilliumIngot,
 				new FluidStack(FireCraftFluids.silmarillium, TConstruct.ingotLiquidValue),
 				TConstructRegistry.getItemStack("ingotCast"),
 				100);
-		
+
 		PulverizerManager.addRecipe(2400, RailcraftToolItems.getCoalCoke(), pulverizedCoke);
 		SmelterManager.addAlloyRecipe(2400, "sand", 1, "dustCoke", 1, carborundum);
 		SmelterManager.addAlloyRecipe(2400, "sand", 1, "dustCoal", 1, carborundum);
@@ -107,7 +107,7 @@ public class FireCraftItems {
 		SmelterManager.addAlloyRecipe(4000, "dustCoke", 1, "dustSteel", 1, ingotSteel);
 		SmelterManager.addAlloyRecipe(4000, "dustCoke", 1, "dustIron", 1, ingotSteel);
 		SmelterManager.addAlloyRecipe(4000, "dustCoke", 1, "ingotIron", 1, ingotSteel);
-		
+
 		ItemStack ingotGraphite = ItemHelper.cloneStack(OreDictionary.getOres("ingotGraphite").get(0), 1);
 		FurnaceManager.addRecipe(4000, carborundum, ingotGraphite, false);
 	}
