@@ -61,9 +61,15 @@ public class RenderStarfield extends TileEntitySpecialRenderer implements IItemR
 		GL11.glPushMatrix();
 		RenderUtils.preItemRender();
 
+		CCRenderState.changeTexture(ShaderStarfield.starsTexture);
+
+		ShaderStarfield.alpha = 0;
+
+		ShaderHelper.useShader(ShaderStarfield.starfieldShader, ShaderStarfield.callback);
 		CCRenderState.startDrawing();
 		model.render(offset, offset, offset, RenderUtils.getIconTransformation(texture));
 		CCRenderState.draw();
+		ShaderHelper.releaseShader();
 
 		RenderUtils.postItemRender();
 		GL11.glPopMatrix();

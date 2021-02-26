@@ -4,11 +4,8 @@ import com.firelizzard.firecraft.entity.PlasmaBoltEntity;
 import com.firelizzard.firecraft.events.ItemToolTipHandler;
 import com.firelizzard.firecraft.rendering.DestroyerRender;
 import com.firelizzard.firecraft.rendering.PlasmaBoltRender;
-// import com.firelizzard.firecraft.rendering.SilmarilliumBlockRender;
 import com.firelizzard.firecraft.rendering.RenderStarfield;
-import com.firelizzard.firecraft.tile.StarfieldTile;
 
-import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
@@ -27,7 +24,6 @@ public abstract class FireCraftProxy {
 		@Override
 		public void init() {
 			RenderingRegistry.registerEntityRenderingHandler(PlasmaBoltEntity.class, new PlasmaBoltRender());
-			ClientRegistry.bindTileEntitySpecialRenderer(StarfieldTile.class, RenderStarfield.instance);
 			MinecraftForgeClient.registerItemRenderer(FireCraftItems.destroyer, new DestroyerRender());
 			MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(FireCraftBlocks.starfield), RenderStarfield.instance);
 

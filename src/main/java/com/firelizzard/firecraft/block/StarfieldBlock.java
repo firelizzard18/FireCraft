@@ -2,8 +2,10 @@ package com.firelizzard.firecraft.block;
 
 import com.firelizzard.firecraft.FireCraftMod;
 import com.firelizzard.firecraft.initialization.FireCraftMaterials;
+import com.firelizzard.firecraft.rendering.RenderStarfield;
 import com.firelizzard.firecraft.tile.StarfieldTile;
 
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -14,6 +16,10 @@ import net.minecraft.world.World;
 
 public class StarfieldBlock extends Block implements ITileEntityProvider {
 	public static final String NAME = "starfield";
+
+	static {
+		ClientRegistry.bindTileEntitySpecialRenderer(StarfieldTile.class, RenderStarfield.instance);
+	}
 
 	public StarfieldBlock() {
 		super(FireCraftMaterials.starfield);
