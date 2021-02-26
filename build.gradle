@@ -1,3 +1,4 @@
+
 buildscript {
     repositories {
         mavenCentral()
@@ -11,22 +12,32 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.0.+') {
+            changing = true
+        }
     }
+}
+
+plugins {
+    id 'java-library'
+    id 'maven-publish'
 }
 
 apply plugin: 'forge'
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+apply plugin: 'java'
+compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
 
-version = "0.5"
-group= "com.firelizzard.firecraft"
+version = project.version
+group = project.group
 archivesBaseName = "Firecraft"
 
 minecraft {
-    version = "1.7.10-10.13.4.1558-1.7.10"
-    runDir = "eclipse"
+    version = project.minecraft_version + "-" + project.forge_version
+    runDir = "run"
 }
 
 configurations {
