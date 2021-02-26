@@ -30,7 +30,7 @@ public class RenderStarfield extends TileEntitySpecialRenderer implements IItemR
 
 		CCRenderState.changeTexture(ShaderStarfield.starsTexture);
 
-		ShaderStarfield.alpha = 0;
+		ShaderStarfield.alpha = 0.05f;
 
 		ShaderHelper.useShader(ShaderStarfield.starfieldShader, ShaderStarfield.callback);
 		CCRenderState.startDrawing();
